@@ -1,0 +1,53 @@
+{
+  "id": "A_setup_types4",
+  "legacy_id": "A_setup_types5",
+  "category": "Project Initialization",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "A06",
+  "required_capabilities": "Create Stories (×1); Inspect Project (×1)",
+  "instruction": "Set up the project's storey structure with exactly four storeys, from the bottom up: 'Ground Floor Level' at elevation 0 mm, 'First Floor Level' at 2725 mm, 'Eaves Level' at 5200 mm, and 'Ridge Level' at 8850 mm. Use exactly these names and elevations; do not create any additional storeys or any elements. Make 'Ridge Level' the active storey.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stories": [
+      {
+        "name": "Ground Floor Level",
+        "elevation_mm": 0
+      },
+      {
+        "name": "First Floor Level",
+        "elevation_mm": 2725
+      },
+      {
+        "name": "Eaves Level",
+        "elevation_mm": 5200
+      },
+      {
+        "name": "Ridge Level",
+        "elevation_mm": 8850
+      }
+    ],
+    "stories_exact": true,
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "story_elev_tolerance_mm": 0,
+    "active_story": "Ridge Level"
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/A_setup_types4/env"
+      }
+    ]
+  }
+}

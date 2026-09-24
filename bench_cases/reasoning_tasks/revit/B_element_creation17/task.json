@@ -1,0 +1,66 @@
+{
+  "id": "B_element_creation17",
+  "legacy_id": "D_slabs_stairs_rooms6",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "v2_template": "E01",
+  "required_capabilities": "Create Room/Zone (×3); Inspect Project (×1)",
+  "instruction": "The walls are already built. Create one named room for each room the floorplan drawing shows, placing each room inside the matching enclosed area with the name shown in the drawing. Do not move or create any walls; only place the rooms.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name": "Kitchen",
+        "inside": [
+          5475,
+          4072
+        ],
+        "area_m2": 24.5
+      },
+      {
+        "name": "Bedroom",
+        "inside": [
+          13464,
+          9120
+        ],
+        "area_m2": 17.7
+      },
+      {
+        "name": "Living Room",
+        "inside": [
+          8362,
+          7847
+        ],
+        "area_m2": 43.7
+      }
+    ],
+    "exact_counts": {
+      "rooms": 3,
+      "walls": 15,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 1,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "slabs"
+    ],
+    "room_area_ratio": 0.05,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/B_element_creation17/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "B_element_creation13",
+  "legacy_id": "D_slabs_stairs_rooms1",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "D01",
+  "required_capabilities": "Create Slab (×1); Inspect Project (×1)",
+  "instruction": "Create one floor slab on the active storey covering the entire footprint of the existing exterior walls. The slab boundary must be flush with the walls' outer surface (including any finish layer), not on the wall reference line. Set the slab's reference plane to Top, with the slab's top surface at the storey level. Reuse the existing slab composite 'Concrete Floor with 10mm Tile'; do not create a new one. Do not create or modify walls; only create the one slab.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "slabs": [
+      {
+        "floor": "active",
+        "outline": "footprint",
+        "composite": "Concrete Floor with 10mm Tile",
+        "level_mm": 0,
+        "reference_plane": "Top"
+      }
+    ],
+    "iou_min": 0.99,
+    "tolerance_mm": 0,
+    "exact_counts": {
+      "slabs": 1,
+      "walls": 10,
+      "doors": 0,
+      "windows": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls"
+    ],
+    "no_extra_composites": true,
+    "composites": []
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation13/env"
+      }
+    ]
+  }
+}

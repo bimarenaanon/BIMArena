@@ -1,0 +1,107 @@
+{
+  "id": "C_model_editing2",
+  "legacy_id": "B_walls10",
+  "category": "Model Revision",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "B05",
+  "required_capabilities": "Move with Constraints (×3); Inspect Project (×1)",
+  "instruction": "The project already contains a finished room layout with room labels. By moving the EXTERIOR walls, resize two rooms to these clear internal dimensions:\n- Kitchen: 2000 x 3500 mm\n- Livingroom: 5000 x 5000 mm\nKeep every interior wall on its existing line (trim or extend endpoints only as needed for clean connections), keep every door and window at its position along its wall, update the room zones to match the new layout, and do not create, move, or modify any room labels or wall types.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name": "kitchen",
+        "existing": true,
+        "inside": [
+          10300,
+          8800
+        ],
+        "dims_mm": [
+          2000,
+          3500
+        ]
+      },
+      {
+        "name": "Livingroom",
+        "existing": true,
+        "inside": [
+          16000,
+          13000
+        ],
+        "dims_mm": [
+          5000,
+          5000
+        ]
+      }
+    ],
+    "room_area_ratio": 0.1,
+    "composites": [],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "doors": 4,
+      "windows": 3,
+      "rooms": 4,
+      "slabs": 1,
+      "stairs": 0,
+      "objects": 0
+    },
+    "doors": [
+      {
+        "label": "DOO-003 swing unchanged (opens south, outward)",
+        "near": [
+          13128,
+          6336
+        ],
+        "open_into": [
+          13128,
+          5336
+        ]
+      },
+      {
+        "label": "DOO-004 swing unchanged (opens north)",
+        "near": [
+          13339,
+          10685
+        ],
+        "open_into": [
+          13339,
+          11685
+        ]
+      },
+      {
+        "label": "DOO-005 swing unchanged (opens east, into the living room)",
+        "near": [
+          14079,
+          14876
+        ],
+        "open_into": [
+          15079,
+          14876
+        ]
+      },
+      {
+        "label": "DOO-006 swing unchanged (opens west, into the kitchen)",
+        "near": [
+          11268,
+          9706
+        ],
+        "open_into": [
+          10268,
+          9706
+        ]
+      }
+    ],
+    "opening_pos_tolerance_mm": 1500,
+    "wall_tolerance_mm": 50
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/C_model_editing2/env"
+      }
+    ]
+  }
+}

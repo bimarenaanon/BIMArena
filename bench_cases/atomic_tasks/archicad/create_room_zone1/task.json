@@ -1,0 +1,48 @@
+{
+  "id": "create_room_zone1",
+  "legacy_id": "create_zone1",
+  "atom": "create_zone",
+  "category": "Creation",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Room/Zone (×1)",
+  "instruction": "The interior partition divides the building into two enclosures. The eastern one already holds a zone; create a zone in the WESTERN enclosure, named 'Lobby' with number '03'. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name_contains": [
+          "lobby"
+        ],
+        "number": "03",
+        "inside": [
+          1000,
+          2000
+        ]
+      },
+      {
+        "name_contains": [
+          "office"
+        ],
+        "inside": [
+          8344,
+          5101
+        ],
+        "existing": true
+      }
+    ],
+    "exact_counts": {
+      "rooms": 2
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_room_zone1/env"
+      }
+    ]
+  }
+}

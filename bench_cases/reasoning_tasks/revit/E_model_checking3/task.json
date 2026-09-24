@@ -1,0 +1,38 @@
+{
+  "id": "E_model_checking3",
+  "legacy_id": "E_cross_view6",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "F08",
+  "required_capabilities": "Replace Element Type (×12); Inspect Project (×1)",
+  "instruction": "The project opens in a 3D view. The wall heights are visibly inconsistent. Unify all walls to a height of 3000 mm, keeping every wall's plan position unchanged.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls"
+    ],
+    "wall_height_mm": 3000,
+    "composites": [],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 13,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "wall_height_tolerance_mm": 10
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/E_model_checking3/env"
+      }
+    ]
+  }
+}

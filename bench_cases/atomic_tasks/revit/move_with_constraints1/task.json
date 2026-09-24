@@ -1,0 +1,130 @@
+{
+  "id": "move_with_constraints1",
+  "legacy_id": "move_with_constrain1",
+  "atom": "move_with_constrain",
+  "category": "Editing",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Move with Constraints (×1)",
+  "instruction": "Move the north exterior wall 500 mm in +y. The side walls and the partition stretch with it, and the floor and the room must follow the new footprint. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          0,
+          10500
+        ],
+        "end": [
+          11000,
+          10500
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "match": "any",
+        "beg": [
+          11000,
+          0
+        ],
+        "end": [
+          11000,
+          10500
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "match": "any",
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          0,
+          10500
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "match": "any",
+        "beg": [
+          5500,
+          0
+        ],
+        "end": [
+          5500,
+          10500
+        ],
+        "composite": "Interior - Blockwork 100"
+      }
+    ],
+    "windows": [
+      {
+        "sill_mm": 900,
+        "near": [
+          4000,
+          10500
+        ]
+      }
+    ],
+    "exact_counts": {
+      "walls": 6,
+      "windows": 1,
+      "doors": 1,
+      "slabs": 1,
+      "rooms": 1
+    },
+    "slabs": [
+      {
+        "match": "any",
+        "floor": "active",
+        "level_mm": 0,
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            11000,
+            0
+          ],
+          [
+            11000,
+            10500
+          ],
+          [
+            0,
+            10500
+          ]
+        ],
+        "composite": "Insitu Concrete 225mm"
+      }
+    ],
+    "iou_min": 0.98,
+    "rooms": [
+      {
+        "existing": true,
+        "name_contains": [
+          "office"
+        ],
+        "inside": [
+          8000,
+          10000
+        ],
+        "area_m2": 49.9,
+        "area_ratio": 0.02
+      }
+    ]
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/move_with_constraints1/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "replace_element_type4",
+  "legacy_id": "replace_door_type1",
+  "atom": "replace_door_type",
+  "category": "Editing",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Replace the type of the door on the south wall with the stock 'M_Single-Flush: 0762 x 2134mm' type, already loaded in this project, keeping its position unchanged. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "near": [
+          4000,
+          0
+        ],
+        "width_mm": 762,
+        "height_mm": 2134,
+        "type_contains": [
+          "m_single-flush: 0762 x 2134mm"
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/replace_element_type4/env"
+      }
+    ]
+  }
+}

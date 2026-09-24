@@ -1,0 +1,52 @@
+{
+  "id": "A_setup_types4",
+  "legacy_id": "A_setup_types5",
+  "category": "Project Initialization",
+  "authoring_tool": "Revit",
+  "v2_template": "A06",
+  "required_capabilities": "Create Stories (×1); Inspect Project (×1)",
+  "instruction": "Set up the project's level structure with exactly four levels, from the bottom up: 'Ground' at elevation 0 mm, 'First' at 2725 mm, 'Eaves' at 5200 mm, and 'Ridge' at 8850 mm. Use exactly these names and elevations; do not create any additional levels or any elements.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stories": [
+      {
+        "name": "Ground",
+        "elevation_mm": 0
+      },
+      {
+        "name": "First",
+        "elevation_mm": 2725
+      },
+      {
+        "name": "Eaves",
+        "elevation_mm": 5200
+      },
+      {
+        "name": "Ridge",
+        "elevation_mm": 8850
+      }
+    ],
+    "stories_exact": true,
+    "story_elev_tolerance_mm": 0,
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/A_setup_types4/env"
+      }
+    ]
+  }
+}

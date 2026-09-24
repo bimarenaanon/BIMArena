@@ -1,0 +1,53 @@
+{
+  "id": "move_element1",
+  "legacy_id": "modify_slab1",
+  "atom": "modify_slab",
+  "category": "Editing",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Move Element (×1)",
+  "instruction": "Edit the floor's sketch to extend it 1000 mm further in +x. Keep one single floor, same type, same elevation.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "slabs": [
+      {
+        "existing": true,
+        "floor": "active",
+        "level_mm": 0,
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            12000,
+            0
+          ],
+          [
+            12000,
+            10000
+          ],
+          [
+            0,
+            10000
+          ]
+        ],
+        "composite": "Insitu Concrete 225mm"
+      }
+    ],
+    "exact_counts": {
+      "slabs": 1
+    },
+    "iou_min": 0.98
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/move_element1/env"
+      }
+    ]
+  }
+}

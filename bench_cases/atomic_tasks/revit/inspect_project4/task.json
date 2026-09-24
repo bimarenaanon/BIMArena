@@ -1,0 +1,36 @@
+{
+  "id": "inspect_project4",
+  "legacy_id": "observation1",
+  "atom": "observation",
+  "category": "Query & Selection",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Inspect Project (×1)",
+  "instruction": "REPORT how many levels the project has and how many walls, doors and windows the model contains. Answer in the form \"<label>: <value>\", one line each, using exactly the labels levels, walls, doors, windows. Change nothing.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs",
+      "rooms"
+    ],
+    "answer_values": {
+      "levels": 2,
+      "walls": 6,
+      "doors": 1,
+      "windows": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/inspect_project4/env"
+      }
+    ]
+  }
+}

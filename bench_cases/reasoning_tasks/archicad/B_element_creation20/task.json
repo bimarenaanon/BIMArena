@@ -1,0 +1,110 @@
+{
+  "id": "B_element_creation20",
+  "legacy_id": "E_cross_view1",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "F02",
+  "required_capabilities": "Switch Active Story (×1); Create Window (×6); Inspect Project (×1)",
+  "instruction": "The two-storey building's walls are already created, but there are no windows yet. Read the provided drawing and create the windows on BOTH floors, each 1500 x 1500 mm, matching the host walls, positions, and sill heights shown. Do not create or modify any walls, and place no extra windows.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "label": "window 1 (storey 0)",
+        "floor": 0,
+        "center": [
+          7000,
+          1800
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 900
+      },
+      {
+        "label": "window 2 (storey 0)",
+        "floor": 0,
+        "center": [
+          7000,
+          4200
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 900
+      },
+      {
+        "label": "window 3 (storey 0)",
+        "floor": 0,
+        "center": [
+          7000,
+          6600
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 900
+      },
+      {
+        "label": "window 1 (storey 1)",
+        "floor": 1,
+        "center": [
+          7000,
+          1800
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      },
+      {
+        "label": "window 2 (storey 1)",
+        "floor": 1,
+        "center": [
+          7000,
+          4200
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      },
+      {
+        "label": "window 3 (storey 1)",
+        "floor": 1,
+        "center": [
+          7000,
+          6600
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      }
+    ],
+    "exact_counts": {
+      "windows": 6,
+      "walls": 8,
+      "doors": 1,
+      "slabs": 2,
+      "stairs": 1,
+      "rooms": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "slabs",
+      "stairs"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "opening_pos_tolerance_mm": 10
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation20/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "id": "E_model_checking4",
+  "legacy_id": "E_cross_view7",
+  "category": "Model Checking",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Switch Active Story (×1); Move Element (×3); Inspect Project (×1)",
+  "instruction": "The building's ground floor and upper floor are both already built, but their exterior-wall outlines currently differ. Adjust the UPPER floor's exterior walls — move them, and add wall segments where necessary — so its outline matches the ground floor's outline exactly. Do not modify any ground-floor element, and keep the upper floor's interior walls unchanged.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "label": "upper outline segment 1",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          12000,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "upper outline segment 2",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          12000,
+          0
+        ],
+        "end": [
+          12000,
+          5500
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "upper outline segment 3",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          12000,
+          5500
+        ],
+        "end": [
+          8700,
+          5500
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "upper outline segment 4",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          8700,
+          5500
+        ],
+        "end": [
+          8700,
+          9500
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "upper outline segment 5",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          8700,
+          9500
+        ],
+        "end": [
+          11200,
+          9500
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "upper outline segment 6",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          11200,
+          9500
+        ],
+        "end": [
+          11200,
+          11500
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "upper outline segment 7",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          11200,
+          11500
+        ],
+        "end": [
+          5200,
+          11500
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "upper outline segment 8",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          5200,
+          11500
+        ],
+        "end": [
+          5200,
+          9775
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "upper outline segment 9",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          5200,
+          9775
+        ],
+        "end": [
+          0,
+          9775
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "upper outline segment 10",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          0,
+          9775
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity"
+      }
+    ],
+    "wall_tolerance_mm": 10,
+    "no_extra_walls": true,
+    "exact_counts": {
+      "doors": 4,
+      "windows": 7,
+      "slabs": 2,
+      "stairs": 1,
+      "rooms": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            12002,
+            7500
+          ],
+          [
+            11602,
+            9500
+          ]
+        ]
+      },
+      "doors",
+      "windows",
+      "slabs",
+      "stairs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/E_model_checking4/env"
+      }
+    ]
+  }
+}

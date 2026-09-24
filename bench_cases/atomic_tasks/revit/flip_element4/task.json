@@ -1,0 +1,42 @@
+{
+  "id": "flip_element4",
+  "legacy_id": "flip_wall2",
+  "atom": "flip_wall",
+  "category": "Editing",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Flip Element (×1)",
+  "instruction": "The EAST exterior wall has the same defect: its exterior brick face points into the building. Flip that wall so its brick face points outward, without moving the wall body — the building outline (11000 × 10000) must stay exactly where it is — and keeping its type unchanged. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          11000,
+          0
+        ],
+        "end": [
+          11000,
+          10000
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud",
+        "faces": "outward",
+        "floor": 0
+      }
+    ],
+    "exact_counts": {
+      "walls": 6
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/flip_element4/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "id": "C_model_editing8",
+  "legacy_id": "F_design_change3",
+  "category": "Model Revision",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "G03",
+  "required_capabilities": "Move with Constraints (×2); Inspect Project (×1)",
+  "instruction": "The project's walls, doors, windows, and rooms have already been built and match the attached floor plan. The drawing carries redline annotations marking the walls that must be changed. Apply exactly those wall changes, and update ALL related elements so the model stays consistent — not only the walls: the floor slab, the zones, and any door or window hosted on a changed wall must follow the change. Newly added walls must use the same wall type and width as the existing walls they connect to. Everything unmarked must remain untouched.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "label": "wall 1",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          1276,
+          -2200
+        ],
+        "end": [
+          13000,
+          -2200
+        ],
+        "width_mm": 275,
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "wall 2",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          13000,
+          0
+        ],
+        "end": [
+          13000,
+          12000
+        ],
+        "width_mm": 275,
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "wall 3",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          13000,
+          12000
+        ],
+        "end": [
+          8500,
+          12000
+        ],
+        "width_mm": 275,
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "wall 4",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          8500,
+          12000
+        ],
+        "end": [
+          8500,
+          9500
+        ],
+        "width_mm": 275,
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "wall 5",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          8500,
+          9500
+        ],
+        "end": [
+          1276.2,
+          9500
+        ],
+        "width_mm": 275,
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "wall 6",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          276,
+          9500
+        ],
+        "end": [
+          276,
+          0
+        ],
+        "width_mm": 275,
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "wall 7",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          8775,
+          9225
+        ],
+        "end": [
+          13000,
+          9225
+        ],
+        "width_mm": 125,
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "label": "wall 8",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5525,
+          9500
+        ],
+        "end": [
+          5525,
+          2599.7
+        ],
+        "width_mm": 125,
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "label": "wall 9",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5525,
+          2724.7
+        ],
+        "end": [
+          3877,
+          2724.8
+        ],
+        "width_mm": 125,
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "label": "wall 10",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          3877,
+          2724.8
+        ],
+        "end": [
+          3877,
+          -2200
+        ],
+        "width_mm": 125,
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "label": "wall 11",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5525,
+          2599.7
+        ],
+        "end": [
+          8775,
+          2600
+        ],
+        "width_mm": 125,
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "label": "wall 12",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          8775,
+          2600
+        ],
+        "end": [
+          8775,
+          9225
+        ],
+        "width_mm": 125,
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "label": "wall 13",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5525,
+          5717.5
+        ],
+        "end": [
+          8775,
+          5717.5
+        ],
+        "width_mm": 125,
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "label": "wall 14",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          276,
+          9500
+        ],
+        "end": [
+          1276,
+          9500
+        ],
+        "width_mm": 275,
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "wall 15",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          276,
+          0
+        ],
+        "end": [
+          276,
+          -2200
+        ],
+        "width_mm": 275,
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "wall 16",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          276,
+          -2200
+        ],
+        "end": [
+          1276,
+          -2200
+        ],
+        "width_mm": 275,
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "label": "wall 17",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          13000,
+          -2200
+        ],
+        "end": [
+          13000,
+          0
+        ],
+        "width_mm": 275,
+        "composite": "100 Block Insulated Cavity"
+      }
+    ],
+    "wall_tolerance_mm": 100,
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "label": "south-wall door (follows the moved wall)",
+        "near": [
+          7946,
+          -2200
+        ],
+        "width_mm": 900,
+        "height_mm": 2100
+      }
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "slabs": [
+      {
+        "label": "floor slab (extended)",
+        "existing": true,
+        "floor": 0,
+        "outline": [
+          [
+            276,
+            9500
+          ],
+          [
+            8500,
+            9500
+          ],
+          [
+            8500,
+            12000
+          ],
+          [
+            13000,
+            12000
+          ],
+          [
+            13000,
+            -2200
+          ],
+          [
+            276,
+            -2200
+          ],
+          [
+            276,
+            9500
+          ]
+        ],
+        "level_mm": 0
+      }
+    ],
+    "iou_min": 0.99,
+    "tolerance_mm": 0,
+    "rooms": [
+      {
+        "name": "Bedroom",
+        "existing": true,
+        "inside": [
+          3038,
+          5975
+        ],
+        "area_m2": 32.3
+      },
+      {
+        "name": "Kitchen",
+        "existing": true,
+        "inside": [
+          7150,
+          7534
+        ],
+        "area_m2": 10.1
+      },
+      {
+        "name": "Bathroom",
+        "existing": true,
+        "inside": [
+          7150,
+          4221
+        ],
+        "area_m2": 9.0
+      },
+      {
+        "name": "Balcony",
+        "existing": true,
+        "inside": [
+          10750,
+          10538
+        ],
+        "area_m2": 9.4
+      },
+      {
+        "name": "Closet",
+        "existing": true,
+        "inside": [
+          2214,
+          400
+        ],
+        "area_m2": 15.5
+      },
+      {
+        "name": "Living Room",
+        "existing": true,
+        "inside": [
+          10750,
+          5912
+        ],
+        "area_m2": 65.6
+      }
+    ],
+    "room_area_ratio": 0.05,
+    "exact_counts": {
+      "doors": 6,
+      "windows": 3,
+      "slabs": 1,
+      "rooms": 6,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            7946,
+            0
+          ]
+        ]
+      },
+      "windows"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/C_model_editing8/env"
+      }
+    ]
+  }
+}

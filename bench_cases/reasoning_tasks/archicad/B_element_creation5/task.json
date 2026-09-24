@@ -1,0 +1,64 @@
+{
+  "id": "B_element_creation5",
+  "legacy_id": "B_walls4",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "B02",
+  "required_capabilities": "Create Wall (×2); Inspect Project (×1)",
+  "instruction": "The rectangular exterior-wall loop is already built. Create the interior walls shown in the drawing, matching the wall thickness dimensioned on it; any wall type or composite of that thickness is fine. Walls only - do not place any zones. Do not modify the exterior walls or create anything else.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          4000,
+          0
+        ],
+        "end": [
+          4000,
+          6000
+        ],
+        "width_mm": 200,
+        "label": "vertical cross wall (south-north midpoints)"
+      },
+      {
+        "beg": [
+          0,
+          3000
+        ],
+        "end": [
+          8000,
+          3000
+        ],
+        "width_mm": 200,
+        "label": "horizontal cross wall (west-east midpoints)"
+      }
+    ],
+    "no_extra_walls": true,
+    "composites": [],
+    "preserve": [
+      "walls"
+    ],
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "wall_tolerance_mm": 100
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation5/env"
+      }
+    ]
+  }
+}

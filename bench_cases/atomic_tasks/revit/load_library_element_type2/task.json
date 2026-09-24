@@ -1,0 +1,35 @@
+{
+  "id": "load_library_element_type2",
+  "legacy_id": "load_family_type_window1",
+  "atom": "load_family_type_window",
+  "category": "Config. & Types",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Load Library Element Type (×1)",
+  "instruction": "Load the 'M_Window-Casement-Triple-Side-Transom' window family from the installed family library, then place one instance of it, 2150 x 1500 mm, in any wall to show it is available. Where it goes is your call. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "type_contains": [
+          "m_window-casement-triple-side-transom"
+        ],
+        "width_mm": 2150,
+        "height_mm": 1500
+      }
+    ],
+    "exact_counts": {
+      "windows": 2
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/load_library_element_type2/env"
+      }
+    ]
+  }
+}

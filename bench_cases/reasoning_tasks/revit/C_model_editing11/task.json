@@ -1,0 +1,237 @@
+{
+  "id": "C_model_editing11",
+  "legacy_id": "F_design_change6",
+  "category": "Model Revision",
+  "authoring_tool": "Revit",
+  "v2_template": "G06",
+  "required_capabilities": "Create Door/Window Type (×1); Create Window (×1); Move Element (×1); Move with Constraints (×1); Replace Element Type (×2); Inspect Project (×1); Query Library (×1)",
+  "instruction": "Execute this combined client change on the single-storey model: enlarge the Bedroom by moving its west wall 1500 mm further west, handling the knock-on effects so the floor slab, the room boundaries, and every element attached to the moved wall follow; replace the Bedroom's 915 mm swing door with a 1500 x 2100 mm 'M_Door-Interior-Double-Sliding-2_Panel-Wood' at the same position; add a window of any type in the Bedroom's south exterior wall, 1800 mm wide with 2.7 m2 of glass, anywhere along it; and rename the Bedroom to 'Accessible Bedroom'. Leave everything else untouched.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "label": "bedroom sliding door",
+        "width_mm": 1500,
+        "height_mm": 2100,
+        "type_contains": [
+          "Sliding",
+          "Slide"
+        ],
+        "type_not_contains": [
+          "exterior"
+        ],
+        "near": [
+          5901,
+          1156
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "label": "new south window (any position)",
+        "width_mm": 1800,
+        "height_mm": 1500,
+        "host_side": "bottom"
+      }
+    ],
+    "rooms": [
+      {
+        "name": "Accessible Bedroom",
+        "existing": true
+      }
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          -1499,
+          98
+        ],
+        "end": [
+          -1499,
+          7098
+        ],
+        "width_mm": 200
+      },
+      {
+        "match": "any",
+        "beg": [
+          -1399,
+          7198
+        ],
+        "end": [
+          9351,
+          7198
+        ],
+        "width_mm": 200
+      },
+      {
+        "match": "any",
+        "beg": [
+          5801,
+          7098
+        ],
+        "end": [
+          5801,
+          9898
+        ],
+        "width_mm": 200
+      },
+      {
+        "match": "any",
+        "beg": [
+          5901,
+          9998
+        ],
+        "end": [
+          12801,
+          9998
+        ],
+        "width_mm": 200
+      },
+      {
+        "match": "any",
+        "beg": [
+          12901,
+          9898
+        ],
+        "end": [
+          12901,
+          98
+        ],
+        "width_mm": 200
+      },
+      {
+        "match": "any",
+        "beg": [
+          12801,
+          -2
+        ],
+        "end": [
+          -1399,
+          -2
+        ],
+        "width_mm": 200
+      },
+      {
+        "match": "any",
+        "beg": [
+          9351,
+          9898
+        ],
+        "end": [
+          9351,
+          4798
+        ],
+        "width_mm": 200
+      },
+      {
+        "match": "any",
+        "beg": [
+          5901,
+          7098
+        ],
+        "end": [
+          5901,
+          98
+        ],
+        "width_mm": 200
+      },
+      {
+        "match": "any",
+        "beg": [
+          9351,
+          4798
+        ],
+        "end": [
+          12801,
+          4798
+        ],
+        "width_mm": 200
+      },
+      {
+        "match": "any",
+        "beg": [
+          9351,
+          2598
+        ],
+        "end": [
+          11151,
+          2598
+        ],
+        "width_mm": 200
+      },
+      {
+        "match": "any",
+        "beg": [
+          3001,
+          7098
+        ],
+        "end": [
+          3001,
+          4298
+        ],
+        "width_mm": 200
+      },
+      {
+        "match": "any",
+        "beg": [
+          3001,
+          4298
+        ],
+        "end": [
+          -1399,
+          4298
+        ],
+        "width_mm": 200
+      }
+    ],
+    "no_extra_walls": true,
+    "wall_tolerance_mm": 10,
+    "slabs": [
+      {
+        "match": "any",
+        "floor": 0,
+        "outline": "footprint",
+        "level_mm": 0,
+        "label": "slab follows the enlarged bedroom"
+      }
+    ],
+    "exact_counts": {
+      "doors": 4,
+      "windows": 6,
+      "slabs": 1,
+      "rooms": 2,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            5901,
+            1156
+          ]
+        ]
+      },
+      "windows"
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "tolerance_mm": 0,
+    "room_area_ratio": 0.05,
+    "iou_min": 0.99
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/C_model_editing11/env"
+      }
+    ]
+  }
+}

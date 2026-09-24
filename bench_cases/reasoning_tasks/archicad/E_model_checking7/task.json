@@ -1,0 +1,251 @@
+{
+  "id": "E_model_checking7",
+  "legacy_id": "G_model_check3",
+  "category": "Model Checking",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "H03",
+  "required_capabilities": "Flip Element (×5); Inspect Project (×1); Check Clash (×1)",
+  "instruction": "Many doors in the current project have obvious clashes. Check which doors are clashing, and resolve the clashes by flipping the door swing direction.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "any_of": [
+      {
+        "doors": [
+          {
+            "label": "door at [5700, 2629]",
+            "near": [
+              5700,
+              2629
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              6700,
+              2629
+            ]
+          },
+          {
+            "label": "door at [5700, 4247]",
+            "near": [
+              5700,
+              4247
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              4700,
+              4247
+            ]
+          },
+          {
+            "label": "door at [1339, 1359]",
+            "near": [
+              1339,
+              1359
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              1339,
+              2359
+            ]
+          },
+          {
+            "label": "door at [3977, 1359] (A: opens north)",
+            "near": [
+              3977,
+              1359
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              3977,
+              2359
+            ]
+          },
+          {
+            "label": "door at [3995, 0] (A: opens north)",
+            "near": [
+              3995,
+              0
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              3995,
+              1000
+            ]
+          }
+        ]
+      },
+      {
+        "doors": [
+          {
+            "label": "door at [5700, 2629]",
+            "near": [
+              5700,
+              2629
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              6700,
+              2629
+            ]
+          },
+          {
+            "label": "door at [5700, 4247]",
+            "near": [
+              5700,
+              4247
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              4700,
+              4247
+            ]
+          },
+          {
+            "label": "door at [1339, 1359]",
+            "near": [
+              1339,
+              1359
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              1339,
+              2359
+            ]
+          },
+          {
+            "label": "door at [3977, 1359] (B: opens south)",
+            "near": [
+              3977,
+              1359
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              3977,
+              359
+            ]
+          },
+          {
+            "label": "door at [3995, 0] (B: opens south)",
+            "near": [
+              3995,
+              0
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              3995,
+              -1000
+            ]
+          }
+        ]
+      },
+      {
+        "doors": [
+          {
+            "label": "door at [5700, 2629]",
+            "near": [
+              5700,
+              2629
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              6700,
+              2629
+            ]
+          },
+          {
+            "label": "door at [5700, 4247]",
+            "near": [
+              5700,
+              4247
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              4700,
+              4247
+            ]
+          },
+          {
+            "label": "door at [1339, 1359]",
+            "near": [
+              1339,
+              1359
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              1339,
+              2359
+            ]
+          },
+          {
+            "label": "door at [3977, 1359] (C: opens north)",
+            "near": [
+              3977,
+              1359
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              3977,
+              2359
+            ]
+          },
+          {
+            "label": "door at [3995, 0] (C: opens south)",
+            "near": [
+              3995,
+              0
+            ],
+            "width_mm": 900,
+            "height_mm": 2100,
+            "open_into": [
+              3995,
+              -1000
+            ]
+          }
+        ]
+      }
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "openings_no_clash": true,
+    "exact_counts": {
+      "doors": 5,
+      "walls": 13,
+      "windows": 0,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 5
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs",
+      "objects"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/E_model_checking7/env"
+      }
+    ]
+  }
+}

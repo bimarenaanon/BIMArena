@@ -1,0 +1,35 @@
+{
+  "id": "delete_element2",
+  "atom": "delete_element",
+  "category": "Deletion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Delete Element (×1)",
+  "instruction": "Delete the room, leaving every other element exactly as it is.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "rooms": 0,
+      "walls": 6,
+      "doors": 1,
+      "windows": 1,
+      "slabs": 1
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs"
+    ]
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/delete_element2/env"
+      }
+    ]
+  }
+}

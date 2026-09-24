@@ -1,0 +1,50 @@
+{
+  "id": "query_types2",
+  "legacy_id": "list_types2",
+  "atom": "list_types",
+  "category": "Query & Selection",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Query Types (×1)",
+  "instruction": "Look up the floor types available in this project and REPORT the names of two FLOOR types, spelled exactly as the project has them. Answer in the form \"<label>: <value>\", one line each, using the label floor.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    },
+    "answer_items": [
+      {
+        "label": "floor",
+        "min": 2,
+        "contains": [
+          "Standard Timber-Wood Finish",
+          "Beam and Block 200mm",
+          "Insitu Concrete 225mm",
+          "Concrete-Domestic 425mm",
+          "Concrete-Commercial 362mm",
+          "160mm Concrete With 50mm Metal Deck",
+          "Generic 150mm",
+          "Generic 150mm - Filled",
+          "Generic 300mm"
+        ],
+        "exact": true
+      }
+    ]
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/query_types2/env"
+      }
+    ]
+  }
+}

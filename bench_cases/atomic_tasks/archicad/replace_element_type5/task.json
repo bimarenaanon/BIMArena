@@ -1,0 +1,39 @@
+{
+  "id": "replace_element_type5",
+  "legacy_id": "modify_zone1",
+  "atom": "modify_zone",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Modify the zone: rename it to 'Meeting Room' and change its number to '02'. Do not create a second zone and change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "existing": true,
+        "name_contains": [
+          "meeting"
+        ],
+        "number": "02",
+        "inside": [
+          8344,
+          5101
+        ]
+      }
+    ],
+    "exact_counts": {
+      "rooms": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/replace_element_type5/env"
+      }
+    ]
+  }
+}

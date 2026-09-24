@@ -1,0 +1,111 @@
+{
+  "id": "query_library1",
+  "legacy_id": "list_family_door1",
+  "atom": "list_family_door",
+  "category": "Query & Selection",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Query Library (×1)",
+  "instruction": "Browse the door families available to this project beyond the ones already loaded, and REPORT the names of three of them, spelled exactly as the library has them. At least one must be a RESIDENTIAL door family. Answer in the form \"<label>: <value>\", one line each, using the label door family.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    },
+    "answer_items": [
+      {
+        "label": "door family",
+        "min": 3,
+        "contains": [
+          "M_Door-Curtain-Wall-Double-Glass",
+          "M_Door-Curtain-Wall-Double-Storefront",
+          "M_Door-Curtain-Wall-Single-Glass",
+          "M_Door-Double-Flush_Panel",
+          "M_Door-Double-Flush_Panel-Double-Acting",
+          "M_Door-Double-Glass",
+          "M_Door-Double-Sliding",
+          "M_Door-Exterior-Double",
+          "M_Door-Exterior-Double-Full Glass-Wood_Clad",
+          "M_Door-Exterior-Double-Two_Lite",
+          "M_Door-Exterior-Revolving-Full Glass-Metal",
+          "M_Door-Exterior-Side_Lite-Full Arch Glass-Wood_Clad",
+          "M_Door-Exterior-Side_Lite-Full Flat Glass-Wood_Clad",
+          "M_Door-Exterior-Single-Entry-Half Arch Glass-Wood_Clad",
+          "M_Door-Exterior-Single-Entry-Half Flat Glass-Wood_Clad",
+          "M_Door-Exterior-Single-Two_Lite",
+          "M_Door-Garage-Embossed_Panel",
+          "M_Door-Garage-Flush_Panel",
+          "M_Door-Interior-Double-Full Glass-Wood",
+          "M_Door-Interior-Double-Pocket-2_Panel-Wood",
+          "M_Door-Interior-Double-Sliding-2_Panel-Wood",
+          "M_Door-Interior-Single-1_Panel-Wood",
+          "M_Door-Interior-Single-2_Panel-Wood",
+          "M_Door-Interior-Single-3_Panel_Vert-Wood",
+          "M_Door-Interior-Single-4_Panel-Wood",
+          "M_Door-Interior-Single-5_Panel_Vert-Wood",
+          "M_Door-Interior-Single-6_Panel-Wood",
+          "M_Door-Interior-Single-Flush_Panel-Wood",
+          "M_Door-Interior-Single-Full Glass-Wood",
+          "M_Door-Interior-Single-Pocket-2_Panel-Wood",
+          "M_Door-Opening",
+          "M_Door-Overhead-Rolling",
+          "M_Door-Overhead-Sectional",
+          "M_Door-Passage-Double-Flush",
+          "M_Door-Passage-Double-Flush-Dbl_Acting",
+          "M_Door-Passage-Single-Cold_Room",
+          "M_Door-Passage-Single-Flush",
+          "M_Door-Passage-Single-Flush-Dbl_Acting",
+          "M_Door-Passage-Single-Full_Lite",
+          "M_Door-Passage-Single-One_Lite",
+          "M_Door-Passage-Single-Two_Lite",
+          "M_Door-Passage-Single-Two_Lite_Narrow",
+          "M_Door-Passage-Single-Vision_Lite",
+          "M_Door-Passage-Single-Vision_Two_Lite",
+          "M_Door-Passage-Uneven-Flush",
+          "M_Door-Single-Flush_Panel_Double-Acting",
+          "M_Door-Single-Panel"
+        ],
+        "exact": true,
+        "must_match": [
+          [
+            "M_Door-Exterior-Double-Full Glass-Wood_Clad",
+            "M_Door-Exterior-Side_Lite-Full Arch Glass-Wood_Clad",
+            "M_Door-Exterior-Side_Lite-Full Flat Glass-Wood_Clad",
+            "M_Door-Exterior-Single-Entry-Half Arch Glass-Wood_Clad",
+            "M_Door-Exterior-Single-Entry-Half Flat Glass-Wood_Clad",
+            "M_Door-Garage-Embossed_Panel",
+            "M_Door-Garage-Flush_Panel",
+            "M_Door-Interior-Double-Full Glass-Wood",
+            "M_Door-Interior-Double-Pocket-2_Panel-Wood",
+            "M_Door-Interior-Double-Sliding-2_Panel-Wood",
+            "M_Door-Interior-Single-1_Panel-Wood",
+            "M_Door-Interior-Single-2_Panel-Wood",
+            "M_Door-Interior-Single-3_Panel_Vert-Wood",
+            "M_Door-Interior-Single-4_Panel-Wood",
+            "M_Door-Interior-Single-5_Panel_Vert-Wood",
+            "M_Door-Interior-Single-6_Panel-Wood",
+            "M_Door-Interior-Single-Flush_Panel-Wood",
+            "M_Door-Interior-Single-Full Glass-Wood",
+            "M_Door-Interior-Single-Pocket-2_Panel-Wood"
+          ]
+        ]
+      }
+    ]
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/query_library1/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "create_wall1",
+  "atom": "create_wall",
+  "category": "Creation",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Wall (×1)",
+  "instruction": "Create four walls forming one closed rectangular loop, drawn counterclockwise through (0, 0) → (6000, 0) → (6000, 4000) → (0, 4000) → (0, 0) with the existing composite '100 Block Insulated Cavity', so every layer stack faces outward. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          6000,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          6000,
+          0
+        ],
+        "end": [
+          6000,
+          4000
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          6000,
+          4000
+        ],
+        "end": [
+          0,
+          4000
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          0,
+          4000
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward"
+      }
+    ],
+    "no_extra_walls": true,
+    "composites": [],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_wall1/env"
+      }
+    ]
+  }
+}

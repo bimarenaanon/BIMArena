@@ -1,0 +1,41 @@
+{
+  "id": "flip_element2",
+  "legacy_id": "flip_door_hinge1",
+  "atom": "flip_door_hinge",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Flip Element (×1)",
+  "instruction": "Flip the hinge of the door on the south wall to the opposite jamb, keeping its swing direction (into the room) unchanged. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "near": [
+          4000,
+          0
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "swing": "in",
+        "hinge_near": [
+          4450,
+          0
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/flip_element2/env"
+      }
+    ]
+  }
+}

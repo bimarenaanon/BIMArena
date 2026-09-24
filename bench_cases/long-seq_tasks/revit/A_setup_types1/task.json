@@ -1,0 +1,59 @@
+{
+  "id": "A_setup_types1",
+  "legacy_id": "A_setup_types1",
+  "category": "Project Initialization",
+  "authoring_tool": "Revit",
+  "v2_template": "A01",
+  "required_capabilities": "Create Wall Type (×1); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Create a symmetric load-bearing internal masonry wall type with three layers (Finish / Structure / Finish): (1) 15 mm gypsum plaster, (2) a 115 mm structural-brick core, (3) 15 mm gypsum plaster. Create the wall type only - do not place any walls.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "skins": [
+          {
+            "material_contains": [
+              "Gypsum",
+              "Render"
+            ],
+            "thickness_mm": 15
+          },
+          {
+            "material_contains": [
+              "Brick",
+              "Masonry"
+            ],
+            "thickness_mm": 115
+          },
+          {
+            "material_contains": [
+              "Gypsum",
+              "Render"
+            ],
+            "thickness_mm": 15
+          }
+        ]
+      }
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/A_setup_types1/env"
+      }
+    ]
+  }
+}

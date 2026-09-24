@@ -1,0 +1,208 @@
+{
+  "id": "E_model_checking9",
+  "legacy_id": "H_domain_reasoning1",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "I01",
+  "required_capabilities": "Replace Element Type (×6); Inspect Project (×1); Query Types (×1)",
+  "instruction": "The project's walls and rooms have already been created, but every internal wall currently uses the most generic wall type. Based on the uses of the rooms on both sides of each partition, infer the acoustic, moisture, or fire performance it requires, and assign the matching wall type - reuse the wall types that already exist in the project, do not create new ones. Preserve all wall centrelines and room boundaries.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "walls": [
+      {
+        "label": "356420 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          218,
+          12724
+        ],
+        "end": [
+          11218,
+          12724
+        ],
+        "composite": "Exterior - Render on Brick on Block"
+      },
+      {
+        "label": "356499 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          11432,
+          12510
+        ],
+        "end": [
+          11432,
+          3510
+        ],
+        "composite": "Exterior - Render on Brick on Block"
+      },
+      {
+        "label": "356550 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          11218,
+          3296
+        ],
+        "end": [
+          4218,
+          3296
+        ],
+        "composite": "Exterior - Render on Brick on Block"
+      },
+      {
+        "label": "356582 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          4432,
+          3510
+        ],
+        "end": [
+          4432,
+          210
+        ],
+        "composite": "Exterior - Render on Brick on Block"
+      },
+      {
+        "label": "356633 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          4218,
+          -4
+        ],
+        "end": [
+          218,
+          -4
+        ],
+        "composite": "Exterior - Render on Brick on Block"
+      },
+      {
+        "label": "356672 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          4,
+          210
+        ],
+        "end": [
+          4,
+          12510
+        ],
+        "composite": "Exterior - Render on Brick on Block"
+      },
+      {
+        "label": "356747 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          4218,
+          12510
+        ],
+        "end": [
+          4218,
+          8510
+        ],
+        "composite": "INT_125_Acoustic_Partition"
+      },
+      {
+        "label": "356794 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          4218,
+          8510
+        ],
+        "end": [
+          218,
+          8510
+        ],
+        "composite": "INT_150_Fire_Rated_Stair_Wall"
+      },
+      {
+        "label": "356891 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          218,
+          5310
+        ],
+        "end": [
+          7718,
+          5310
+        ],
+        "composite": "INT_150_Fire_Rated_Stair_Wall"
+      },
+      {
+        "label": "356958 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          7718,
+          12510
+        ],
+        "end": [
+          7718,
+          3510
+        ],
+        "composite": "INT_125_Moisture_Acoustic"
+      },
+      {
+        "label": "357094 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          7718,
+          7710
+        ],
+        "end": [
+          11218,
+          7710
+        ],
+        "composite": "INT_125_Moisture_Acoustic"
+      },
+      {
+        "label": "357751 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          4218,
+          5310
+        ],
+        "end": [
+          4218,
+          3510
+        ],
+        "composite": "INT_125_Moisture_Acoustic"
+      }
+    ],
+    "wall_tolerance_mm": 10,
+    "exact_counts": {
+      "walls": 12,
+      "rooms": 6,
+      "slabs": 1,
+      "doors": 0,
+      "windows": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/E_model_checking9/env"
+      }
+    ]
+  }
+}

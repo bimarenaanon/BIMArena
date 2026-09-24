@@ -1,0 +1,180 @@
+{
+  "id": "C_model_editing10",
+  "legacy_id": "F_design_change5",
+  "category": "Model Revision",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "G05",
+  "required_capabilities": "Create Stories (×1); Move Element (×1); Replace Element Type (×5); Inspect Project (×1)",
+  "instruction": "The two-storey project has already been built. Change the storey heights: the ground floor becomes 2750 mm and the first floor becomes 3500 mm. Accordingly, raise the first-floor slab to 300 mm ABOVE the new first-storey level, and raise every first-floor window's sill height by 300 mm relative to its storey (sill height 1000 mm -> 1300 mm). Ground-floor elements keep their storey-relative positions; do not move, add, or delete anything else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stories": [
+      {
+        "elevation_mm": 0
+      },
+      {
+        "elevation_mm": 2750
+      },
+      {
+        "elevation_mm": 6250
+      }
+    ],
+    "stories_exact": true,
+    "story_elev_tolerance_mm": 0,
+    "slabs": [
+      {
+        "label": "first-floor slab (300 above the new storey)",
+        "existing": true,
+        "floor": 1,
+        "level_mm": 3050,
+        "match": "any"
+      },
+      {
+        "label": "ground slab (unchanged)",
+        "existing": true,
+        "floor": 0,
+        "level_mm": 0
+      }
+    ],
+    "tolerance_mm": 0,
+    "windows": [
+      {
+        "label": "floor-1 window at [0, 7252]",
+        "floor": 1,
+        "near": [
+          0,
+          7252
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1300
+      },
+      {
+        "label": "floor-1 window at [6927, 0]",
+        "floor": 1,
+        "near": [
+          6927,
+          0
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1300
+      },
+      {
+        "label": "floor-1 window at [8700, 7623]",
+        "floor": 1,
+        "near": [
+          8700,
+          7623
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1300
+      },
+      {
+        "label": "floor-1 window at [9340, 11500]",
+        "floor": 1,
+        "near": [
+          9340,
+          11500
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1300
+      },
+      {
+        "label": "floor-1 window at [10250, 5500]",
+        "floor": 1,
+        "near": [
+          10250,
+          5500
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1300
+      },
+      {
+        "label": "floor-0 window at [0, 7252] (unchanged)",
+        "floor": 0,
+        "near": [
+          0,
+          7252
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      },
+      {
+        "label": "floor-0 window at [6927, 0] (unchanged)",
+        "floor": 0,
+        "near": [
+          6927,
+          0
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      },
+      {
+        "label": "floor-0 window at [8700, 7623] (unchanged)",
+        "floor": 0,
+        "near": [
+          8700,
+          7623
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      },
+      {
+        "label": "floor-0 window at [9340, 11500] (unchanged)",
+        "floor": 0,
+        "near": [
+          9340,
+          11500
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      },
+      {
+        "label": "floor-0 window at [10250, 5500] (unchanged)",
+        "floor": 0,
+        "near": [
+          10250,
+          5500
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      }
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "exact_counts": {
+      "walls": 30,
+      "doors": 5,
+      "windows": 10,
+      "slabs": 2,
+      "stairs": 1,
+      "rooms": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/C_model_editing10/env"
+      }
+    ]
+  }
+}

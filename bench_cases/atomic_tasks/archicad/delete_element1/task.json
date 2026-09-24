@@ -1,0 +1,31 @@
+{
+  "id": "delete_element1",
+  "atom": "delete_element",
+  "category": "Deletion",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Delete Element (×1)",
+  "instruction": "Delete every door in the model, leaving everything else exactly as it is.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "doors": 0,
+      "windows": 3,
+      "walls": 4
+    },
+    "preserve": [
+      "walls",
+      "windows"
+    ]
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/delete_element1/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "B_element_creation19",
+  "legacy_id": "D_slabs_stairs_rooms8",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Room/Zone (×5); Inspect Project (×1)",
+  "instruction": "Five rooms are already enclosed by existing walls on the active storey. Create one room in each enclosed area, named by its position:\n- Top-left = Living Room\n- Bottom-left = Bedroom 1\n- Bottom-right = Kitchen\n- Top-right = Bedroom 2\n- Center = Hallway\nPlace each room's placement point inside the matching enclosed area so the room fills that space; do not move or create any walls.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name": "Bedroom 1",
+        "inside": [
+          2773,
+          4444
+        ],
+        "area_m2": 37.2
+      },
+      {
+        "name": "Kitchen",
+        "inside": [
+          9502,
+          2651
+        ],
+        "area_m2": 16.3
+      },
+      {
+        "name": "Bedroom 2",
+        "inside": [
+          11269,
+          12301
+        ],
+        "area_m2": 20.9
+      },
+      {
+        "name": "Living Room",
+        "inside": [
+          2802,
+          11601
+        ],
+        "area_m2": 19.7
+      },
+      {
+        "name": "Hallway",
+        "inside": [
+          7085,
+          7776
+        ],
+        "area_m2": 52.4
+      }
+    ],
+    "exact_counts": {
+      "rooms": 5,
+      "walls": 12,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls"
+    ],
+    "room_area_ratio": 0.05,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/B_element_creation19/env"
+      }
+    ]
+  }
+}

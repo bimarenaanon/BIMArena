@@ -1,0 +1,97 @@
+{
+  "id": "C_model_editing4",
+  "legacy_id": "C_openings9",
+  "category": "Model Revision",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Door/Window Type (×3); Replace Element Type (×6); Inspect Project (×1); Query Library (×1)",
+  "instruction": "The floorplan layout and all room labels are already created in the project. All windows currently have the same size and type. Modify the windows as follows:\n- Replace the bedroom window with a casement double window, 1400 × 1800 mm, sill height 900 mm.\n- Replace the kitchen window with a four-panel sliding window, 1650 × 600 mm, sill height 1250 mm.\n- Replace the living room window with a double-hung window, 900 × 1200 mm, sill height 1000 mm.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "doors",
+      "rooms",
+      "slabs",
+      {
+        "bucket": "windows",
+        "except_near": [
+          [
+            215,
+            12303
+          ],
+          [
+            11715,
+            16512
+          ],
+          [
+            215,
+            3184
+          ]
+        ]
+      }
+    ],
+    "exact_counts": {
+      "windows": 4,
+      "walls": 18,
+      "doors": 6,
+      "slabs": 1,
+      "rooms": 4,
+      "stairs": 0,
+      "objects": 0
+    },
+    "opening_pos_tolerance_mm": 10,
+    "windows": [
+      {
+        "near": [
+          215,
+          12303
+        ],
+        "width_mm": 1400,
+        "height_mm": 1800,
+        "sill_mm": 900,
+        "type_contains": [
+          "Casement-Double"
+        ],
+        "label": "bedroom -> casement double 1400x1800"
+      },
+      {
+        "near": [
+          11715,
+          16512
+        ],
+        "width_mm": 1650,
+        "height_mm": 600,
+        "sill_mm": 1250,
+        "type_contains": [
+          "Sliding-Four"
+        ],
+        "label": "kitchen -> sliding four 1650x600"
+      },
+      {
+        "near": [
+          215,
+          3184
+        ],
+        "width_mm": 900,
+        "height_mm": 1200,
+        "sill_mm": 1000,
+        "type_contains": [
+          "Double-Hung"
+        ],
+        "label": "living room -> double hung 900x1200"
+      }
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/C_model_editing4/env"
+      }
+    ]
+  }
+}

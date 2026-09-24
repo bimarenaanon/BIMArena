@@ -1,0 +1,191 @@
+{
+  "id": "B_element_creation7",
+  "legacy_id": "B_walls7",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "v2_template": "B06",
+  "required_capabilities": "Create Wall (×13); Inspect Project (×1)",
+  "instruction": "Boundaries are already drawn in the project. Based on them, create the exterior and interior walls so that the layout is properly enclosed and connected. Use only the existing exterior wall type 'Exterior - Block on Mtl. Stud' and only the existing interior wall type 'Interior - 138mm Partition (1-hr)' and with the height 3500mm. Do not create or modify wall types; ensure exterior walls form the building envelope - each with its exterior face pointing outward and ALIGNED ON the boundary shown (do not offset the envelope outward by the wall thickness) - and interior walls centred on their boundary lines, correctly separating the rooms.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          293,
+          14287
+        ],
+        "end": [
+          6733,
+          14287
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          6963,
+          14057
+        ],
+        "end": [
+          6963,
+          6057
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          6733,
+          6287
+        ],
+        "end": [
+          10833,
+          6287
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          11063,
+          6057
+        ],
+        "end": [
+          11063,
+          3017
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          10833,
+          2787
+        ],
+        "end": [
+          3693,
+          2787
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          3463,
+          3017
+        ],
+        "end": [
+          3463,
+          4517
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          3693,
+          4287
+        ],
+        "end": [
+          -1107,
+          4287
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          -1337,
+          4517
+        ],
+        "end": [
+          -1337,
+          10057
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          -1107,
+          10287
+        ],
+        "end": [
+          293,
+          10287
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          63,
+          10057
+        ],
+        "end": [
+          63,
+          14057
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          3532,
+          14057
+        ],
+        "end": [
+          3532,
+          4517
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)"
+      },
+      {
+        "beg": [
+          293,
+          10356
+        ],
+        "end": [
+          6733,
+          10356
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)"
+      },
+      {
+        "beg": [
+          3463,
+          6356
+        ],
+        "end": [
+          6733,
+          6356
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)"
+      }
+    ],
+    "no_extra_walls": true,
+    "preserve": [],
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 100,
+    "wall_height_mm": 3500
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/B_element_creation7/env"
+      }
+    ]
+  }
+}

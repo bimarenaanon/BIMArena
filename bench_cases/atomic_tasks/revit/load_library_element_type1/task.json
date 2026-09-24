@@ -1,0 +1,35 @@
+{
+  "id": "load_library_element_type1",
+  "legacy_id": "load_family_type_door1",
+  "atom": "load_family_type_door",
+  "category": "Config. & Types",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Load Library Element Type (×1)",
+  "instruction": "Load the 'M_Door-Double-Sliding' door family from the installed family library, then place one instance of it, 1700 x 2100 mm, in any wall to show it is available. Where it goes is your call. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "type_contains": [
+          "m_door-double-sliding"
+        ],
+        "width_mm": 1700,
+        "height_mm": 2100
+      }
+    ],
+    "exact_counts": {
+      "doors": 2
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/load_library_element_type1/env"
+      }
+    ]
+  }
+}

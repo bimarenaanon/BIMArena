@@ -1,0 +1,527 @@
+{
+  "id": "F_end_to_end3",
+  "legacy_id": "I_long_sequence4",
+  "category": "End-to-End Modeling",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Door/Window Type (×3); Create Wall (×18); Create Slab (×1); Create Door (×7); Create Window (×11); Replace Element Type (×11); Inspect Project (×1); Query Types (×1)",
+  "instruction": "Create the complete single-storey building: all walls, doors, windows, and the floor slab. Do not create wall types — use existing ones. Ignore furniture.\nExterior walls using an EXISTING exterior type whose name contains 'Render' (e.g. 'Exterior - Render on Brick on Block'):\n- (0, 1100) → (0, 8260)\n- (0, 8260) → (6150, 8260)\n- (0, 1100) → (2650, 1100)\n- (2650, 1100) → (2650, 0)\n- (2650, 0) → (6150, 0)\nExterior walls using an EXISTING brick or block exterior type WITHOUT render (e.g. 'Exterior - Brick on Mtl. Stud'):\n- (6150, 0) → (10550, 0)\n- (10550, 0) → (10550, 8260)\n- (6150, 8260) → (6150, 10260)\n- (6150, 10260) → (10350, 10260)\n- (10350, 10260) → (10350, 8260)\n- (10350, 8260) → (10550, 8260)\nInterior walls (any suitable existing interior wall type):\n- (6425, 7986) → (10075, 7986)\n- (0, 3800) → (6150, 3800)\n- (6150, 8260) → (6150, 7260)\n- (2924, 1374) → (2924, 3800)\n- (3274, 3800) → (3274, 6300)\n- (6150, 4800) → (6150, 0)\n- (10550, 2600) → (6150, 2600)\nDoors, 900 × 2100 mm unless noted, centred at: (7375, 7986); (10350, 9160); (8625, 2600) 700 mm wide; (6150, 1574) 800 mm wide; (4575, 3800); (1324, 3800); (1250, 1100).\nWindows, 900 × 1200 mm with 1000 mm sill unless noted, centred at: (10550, 6810); (10550, 5410) 900 × 1500; (4647, 0) 900 × 1500; (6900, 0) 500 × 1500; (6150, 9260); (7298, 10260); (8461, 10260); (9571, 10260); (0, 6510); (1868, 8260); (4389, 8260).\nFloor slab at level 0 with outline (0, 8260), (6150, 8260), (6150, 10260), (10350, 10260), (10350, 8260), (10550, 8260), (10550, 0), (2650, 0), (2650, 1100), (0, 1100).",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          0,
+          1100
+        ],
+        "end": [
+          0,
+          8260
+        ],
+        "composite": [
+          "Render"
+        ],
+        "label": "exterior west"
+      },
+      {
+        "beg": [
+          0,
+          8260
+        ],
+        "end": [
+          6150,
+          8260
+        ],
+        "composite": [
+          "Render"
+        ],
+        "label": "exterior north-west"
+      },
+      {
+        "beg": [
+          0,
+          1100
+        ],
+        "end": [
+          2650,
+          1100
+        ],
+        "composite": [
+          "Render"
+        ],
+        "label": "exterior south-west jog"
+      },
+      {
+        "beg": [
+          2650,
+          1100
+        ],
+        "end": [
+          2650,
+          0
+        ],
+        "composite": [
+          "Render"
+        ],
+        "label": "exterior south jog"
+      },
+      {
+        "beg": [
+          2650,
+          0
+        ],
+        "end": [
+          6150,
+          0
+        ],
+        "composite": [
+          "Render"
+        ],
+        "label": "exterior south-left"
+      },
+      {
+        "beg": [
+          6150,
+          0
+        ],
+        "end": [
+          10550,
+          0
+        ],
+        "composite": [
+          "Brick",
+          "Block"
+        ],
+        "label": "exterior south-right",
+        "composite_not": [
+          "Render",
+          "Interior"
+        ]
+      },
+      {
+        "beg": [
+          10550,
+          0
+        ],
+        "end": [
+          10550,
+          8260
+        ],
+        "composite": [
+          "Brick",
+          "Block"
+        ],
+        "label": "exterior east",
+        "composite_not": [
+          "Render",
+          "Interior"
+        ]
+      },
+      {
+        "beg": [
+          6150,
+          8260
+        ],
+        "end": [
+          6150,
+          10260
+        ],
+        "composite": [
+          "Brick",
+          "Block"
+        ],
+        "label": "exterior annex west",
+        "composite_not": [
+          "Render",
+          "Interior"
+        ]
+      },
+      {
+        "beg": [
+          6150,
+          10260
+        ],
+        "end": [
+          10350,
+          10260
+        ],
+        "composite": [
+          "Brick",
+          "Block"
+        ],
+        "label": "exterior annex north",
+        "composite_not": [
+          "Render",
+          "Interior"
+        ]
+      },
+      {
+        "beg": [
+          10350,
+          10260
+        ],
+        "end": [
+          10350,
+          8260
+        ],
+        "composite": [
+          "Brick",
+          "Block"
+        ],
+        "label": "exterior annex east",
+        "composite_not": [
+          "Render",
+          "Interior"
+        ]
+      },
+      {
+        "beg": [
+          10350,
+          8260
+        ],
+        "end": [
+          10550,
+          8260
+        ],
+        "composite": [
+          "Brick",
+          "Block"
+        ],
+        "label": "exterior annex jog",
+        "composite_not": [
+          "Render",
+          "Interior"
+        ]
+      },
+      {
+        "beg": [
+          6425,
+          7986
+        ],
+        "end": [
+          10075,
+          7985
+        ],
+        "label": "interior annex front"
+      },
+      {
+        "beg": [
+          0,
+          3800
+        ],
+        "end": [
+          6150,
+          3800
+        ],
+        "label": "interior main east-west"
+      },
+      {
+        "beg": [
+          6150,
+          8260
+        ],
+        "end": [
+          6150,
+          7260
+        ],
+        "label": "interior annex stub"
+      },
+      {
+        "beg": [
+          2924,
+          1374
+        ],
+        "end": [
+          2924,
+          3800
+        ],
+        "label": "interior bath west"
+      },
+      {
+        "beg": [
+          3274,
+          3800
+        ],
+        "end": [
+          3274,
+          6300
+        ],
+        "label": "interior bedroom divider"
+      },
+      {
+        "beg": [
+          6150,
+          4800
+        ],
+        "end": [
+          6150,
+          0
+        ],
+        "label": "interior corridor"
+      },
+      {
+        "beg": [
+          10550,
+          2600
+        ],
+        "end": [
+          6150,
+          2600
+        ],
+        "label": "interior south room"
+      }
+    ],
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "center": [
+          7375,
+          7986
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "door 1 (annex front)"
+      },
+      {
+        "center": [
+          10350,
+          9160
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "door 2 (annex east)"
+      },
+      {
+        "center": [
+          8625,
+          2600
+        ],
+        "width_mm": 700,
+        "height_mm": 2100,
+        "label": "door 3 (south room, 700 wide)"
+      },
+      {
+        "center": [
+          6150,
+          1574
+        ],
+        "width_mm": 800,
+        "height_mm": 2100,
+        "label": "door 4 (corridor, 800 wide)"
+      },
+      {
+        "center": [
+          4575,
+          3800
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "door 5 (main wall right)"
+      },
+      {
+        "center": [
+          1324,
+          3800
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "door 6 (main wall left)"
+      },
+      {
+        "center": [
+          1250,
+          1100
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "door 7 (south-west)"
+      }
+    ],
+    "opening_pos_tolerance_mm": 500,
+    "windows": [
+      {
+        "center": [
+          10550,
+          6810
+        ],
+        "width_mm": 900,
+        "height_mm": 1200,
+        "sill_mm": 1000,
+        "label": "window 1 (east upper)"
+      },
+      {
+        "center": [
+          10550,
+          5410
+        ],
+        "width_mm": 900,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "label": "window 2 (east lower, 1500 high)"
+      },
+      {
+        "center": [
+          4647,
+          0
+        ],
+        "width_mm": 900,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "label": "window 3 (south-left, 1500 high)"
+      },
+      {
+        "center": [
+          6900,
+          0
+        ],
+        "width_mm": 500,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "label": "window 4 (south narrow, 500 wide)"
+      },
+      {
+        "center": [
+          6150,
+          9260
+        ],
+        "width_mm": 900,
+        "height_mm": 1200,
+        "sill_mm": 1000,
+        "label": "window 5 (annex west)"
+      },
+      {
+        "center": [
+          7298,
+          10260
+        ],
+        "width_mm": 900,
+        "height_mm": 1200,
+        "sill_mm": 1000,
+        "label": "window 6 (annex north 1)"
+      },
+      {
+        "center": [
+          8461,
+          10260
+        ],
+        "width_mm": 900,
+        "height_mm": 1200,
+        "sill_mm": 1000,
+        "label": "window 7 (annex north 2)"
+      },
+      {
+        "center": [
+          9571,
+          10260
+        ],
+        "width_mm": 900,
+        "height_mm": 1200,
+        "sill_mm": 1000,
+        "label": "window 8 (annex north 3)"
+      },
+      {
+        "center": [
+          0,
+          6510
+        ],
+        "width_mm": 900,
+        "height_mm": 1200,
+        "sill_mm": 1000,
+        "label": "window 9 (west)"
+      },
+      {
+        "center": [
+          1868,
+          8260
+        ],
+        "width_mm": 900,
+        "height_mm": 1200,
+        "sill_mm": 1000,
+        "label": "window 10 (north-west 1)"
+      },
+      {
+        "center": [
+          4389,
+          8260
+        ],
+        "width_mm": 900,
+        "height_mm": 1200,
+        "sill_mm": 1000,
+        "label": "window 11 (north-west 2)"
+      }
+    ],
+    "slabs": [
+      {
+        "floor": 0,
+        "outline": [
+          [
+            0,
+            8260
+          ],
+          [
+            6150,
+            8260
+          ],
+          [
+            6150,
+            10260
+          ],
+          [
+            10350,
+            10260
+          ],
+          [
+            10350,
+            8260
+          ],
+          [
+            10550,
+            8260
+          ],
+          [
+            10550,
+            0
+          ],
+          [
+            2650,
+            0
+          ],
+          [
+            2650,
+            1100
+          ],
+          [
+            0,
+            1100
+          ],
+          [
+            0,
+            8260
+          ]
+        ],
+        "level_mm": 0
+      }
+    ],
+    "exact_counts": {
+      "doors": 7,
+      "windows": 11,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 100,
+    "size_tolerance_mm": 30
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/F_end_to_end3/env"
+      }
+    ]
+  }
+}

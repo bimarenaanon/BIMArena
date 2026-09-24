@@ -1,0 +1,37 @@
+{
+  "id": "move_element5",
+  "legacy_id": "move_window1",
+  "atom": "move_window",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Move Element (×1)",
+  "instruction": "Move the window on the north wall 2000 mm in -x along its wall, keeping its size, sill and type unchanged. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "near": [
+          2000,
+          10205
+        ],
+        "width_mm": 1200,
+        "height_mm": 1200,
+        "sill_mm": 900
+      }
+    ],
+    "exact_counts": {
+      "windows": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/move_element5/env"
+      }
+    ]
+  }
+}

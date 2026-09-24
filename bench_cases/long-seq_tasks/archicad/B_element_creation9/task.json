@@ -1,0 +1,101 @@
+{
+  "id": "B_element_creation9",
+  "legacy_id": "C_openings1",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "C01",
+  "required_capabilities": "Create Door (×4); Replace Element Type (×4); Inspect Project (×1)",
+  "instruction": "The room is a simple rectangle with four exterior walls already built. Do not create, move, or modify any walls. Place exactly four doors, each roughly centred on its host wall: one single-leaf 900 × 2100 mm door on the top wall and one on the bottom wall, both opening inward into the room; one double-leaf 1500 × 2100 mm door on the left wall and one on the right wall, both opening outward. Do not place any additional doors.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "host_side": "top",
+        "center": [
+          8542,
+          9645
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "top single door",
+        "open_into": [
+          8542,
+          8645
+        ]
+      },
+      {
+        "host_side": "bottom",
+        "center": [
+          8542,
+          -355
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "bottom single door",
+        "open_into": [
+          8542,
+          645
+        ]
+      },
+      {
+        "host_side": "left",
+        "center": [
+          542,
+          4645
+        ],
+        "width_mm": 1500,
+        "height_mm": 2100,
+        "type_contains": [
+          "double"
+        ],
+        "label": "left double door",
+        "open_into": [
+          -458,
+          4645
+        ]
+      },
+      {
+        "host_side": "right",
+        "center": [
+          16542,
+          4645
+        ],
+        "width_mm": 1500,
+        "height_mm": 2100,
+        "type_contains": [
+          "double"
+        ],
+        "label": "right double door",
+        "open_into": [
+          17542,
+          4645
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 4,
+      "windows": 0,
+      "walls": 4,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls"
+    ],
+    "opening_pos_tolerance_mm": 300,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/B_element_creation9/env"
+      }
+    ]
+  }
+}

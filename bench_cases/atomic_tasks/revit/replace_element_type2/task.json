@@ -1,0 +1,41 @@
+{
+  "id": "replace_element_type2",
+  "legacy_id": "modify_wall1",
+  "atom": "modify_wall",
+  "category": "Editing",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Change the interior partition wall's unconnected height to 3600 mm, leaving its position and type unchanged. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          5500,
+          0
+        ],
+        "end": [
+          5500,
+          10000
+        ],
+        "composite": "Interior - Blockwork 100",
+        "height_mm": 3600
+      }
+    ],
+    "exact_counts": {
+      "walls": 6
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/replace_element_type2/env"
+      }
+    ]
+  }
+}

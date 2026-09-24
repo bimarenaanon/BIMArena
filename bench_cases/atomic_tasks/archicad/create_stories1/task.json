@@ -1,0 +1,47 @@
+{
+  "id": "create_stories1",
+  "legacy_id": "set_stories1",
+  "atom": "set_stories",
+  "category": "Config. & Types",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Stories (×1)",
+  "instruction": "Redefine the project's storey stack to exactly three storeys: 'Ground Floor level' at elevation 0 mm, 'First Floor level' at 3200 mm, and 'Top Floor level' at 6400 mm. Do not create any elements.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stories": [
+      {
+        "name": "Ground Floor level",
+        "elevation_mm": 0
+      },
+      {
+        "name": "First Floor level",
+        "elevation_mm": 3200
+      },
+      {
+        "name": "Top Floor level",
+        "elevation_mm": 6400
+      }
+    ],
+    "stories_exact": true,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_stories1/env"
+      }
+    ]
+  }
+}

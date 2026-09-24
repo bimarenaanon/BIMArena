@@ -1,0 +1,40 @@
+{
+  "id": "C_model_editing9",
+  "legacy_id": "F_design_change4",
+  "category": "Model Revision",
+  "authoring_tool": "Revit",
+  "v2_template": "G04",
+  "required_capabilities": "Delete Element (×7); Inspect Project (×1)",
+  "instruction": "The project's layout has already been built. The attached drawing shows the required design changes as annotations. Read the drawing and apply exactly those changes to the model. Everything unmarked must remain untouched.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "exact_counts": {
+      "windows": 0,
+      "walls": 18,
+      "doors": 5,
+      "slabs": 1,
+      "rooms": 6,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/C_model_editing9/env"
+      }
+    ]
+  }
+}

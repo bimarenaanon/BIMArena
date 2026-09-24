@@ -1,0 +1,769 @@
+{
+  "id": "F_end_to_end6",
+  "legacy_id": "I_long_sequence7",
+  "category": "End-to-End Modeling",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Stories (×1); Switch Active Story (×2); Create Wall (×32); Create Slab (×3); Create Slab Opening (×2); Create Door (×14); Create Window (×11); Create Stair (×2); Inspect Project (×1)",
+  "instruction": "Create the complete three-storey BIM model. Set up exactly three levels at elevations 0, 3000 and 6000 mm. Use any suitable existing types; create no wall types. Ignore the roof and all furniture. Create the stair as one straight flight per storey (two stair elements).\nGROUND floor (level 0) — exterior walls: (0, 0) → (6143, 0); (6143, 0) → (6143, 9060); (6143, 9060) → (4143, 9060); (4143, 9060) → (4143, 10838); (4143, 10838) → (0, 10838); (0, 10838) → (0, 0). Interior walls: (3893, 8810) → (3893, 6110); (3893, 6110) → (0, 6110); (0, 3875) → (4585, 3875); (4585, 3875) → (4585, 0); (2250, 3875) → (2250, 6110).\nSECOND level (3000) — exterior walls: (0, 0) → (6143, 0); (6143, 0) → (6143, 9060); (6143, 9060) → (0, 9060); (0, 9060) → (0, 0). Interior walls: (0, 4075) → (6143, 4075); (0, 5558) → (3768, 5558); (1450, 4075) → (1450, 5558); (4018, 9060) → (4018, 7010); (4018, 7010) → (3768, 7010); (3768, 7010) → (3768, 4075).\nTHIRD level (6000) — exterior walls: the same closed loop as the second level. Interior walls: (0, 4075) → (3885, 4075); (0, 6010) → (3885, 6010); (2885, 6010) → (2885, 4075); (3885, 6010) → (3893, 9060); (6143, 4283) → (3883, 4283); (3883, 4283) → (3883, 0); (6143, 2083) → (3883, 2083).\nDoors, 900 × 2100 mm unless noted — level 0: (3262, 6110); (2250, 5235); (4585, 3050); (5292, 0); (1751, 10838) 1500 mm wide. Level 3000: (4943, 4075); (3768, 6311); (3768, 4911); (915, 5558). Level 6000: (3403, 6010); (2885, 5256); (3382, 4075); (4556, 4283); (3883, 924).\nWindows, 900 × 1500 mm with 1000 mm sill unless noted — level 0: (4943, 9060); (2250, 0) 1500 × 1500; (6143, 3515). Level 3000: (4968, 9060); (4842, 0); (1950, 0) 1500 × 1500; (1950, 9060) 1500 × 1500. Level 6000: (2350, 9060) 1500 × 1500; (2350, 0) 1500 × 1500; (4890, 9060); (4804, 0).\nSlabs: level 0 with outline (0, 10838), (4143, 10838), (4143, 9060), (6143, 9060), (6143, 0), (0, 0); level 3000 with the same outline and a stairwell opening over x = 4993..5418, y = 5160..8810; level 6000 with outline (0, 9060), (6143, 9060), (6143, 0), (0, 0) and the same stairwell opening.\nStairs: one from level 0 to 3000 and one from 3000 to 6000, each placed inside the region x = 4143..6143, y = 3875..9700.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stories": [
+      {
+        "elevation_mm": 0
+      },
+      {
+        "elevation_mm": 3000
+      },
+      {
+        "elevation_mm": 6000
+      }
+    ],
+    "stories_exact": true,
+    "walls": [
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          6143,
+          0
+        ],
+        "floor": 0
+      },
+      {
+        "beg": [
+          6143,
+          0
+        ],
+        "end": [
+          6143,
+          9060
+        ],
+        "floor": 0
+      },
+      {
+        "beg": [
+          6143,
+          9060
+        ],
+        "end": [
+          4143,
+          9060
+        ],
+        "floor": 0
+      },
+      {
+        "beg": [
+          4143,
+          9060
+        ],
+        "end": [
+          4143,
+          10838
+        ],
+        "floor": 0
+      },
+      {
+        "beg": [
+          4143,
+          10838
+        ],
+        "end": [
+          1,
+          10838
+        ],
+        "floor": 0
+      },
+      {
+        "beg": [
+          1,
+          10838
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "floor": 0
+      },
+      {
+        "beg": [
+          3893,
+          8810
+        ],
+        "end": [
+          3893,
+          6110
+        ],
+        "floor": 0
+      },
+      {
+        "beg": [
+          3893,
+          6110
+        ],
+        "end": [
+          1,
+          6110
+        ],
+        "floor": 0
+      },
+      {
+        "beg": [
+          0,
+          3875
+        ],
+        "end": [
+          4585,
+          3875
+        ],
+        "floor": 0
+      },
+      {
+        "beg": [
+          4585,
+          3875
+        ],
+        "end": [
+          4585,
+          0
+        ],
+        "floor": 0
+      },
+      {
+        "beg": [
+          2250,
+          3875
+        ],
+        "end": [
+          2251,
+          6110
+        ],
+        "floor": 0
+      },
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          6143,
+          0
+        ],
+        "floor": 1
+      },
+      {
+        "beg": [
+          6143,
+          0
+        ],
+        "end": [
+          6143,
+          9060
+        ],
+        "floor": 1
+      },
+      {
+        "beg": [
+          6143,
+          9060
+        ],
+        "end": [
+          0,
+          9060
+        ],
+        "floor": 1
+      },
+      {
+        "beg": [
+          0,
+          9060
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "floor": 1
+      },
+      {
+        "beg": [
+          0,
+          4075
+        ],
+        "end": [
+          6143,
+          4075
+        ],
+        "floor": 1
+      },
+      {
+        "beg": [
+          0,
+          5558
+        ],
+        "end": [
+          3768,
+          5558
+        ],
+        "floor": 1
+      },
+      {
+        "beg": [
+          1450,
+          4075
+        ],
+        "end": [
+          1450,
+          5558
+        ],
+        "floor": 1
+      },
+      {
+        "beg": [
+          4018,
+          9060
+        ],
+        "end": [
+          4018,
+          7010
+        ],
+        "floor": 1
+      },
+      {
+        "beg": [
+          4018,
+          7010
+        ],
+        "end": [
+          3768,
+          7010
+        ],
+        "floor": 1
+      },
+      {
+        "beg": [
+          3768,
+          7010
+        ],
+        "end": [
+          3768,
+          4075
+        ],
+        "floor": 1
+      },
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          6143,
+          0
+        ],
+        "floor": 2
+      },
+      {
+        "beg": [
+          6143,
+          0
+        ],
+        "end": [
+          6143,
+          9060
+        ],
+        "floor": 2
+      },
+      {
+        "beg": [
+          6143,
+          9060
+        ],
+        "end": [
+          0,
+          9060
+        ],
+        "floor": 2
+      },
+      {
+        "beg": [
+          0,
+          9060
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "floor": 2
+      },
+      {
+        "beg": [
+          0,
+          4075
+        ],
+        "end": [
+          3885,
+          4075
+        ],
+        "floor": 2
+      },
+      {
+        "beg": [
+          0,
+          6010
+        ],
+        "end": [
+          3885,
+          6010
+        ],
+        "floor": 2
+      },
+      {
+        "beg": [
+          2885,
+          6010
+        ],
+        "end": [
+          2885,
+          4075
+        ],
+        "floor": 2
+      },
+      {
+        "beg": [
+          3885,
+          6010
+        ],
+        "end": [
+          3894,
+          9060
+        ],
+        "floor": 2
+      },
+      {
+        "beg": [
+          6143,
+          4283
+        ],
+        "end": [
+          3883,
+          4283
+        ],
+        "floor": 2
+      },
+      {
+        "beg": [
+          3883,
+          4283
+        ],
+        "end": [
+          3883,
+          0
+        ],
+        "floor": 2
+      },
+      {
+        "beg": [
+          6143,
+          2083
+        ],
+        "end": [
+          3883,
+          2083
+        ],
+        "floor": 2
+      }
+    ],
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "center": [
+          3262,
+          6110
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 0
+      },
+      {
+        "center": [
+          2250,
+          5235
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 0
+      },
+      {
+        "center": [
+          4585,
+          3050
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 0
+      },
+      {
+        "center": [
+          5292,
+          0
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 0
+      },
+      {
+        "center": [
+          1751,
+          10838
+        ],
+        "width_mm": 1500,
+        "height_mm": 2100,
+        "floor": 0
+      },
+      {
+        "center": [
+          4943,
+          4075
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 1
+      },
+      {
+        "center": [
+          3768,
+          6311
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 1
+      },
+      {
+        "center": [
+          3768,
+          4911
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 1
+      },
+      {
+        "center": [
+          915,
+          5558
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 1
+      },
+      {
+        "center": [
+          3403,
+          6010
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 2
+      },
+      {
+        "center": [
+          2885,
+          5256
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 2
+      },
+      {
+        "center": [
+          3382,
+          4075
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 2
+      },
+      {
+        "center": [
+          4556,
+          4283
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 2
+      },
+      {
+        "center": [
+          3883,
+          924
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 2
+      }
+    ],
+    "windows": [
+      {
+        "center": [
+          4943,
+          9060
+        ],
+        "width_mm": 900,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "floor": 0
+      },
+      {
+        "center": [
+          2250,
+          0
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "floor": 0
+      },
+      {
+        "center": [
+          6143,
+          3515
+        ],
+        "width_mm": 900,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "floor": 0
+      },
+      {
+        "center": [
+          4968,
+          9060
+        ],
+        "width_mm": 900,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "floor": 1
+      },
+      {
+        "center": [
+          4842,
+          0
+        ],
+        "width_mm": 900,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "floor": 1
+      },
+      {
+        "center": [
+          1950,
+          0
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "floor": 1
+      },
+      {
+        "center": [
+          1950,
+          9060
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "floor": 1
+      },
+      {
+        "center": [
+          2350,
+          9060
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "floor": 2
+      },
+      {
+        "center": [
+          2350,
+          0
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "floor": 2
+      },
+      {
+        "center": [
+          4890,
+          9060
+        ],
+        "width_mm": 900,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "floor": 2
+      },
+      {
+        "center": [
+          4804,
+          0
+        ],
+        "width_mm": 900,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "floor": 2
+      }
+    ],
+    "slabs": [
+      {
+        "floor": 0,
+        "level_mm": 0,
+        "outline": [
+          [
+            1,
+            10838
+          ],
+          [
+            4143,
+            10838
+          ],
+          [
+            4143,
+            9060
+          ],
+          [
+            6143,
+            9060
+          ],
+          [
+            6143,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            10838
+          ]
+        ]
+      },
+      {
+        "floor": 1,
+        "level_mm": 3000,
+        "outline": [
+          [
+            1,
+            10838
+          ],
+          [
+            4143,
+            10838
+          ],
+          [
+            4143,
+            9060
+          ],
+          [
+            6143,
+            9060
+          ],
+          [
+            6143,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            10838
+          ]
+        ],
+        "exclude_region": [
+          4993,
+          5160,
+          5418,
+          8810
+        ]
+      },
+      {
+        "floor": 2,
+        "level_mm": 6000,
+        "outline": [
+          [
+            0,
+            9060
+          ],
+          [
+            6143,
+            9060
+          ],
+          [
+            6143,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            9060
+          ]
+        ],
+        "exclude_region": [
+          4993,
+          5160,
+          5418,
+          8810
+        ]
+      }
+    ],
+    "stairs": [
+      {
+        "floor": 0,
+        "region": [
+          4143,
+          3875,
+          6143,
+          9700
+        ]
+      },
+      {
+        "floor": 1,
+        "region": [
+          4143,
+          3875,
+          6143,
+          9700
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 14,
+      "windows": 11,
+      "slabs": 3,
+      "stairs": 2,
+      "rooms": 0,
+      "objects": 0
+    },
+    "opening_pos_tolerance_mm": 300,
+    "wall_tolerance_mm": 250,
+    "composites": [],
+    "no_extra_composites": true,
+    "size_tolerance_mm": 30
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/F_end_to_end6/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "query_materials1",
+  "legacy_id": "list_materials1",
+  "atom": "list_materials",
+  "category": "Query & Selection",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Query Materials (×1)",
+  "instruction": "Look up the building materials available in this project and REPORT five of their exact names, including at least one CONCRETE and one INSULATION material. Answer in the form \"<label>: <value>\", one line each, using the label material.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    },
+    "no_extra_composites": true,
+    "answer_items": [
+      {
+        "label": "material",
+        "min": 5,
+        "must_match": [
+          [
+            "concrete"
+          ],
+          [
+            "insulation"
+          ]
+        ],
+        "contains": [
+          "Air Space",
+          "Air Space - Frame",
+          "Aluminium",
+          "Brick",
+          "Brick - Finish",
+          "Brick - Structural",
+          "Concrete",
+          "Concrete - Structural",
+          "Concrete Block - Filler",
+          "Concrete Block - Structural",
+          "Fiberboard",
+          "Fire Proofing",
+          "GENERIC - ENVIRONMENT",
+          "GENERIC - EXTERNAL CLADDING",
+          "GENERIC - EXTERNAL FILLER",
+          "GENERIC - EXTERNAL MEMBRANE",
+          "GENERIC - INSULATION",
+          "GENERIC - INTERNAL CLADDING",
+          "GENERIC - INTERNAL FILLER",
+          "GENERIC - PREFABRICATED",
+          "GENERIC - STRUCTURAL",
+          "Glass",
+          "Gravel",
+          "Gypsum Plasterboard",
+          "Gypsum Plasterboard - Waterproof",
+          "Insulation - Fiber Hard",
+          "Insulation - Fiber Soft",
+          "Insulation - Mineral Hard",
+          "Insulation - Mineral Soft",
+          "Insulation - Plastic Hard",
+          "Insulation - Plastic Soft",
+          "Insulation - Thermal Break",
+          "Iron",
+          "Masonry Block - Filler",
+          "Masonry Block - Structural",
+          "Membrane - Rainproof",
+          "Membrane - Vapor Barrier",
+          "Membrane - Waterproof",
+          "Plaster - Gypsum",
+          "Plaster - Lime Sand",
+          "Plastic - Solid",
+          "Plywood",
+          "Reinforced Concrete - Prefab",
+          "Reinforced Concrete - Structural",
+          "Sand",
+          "Soil",
+          "Steel",
+          "Steel - Stainless",
+          "Steel - Structural",
+          "Stone - Finish",
+          "Stone - Structural",
+          "Tile - Floor",
+          "Tile - Roof",
+          "Tile - Wall",
+          "Timber - Floor",
+          "Timber - Roof",
+          "Timber - Structural",
+          "Titanium Zinc",
+          "Water"
+        ],
+        "exact": true
+      }
+    ]
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/query_materials1/env"
+      }
+    ]
+  }
+}

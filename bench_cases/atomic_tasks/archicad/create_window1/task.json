@@ -1,0 +1,40 @@
+{
+  "id": "create_window1",
+  "legacy_id": "place_window1",
+  "atom": "place_window",
+  "category": "Creation",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Window (×1)",
+  "instruction": "Place one 1200 x 1200 mm window with a 900 mm sill in the EAST exterior wall, positioned so that exactly 2000 mm of wall remains between the window opening's south edge and the building's bottom-right corner, measured along the wall, glazing facing outward (+x). Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "center": [
+          11129,
+          2600
+        ],
+        "width_mm": 1200,
+        "height_mm": 1200,
+        "sill_mm": 900,
+        "swing": "out",
+        "label": "east window, south edge 2000 from the bottom-right corner"
+      }
+    ],
+    "exact_counts": {
+      "windows": 2,
+      "doors": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_window1/env"
+      }
+    ]
+  }
+}

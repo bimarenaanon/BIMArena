@@ -1,0 +1,123 @@
+{
+  "id": "D_model_completion1",
+  "legacy_id": "B_walls6",
+  "category": "Model Completion",
+  "authoring_tool": "Revit",
+  "v2_template": "B04",
+  "required_capabilities": "Create Wall (×7); Inspect Project (×1)",
+  "instruction": "Most walls already exist in the project. Create ONLY the following missing wall segments; do not create or modify anything else and do not create wall types.\nExterior segments, existing type 'CW 102-85-140p':\n- (-2188, 11366) → (-2188, 5505)\n- (-2019, 5336) → (2481, 5336)\n- (2312, 5505) → (2312, 2666)\nInterior segments, existing type 'Interior - 138mm Partition (1-hr)':\n- (7481, 7196) → (7481, 4196)\n- (7412, 4265) → (10812, 4265)\n- (4881, 11366) → (4881, 9696)\n- (8511, 11366) → (8511, 10196)",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          -2188,
+          11366
+        ],
+        "end": [
+          -2188,
+          5505
+        ],
+        "composite": "CW 102-85-140p",
+        "label": "missing exterior segment"
+      },
+      {
+        "beg": [
+          -2019,
+          5336
+        ],
+        "end": [
+          2481,
+          5336
+        ],
+        "composite": "CW 102-85-140p",
+        "label": "missing exterior segment"
+      },
+      {
+        "beg": [
+          2312,
+          5505
+        ],
+        "end": [
+          2312,
+          2666
+        ],
+        "composite": "CW 102-85-140p",
+        "label": "missing exterior segment"
+      },
+      {
+        "beg": [
+          7481,
+          7196
+        ],
+        "end": [
+          7481,
+          4196
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "missing interior segment"
+      },
+      {
+        "beg": [
+          7412,
+          4265
+        ],
+        "end": [
+          10812,
+          4265
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "missing interior segment"
+      },
+      {
+        "beg": [
+          4881,
+          11366
+        ],
+        "end": [
+          4881,
+          9696
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "missing interior segment"
+      },
+      {
+        "beg": [
+          8511,
+          11366
+        ],
+        "end": [
+          8511,
+          10196
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "missing interior segment"
+      }
+    ],
+    "no_extra_walls": true,
+    "wall_tolerance_mm": 100,
+    "composites": [],
+    "no_extra_composites": true,
+    "preserve": [
+      "walls"
+    ],
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/D_model_completion1/env"
+      }
+    ]
+  }
+}

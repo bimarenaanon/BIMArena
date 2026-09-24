@@ -1,0 +1,53 @@
+{
+  "id": "create_slab1",
+  "atom": "create_slab",
+  "category": "Creation",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Slab (×1)",
+  "instruction": "Create one floor covering the building's full footprint — out to the OUTER faces of the four exterior walls — using the existing floor type 'Insitu Concrete 225mm'. Create no other elements.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "slabs": [
+      {
+        "floor": "active",
+        "level_mm": 0,
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            11000,
+            0
+          ],
+          [
+            11000,
+            10000
+          ],
+          [
+            0,
+            10000
+          ]
+        ],
+        "composite": "Insitu Concrete 225mm"
+      }
+    ],
+    "exact_counts": {
+      "slabs": 1,
+      "walls": 6,
+      "doors": 3,
+      "windows": 3
+    }
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/create_slab1/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "replace_element_type8",
+  "legacy_id": "replace_wall_composite1",
+  "atom": "replace_wall_composite",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Switch the interior partition wall to the existing composite 'Double 50 Block Cavity Plastered', keeping its geometry unchanged. Author no new composites and change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "existing": true,
+        "beg": [
+          5784,
+          0
+        ],
+        "end": [
+          5784,
+          10205
+        ],
+        "composite": "Double 50 Block Cavity Plastered"
+      }
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 5
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/replace_element_type8/env"
+      }
+    ]
+  }
+}

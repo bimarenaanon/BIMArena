@@ -1,0 +1,42 @@
+{
+  "id": "delete_element3",
+  "atom": "delete_element",
+  "category": "Deletion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Delete Element (×1)",
+  "instruction": "Delete every element in this model - the walls, the doors and the windows - leaving an empty project. Leave the levels as they are.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "stories": [
+      {
+        "name": "Level 1",
+        "elevation_mm": 0
+      },
+      {
+        "name": "Level 2",
+        "elevation_mm": 4000
+      }
+    ],
+    "stories_exact": true
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/delete_element3/env"
+      }
+    ]
+  }
+}

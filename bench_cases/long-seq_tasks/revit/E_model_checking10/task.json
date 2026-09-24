@@ -1,0 +1,77 @@
+{
+  "id": "E_model_checking10",
+  "legacy_id": "H_domain_reasoning2",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "I02",
+  "required_capabilities": "Create Wall Type (×1); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Create an external load-bearing wall type with exactly four layers, exterior to interior: (1) 10 mm external render, (2) 116 mm mineral-wool insulation, (3) 240 mm sand-lime masonry, (4) 10 mm internal plaster — total thickness 376 mm. Create the wall type only; place no walls.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "label": "insulated external load-bearing wall",
+        "total_thickness_mm": 376,
+        "layers_exact": true,
+        "skins": [
+          {
+            "material_contains": [
+              "Render",
+              "Stucco",
+              "Plaster"
+            ],
+            "thickness_mm": 10
+          },
+          {
+            "material_contains": [
+              "mineral wool",
+              "insulation",
+              "rock wool"
+            ],
+            "thickness_mm": 116
+          },
+          {
+            "material_contains": [
+              "Sand-Lime",
+              "Silicate",
+              "Masonry",
+              "Brick",
+              "Block",
+              "Lime"
+            ],
+            "thickness_mm": 240
+          },
+          {
+            "material_contains": [
+              "Plaster",
+              "Gypsum",
+              "Render"
+            ],
+            "thickness_mm": 10
+          }
+        ],
+        "thickness_tolerance_mm": 2
+      }
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/E_model_checking10/env"
+      }
+    ]
+  }
+}

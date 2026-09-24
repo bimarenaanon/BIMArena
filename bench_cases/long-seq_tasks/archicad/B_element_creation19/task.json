@@ -1,0 +1,87 @@
+{
+  "id": "B_element_creation19",
+  "legacy_id": "D_slabs_stairs_rooms8",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Room/Zone (×5); Inspect Project (×1)",
+  "instruction": "Five rooms exist on the active storey; four are fully enclosed, and the Living Room (top-left) and the Hallway (center) open into each other through a wall-less passage — split them on the line of the short wall stub at x = 5927. Create one zone in each enclosed area, named by its position:\n- Top-left = Living Room\n- Bottom-left = Bedroom 1 \n- Bottom-right = Kitchen\n- Top-right = Bedroom 2\n- Center = Hallway\nPlace each zone's placement point inside the matching enclosed area so the zone fills that room; do not move or create any walls.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name": "Living Room",
+        "inside": [
+          3648,
+          11868
+        ],
+        "outside": [
+          7728,
+          11368
+        ]
+      },
+      {
+        "name": "Bedroom 1",
+        "inside": [
+          4298,
+          7568
+        ],
+        "area_m2": 11.7
+      },
+      {
+        "name": "Bedroom 2",
+        "inside": [
+          11529,
+          11368
+        ],
+        "area_m2": 18.4
+      },
+      {
+        "name": "Kitchen",
+        "inside": [
+          9929,
+          7068
+        ],
+        "area_m2": 10.5
+      },
+      {
+        "name": "Hallway",
+        "inside": [
+          7728,
+          11368
+        ],
+        "outside": [
+          3648,
+          11868
+        ]
+      }
+    ],
+    "exact_counts": {
+      "rooms": 5,
+      "walls": 16,
+      "doors": 4,
+      "windows": 4,
+      "slabs": 1,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "room_area_ratio": 0.05
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/B_element_creation19/env"
+      }
+    ]
+  }
+}

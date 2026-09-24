@@ -1,0 +1,53 @@
+{
+  "id": "create_slab1",
+  "atom": "create_slab",
+  "category": "Creation",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Slab (×1)",
+  "instruction": "Create one floor slab on the Ground Floor covering the rectangle the four exterior walls enclose, using the existing composite 'Concrete Floor with 10mm Tile'. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "slabs": [
+      {
+        "floor": "active",
+        "level_mm": 0,
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            11129,
+            0
+          ],
+          [
+            11129,
+            10205
+          ],
+          [
+            0,
+            10205
+          ]
+        ],
+        "composite": "Concrete Floor with 10mm Tile"
+      }
+    ],
+    "exact_counts": {
+      "slabs": 1,
+      "walls": 4,
+      "doors": 3,
+      "windows": 3
+    }
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_slab1/env"
+      }
+    ]
+  }
+}

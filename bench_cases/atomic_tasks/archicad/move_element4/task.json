@@ -1,0 +1,40 @@
+{
+  "id": "move_element4",
+  "legacy_id": "move_wall1",
+  "atom": "move_wall",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Move Element (×1)",
+  "instruction": "Move the interior partition wall 1000 mm in +x, keeping its length and thickness unchanged. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          6784,
+          0
+        ],
+        "end": [
+          6784,
+          10205
+        ],
+        "width_mm": 100
+      }
+    ],
+    "exact_counts": {
+      "walls": 5
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/move_element4/env"
+      }
+    ]
+  }
+}

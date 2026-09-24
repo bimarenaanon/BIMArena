@@ -1,0 +1,33 @@
+{
+  "id": "load_library_element_type2",
+  "legacy_id": "load_library_window1",
+  "atom": "load_library_window",
+  "category": "Config. & Types",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Load Library Element Type (×1)",
+  "instruction": "Load a 'Triple Window' from the installed ArchiCAD library. Then place one window of that part in any wall, at default position and parameters, to show it is available. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "type_contains": [
+          "triple window"
+        ]
+      }
+    ],
+    "exact_counts": {
+      "windows": 2
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/load_library_element_type2/env"
+      }
+    ]
+  }
+}

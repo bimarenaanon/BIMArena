@@ -1,0 +1,130 @@
+{
+  "id": "C_model_editing1",
+  "legacy_id": "B_walls8",
+  "category": "Model Revision",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "B07",
+  "required_capabilities": "Replace Element Type (×7); Inspect Project (×1); Query Types (×1)",
+  "instruction": "The model contains four exterior walls and three interior walls, all using a generic wall type. Convert the exterior walls to the composite 'Double 50 Block Cavity Plastered', and convert the three interior walls to the composite 'Brick Double Plastered'. Preserve all wall centreline geometry and do not create new wall types.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "existing": true,
+        "beg": [
+          3235,
+          11021
+        ],
+        "end": [
+          13235,
+          11021
+        ],
+        "composite": "Double 50 Block Cavity Plastered",
+        "label": "exterior N"
+      },
+      {
+        "existing": true,
+        "beg": [
+          13235,
+          11021
+        ],
+        "end": [
+          13235,
+          -979
+        ],
+        "composite": "Double 50 Block Cavity Plastered",
+        "label": "exterior E"
+      },
+      {
+        "existing": true,
+        "beg": [
+          13235,
+          -979
+        ],
+        "end": [
+          3235,
+          -979
+        ],
+        "composite": "Double 50 Block Cavity Plastered",
+        "label": "exterior S"
+      },
+      {
+        "existing": true,
+        "beg": [
+          3235,
+          -979
+        ],
+        "end": [
+          3235,
+          11021
+        ],
+        "composite": "Double 50 Block Cavity Plastered",
+        "label": "exterior W"
+      },
+      {
+        "existing": true,
+        "beg": [
+          7835,
+          11021
+        ],
+        "end": [
+          7835,
+          7571
+        ],
+        "composite": "Brick Double Plastered",
+        "label": "interior 1"
+      },
+      {
+        "existing": true,
+        "beg": [
+          3235,
+          4771
+        ],
+        "end": [
+          10235,
+          4771
+        ],
+        "composite": "Brick Double Plastered",
+        "label": "interior 2"
+      },
+      {
+        "existing": true,
+        "beg": [
+          10235,
+          4771
+        ],
+        "end": [
+          10235,
+          -979
+        ],
+        "composite": "Brick Double Plastered",
+        "label": "interior 3"
+      }
+    ],
+    "preserve": [
+      "walls"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 300,
+    "exact_counts": {
+      "walls": 7,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/C_model_editing1/env"
+      }
+    ]
+  }
+}

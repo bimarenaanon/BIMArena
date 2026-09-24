@@ -1,0 +1,39 @@
+{
+  "id": "flip_element2",
+  "legacy_id": "flip_door_hinge1",
+  "atom": "flip_door_hinge",
+  "category": "Editing",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Flip Element (×1)",
+  "instruction": "Flip the hand of the door on the south wall so its hinge moves to the opposite jamb, keeping the same swing direction and position. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "swing": "in",
+        "near": [
+          4000,
+          0
+        ],
+        "hinge_near": [
+          3542,
+          0
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/flip_element2/env"
+      }
+    ]
+  }
+}

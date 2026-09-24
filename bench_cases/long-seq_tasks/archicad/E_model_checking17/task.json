@@ -1,0 +1,81 @@
+{
+  "id": "E_model_checking17",
+  "legacy_id": "H_domain_reasoning9",
+  "category": "Model Checking",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "I11",
+  "required_capabilities": "Replace Element Type (×3); Inspect Project (×1)",
+  "instruction": "Three windows must be ENLARGED in place, each keeping its position and its 900 mm sill height:\n- the window near (1750, 0): to at least 2.025 m2 of window area (e.g. 1500 × 1500 mm)\n- the window near (11639, 2470): to at least 1.6 m2 (e.g. 1350 × 1200 mm)\n- the window near (8898, 8030): to at least 1.016 m2 (e.g. 1200 × 900 mm)\nDo not modify the walls, the zones, or anything else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "label": "Bedroom 1 window (room 16.2 m² -> >= 2.025 m²)",
+        "near": [
+          1750,
+          0
+        ],
+        "min_area_m2": 2.025,
+        "sill_mm": 900
+      },
+      {
+        "label": "east room window (room 12.80 m² -> >= 1.600 m²)",
+        "near": [
+          11639,
+          2470
+        ],
+        "min_area_m2": 1.6,
+        "sill_mm": 900
+      },
+      {
+        "label": "north-middle room window (room 8.13 m² -> >= 1.016 m²)",
+        "near": [
+          8898,
+          8030
+        ],
+        "min_area_m2": 1.016,
+        "sill_mm": 900
+      }
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "rooms": [
+      {
+        "name": "Bedroom 1",
+        "existing": true,
+        "inside": [
+          1800,
+          2250
+        ],
+        "dims_mm": [
+          3600,
+          4500
+        ]
+      }
+    ],
+    "exact_counts": {
+      "walls": 14,
+      "doors": 0,
+      "windows": 3,
+      "rooms": 1,
+      "slabs": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "rooms"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/E_model_checking17/env"
+      }
+    ]
+  }
+}

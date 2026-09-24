@@ -1,0 +1,39 @@
+{
+  "id": "replace_element_type6",
+  "legacy_id": "replace_door_type1",
+  "atom": "replace_door_type",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Replace the door on the south wall with a DOUBLE door type already available in this project, at 2100 x 2100 mm, keeping its position unchanged. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "near": [
+          4000,
+          0
+        ],
+        "width_mm": 2100,
+        "height_mm": 2100,
+        "type_contains": [
+          "double"
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/replace_element_type6/env"
+      }
+    ]
+  }
+}

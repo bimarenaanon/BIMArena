@@ -1,0 +1,58 @@
+# ---- secrets / local config: never commit ----
+.env
+.env.*
+!.env.example
+
+# ---- Python ----
+bench_env/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ---- OS / editor ----
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# ---- run outputs: the agent's per-run records and the harness's result trees ----
+**/runs/
+bench_runner/results/
+bench_runner/vm/.xfer/
+bench_cases/atomic_tasks/.validate/
+
+# ---- caches regenerated on first use ----
+authoring_framework/providers/.cache/
+bench_runner/verifier/.cache/
+bench_runner/backend/archicad/.cache/
+
+# ---- copyrighted material that is never versioned ----
+# the vendors' official help corpora: build them with the two fetch scripts in
+# authoring_framework/knowledge/
+authoring_framework/knowledge/archicad29_help/
+authoring_framework/knowledge/revit2027_help/
+# the six input drawings that are figures of Neufert's Architects' Data, and the book itself:
+# task.json carries the page + bounding box; extract_figures.py cuts them from your own copy
+bench_cases/reasoning_tasks/*/A_setup_types2/drawing.png
+bench_cases/reasoning_tasks/*/A_setup_types7/drawing.png
+bench_cases/reasoning_tasks/*/B_element_creation3/drawing.png
+Neufert-4th-edition.pdf
+authoring_framework/knowledge/Neufert-4th-edition.pdf
+
+# ---- BIM project files ----
+# The application's lock / backup files, wherever they appear.
+*.pln.lck
+*.bpn
+bench_cases/**/*.0[0-9][0-9][0-9].rvt
+# The main tracks' 286 start projects (~2.9 GB) are RELEASE ASSETS: packed with
+# `bench_runner/dataset/projects.py pack`, restored with `projects.py unpack`.
+bench_cases/reasoning_tasks/*/*/env/start/*.pln
+bench_cases/reasoning_tasks/*/*/env/start/*.rvt
+bench_cases/long-seq_tasks/*/*/env/start/*.pln
+bench_cases/long-seq_tasks/*/*/env/start/*.rvt
+# The atomic cases' start projects are byte-copies of the eight versioned templates
+# (`<tool>/_env_*/start/`), re-created with `bench_cases/atomic_tasks/seed_envs.py`.
+bench_cases/atomic_tasks/*/*/env/**/*.pln
+bench_cases/atomic_tasks/*/*/env/**/*.rvt

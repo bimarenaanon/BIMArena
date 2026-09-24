@@ -1,0 +1,72 @@
+{
+  "id": "B_element_creation14",
+  "legacy_id": "D_slabs_stairs_rooms2",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Slab (×2); Create Slab Opening (×1); Inspect Project (×1)",
+  "instruction": "The walls and rooms of both the first and the second floor are already created, but there are no slabs yet. Create the floor slab for BOTH floors, each following its storey's exterior-wall footprint, with the slab boundary flush with the exterior walls' OUTER face. In the SECOND floor's slab, cut a stairwell opening the size of the Stairwell room; the first floor's slab gets no opening. Do not modify any walls or rooms.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "slabs": [
+      {
+        "label": "first-floor slab",
+        "floor": 0,
+        "outline": "footprint",
+        "level_mm": 0
+      },
+      {
+        "floor": 1,
+        "outline": "footprint",
+        "holes": [
+          [
+            [
+              11201,
+              196
+            ],
+            [
+              15301,
+              196
+            ],
+            [
+              15301,
+              7696
+            ],
+            [
+              11201,
+              7696
+            ]
+          ]
+        ],
+        "level_mm": 4000,
+        "label": "second-floor slab (stairwell opening)"
+      }
+    ],
+    "exact_counts": {
+      "slabs": 2,
+      "walls": 26,
+      "doors": 0,
+      "windows": 0,
+      "rooms": 2,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "rooms"
+    ],
+    "iou_min": 0.99,
+    "composites": [],
+    "no_extra_composites": true,
+    "tolerance_mm": 0
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/B_element_creation14/env"
+      }
+    ]
+  }
+}

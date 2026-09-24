@@ -1,0 +1,131 @@
+{
+  "id": "B_element_creation18",
+  "legacy_id": "D_slabs_stairs_rooms7",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Room/Zone (×11); Inspect Project (×1)",
+  "instruction": "The walls are already built; do not move or create any walls. Create exactly eleven named zones, one per room, each placed inside the matching enclosed area so it fills that room:\n- 'Bedroom 1' at (-411, 15107)\n- 'Bedroom 2' at (-411, 11482)\n- 'Utility' at (1839, 10732)\n- 'Walk-in Closet' at (3519, 10732)\n- 'WC' at (5299, 10732)\n- 'Entry' at (7099, 10035)\n- 'Bathroom' at (9324, 11632)\n- 'Sauna' at (9324, 9557)\n- 'Kitchen' at (8449, 14682)\n- 'Hall' at (4494, 12132)\n- 'Living Room' at (3694, 14682)\nKitchen, Hall and Living Room form one open plan with no separating walls — bound each of those three zones by the walls around it plus straight judgment lines between the given points, so the three zones tile the open area without overlapping.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name": "Bedroom 1",
+        "inside": [
+          -411,
+          15107
+        ],
+        "area_m2": 9.1
+      },
+      {
+        "name": "Bedroom 2",
+        "inside": [
+          -411,
+          11482
+        ],
+        "area_m2": 8.2
+      },
+      {
+        "name": "Utility",
+        "inside": [
+          1839,
+          10732
+        ],
+        "area_m2": 2.0
+      },
+      {
+        "name": "Walk-in Closet",
+        "inside": [
+          3519,
+          10732
+        ],
+        "area_m2": 2.1
+      },
+      {
+        "name": "WC",
+        "inside": [
+          5299,
+          10732
+        ],
+        "area_m2": 2.3
+      },
+      {
+        "name": "Entry",
+        "inside": [
+          7099,
+          10035
+        ],
+        "area_m2": 4.7
+      },
+      {
+        "name": "Bathroom",
+        "inside": [
+          9324,
+          11632
+        ],
+        "area_m2": 4.7
+      },
+      {
+        "name": "Sauna",
+        "inside": [
+          9324,
+          9557
+        ],
+        "area_m2": 5.1
+      },
+      {
+        "name": "Kitchen",
+        "inside": [
+          8449,
+          14682
+        ],
+        "area_m2": 17.0,
+        "area_ratio": 0.1
+      },
+      {
+        "name": "Hall",
+        "inside": [
+          4494,
+          12132
+        ],
+        "area_m2": 7.8,
+        "area_ratio": 0.1
+      },
+      {
+        "name": "Living Room",
+        "inside": [
+          3694,
+          14682
+        ],
+        "area_m2": 20.6,
+        "area_ratio": 0.1
+      }
+    ],
+    "room_area_ratio": 0.05,
+    "exact_counts": {
+      "rooms": 11,
+      "walls": 22,
+      "doors": 8,
+      "windows": 5,
+      "slabs": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/B_element_creation18/env"
+      }
+    ]
+  }
+}

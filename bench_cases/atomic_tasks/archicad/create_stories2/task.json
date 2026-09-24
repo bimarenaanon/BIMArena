@@ -1,0 +1,49 @@
+{
+  "id": "create_stories2",
+  "legacy_id": "set_stories2",
+  "atom": "set_stories",
+  "category": "Config. & Types",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Stories (×1)",
+  "instruction": "Add ONE new topmost storey named 'Third Floor', 2700 mm above the current top storey, leaving the existing storeys' names and elevations exactly as they are. Do not create any elements.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stories": [
+      {
+        "name": "Ground Floor",
+        "elevation_mm": 0
+      },
+      {
+        "elevation_mm": 3000
+      },
+      {
+        "elevation_mm": 6000
+      },
+      {
+        "name": "Third Floor",
+        "elevation_mm": 8700
+      }
+    ],
+    "stories_exact": true,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_stories2/env"
+      }
+    ]
+  }
+}

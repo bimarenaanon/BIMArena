@@ -1,0 +1,49 @@
+{
+  "id": "check_clash1",
+  "legacy_id": "clash_check1",
+  "atom": "clash_check",
+  "category": "Query & Selection",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Check Clash (×1)",
+  "instruction": "This project contains geometric clashes. Find them and REPORT them in your final answer as ONE LINE PER CLASH, in exactly this format and nothing else on the line: \"<element type> conflicts with <element type>\", where each element type is one of wall, door, window, slab, stair, object, room. List each distinct pair of types once. Inspect only — change nothing.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs",
+      "rooms",
+      "stairs",
+      "objects"
+    ],
+    "answer_pairs": {
+      "relation": "conflicts with",
+      "pairs": [
+        [
+          "wall",
+          "wall"
+        ],
+        [
+          "wall",
+          "door"
+        ],
+        [
+          "window",
+          "door"
+        ]
+      ]
+    }
+  },
+  "env_template": "clash",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/check_clash1/env"
+      }
+    ]
+  }
+}

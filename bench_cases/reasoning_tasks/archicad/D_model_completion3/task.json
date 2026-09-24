@@ -1,0 +1,127 @@
+{
+  "id": "D_model_completion3",
+  "legacy_id": "C_openings2",
+  "category": "Model Completion",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "C02",
+  "required_capabilities": "Create Door (×5); Inspect Project (×1)",
+  "instruction": "The walls in this floorplan are already built. Add the doors so the model matches the drawing: place every door the plan shows, each a single-leaf 900 × 2100 mm door. Judge each door's host wall and position along that wall from the plan, and set its swing (hinge side + opening direction) to match the arc drawn. The plan has no dimensions, so roughly correct positions are fine.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "center": [
+          8903,
+          14000
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "open_into": [
+          7903,
+          14000
+        ],
+        "hinge_near": [
+          8903,
+          14450
+        ],
+        "label": "door ET->KRH wall, opens west, hinge north"
+      },
+      {
+        "center": [
+          2844,
+          10200
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "open_into": [
+          3844,
+          10200
+        ],
+        "hinge_near": [
+          2844,
+          9750
+        ],
+        "label": "door on x=2844 wall, opens east, hinge south"
+      },
+      {
+        "center": [
+          6204,
+          10970
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "open_into": [
+          6204,
+          9970
+        ],
+        "hinge_near": [
+          5754,
+          10970
+        ],
+        "label": "door on y=10970 wall (west), opens south, hinge west"
+      },
+      {
+        "center": [
+          8092,
+          10970
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "open_into": [
+          8092,
+          11970
+        ],
+        "hinge_near": [
+          8542,
+          10970
+        ],
+        "label": "door on y=10970 wall (east), opens north, hinge east"
+      },
+      {
+        "center": [
+          5467,
+          14465
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "open_into": [
+          4467,
+          14465
+        ],
+        "hinge_near": [
+          5467,
+          14015
+        ],
+        "label": "door HM->ET wall, opens west, hinge south"
+      }
+    ],
+    "opening_pos_tolerance_mm": 300,
+    "exact_counts": {
+      "doors": 5,
+      "walls": 13,
+      "windows": 3,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "windows"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/D_model_completion3/env"
+      }
+    ]
+  }
+}

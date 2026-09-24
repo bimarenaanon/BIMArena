@@ -1,0 +1,73 @@
+{
+  "id": "A_setup_types6",
+  "legacy_id": "A_setup_types7",
+  "category": "Project Initialization",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Wall Type (×1); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Create a new partition wall type with five layers, in order from one face to the other: (1) 12.5 mm gypsum board, (2) 12.5 mm gypsum board, (3) a 25 mm air cavity, (4) 70 mm insulation, (5) 15 mm gypsum board. Create the wall type only - do not place any walls.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "skins": [
+          {
+            "material_contains": [
+              "Gypsum",
+              "Render"
+            ],
+            "thickness_mm": 12.5
+          },
+          {
+            "material_contains": [
+              "Gypsum",
+              "Render"
+            ],
+            "thickness_mm": 12.5
+          },
+          {
+            "material_contains": [
+              "Air",
+              "Cavity"
+            ],
+            "thickness_mm": 25
+          },
+          {
+            "material_contains": [
+              "Insulation",
+              "Cavity fill",
+              "Wool"
+            ],
+            "thickness_mm": 70
+          },
+          {
+            "material_contains": [
+              "Gypsum",
+              "Render"
+            ],
+            "thickness_mm": 15
+          }
+        ]
+      }
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/A_setup_types6/env"
+      }
+    ]
+  }
+}

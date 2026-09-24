@@ -1,0 +1,107 @@
+{
+  "id": "E_model_checking11",
+  "legacy_id": "H_domain_reasoning3",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "I04",
+  "required_capabilities": "Create Door/Window Type (×1); Move with Constraints (×1); Replace Element Type (×1); Inspect Project (×1)",
+  "instruction": "The layout has an entrance door, a corridor, a waiting area, and a destination room, but parts of the circulation space are undersized and noncompliant with the accessibility standards for wheelchair users. Check the continuous accessible route and fix them - modify only the noncompliant spots. Where a space is undersized, fix it by moving the internal walls (the room areas may change accordingly).",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            5704,
+            7510
+          ],
+          [
+            2904,
+            5807
+          ]
+        ]
+      },
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            6323,
+            9213
+          ]
+        ]
+      },
+      {
+        "bucket": "rooms",
+        "except_near": [
+          [
+            6304,
+            7410
+          ]
+        ]
+      }
+    ],
+    "rooms": [
+      {
+        "name": "Corridor",
+        "existing": true,
+        "inside": [
+          6054,
+          7410
+        ],
+        "min_width_mm": 1500
+      }
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "doors": [
+      {
+        "label": "entrance door (widened to >= 900)",
+        "near": [
+          6323,
+          9213
+        ],
+        "min_width_mm": 900,
+        "open_into": [
+          6323,
+          8213
+        ]
+      }
+    ],
+    "opening_pos_tolerance_mm": 100,
+    "walls": [
+      {
+        "label": "corridor wall moved to widen the corridor",
+        "match": "any",
+        "floor": 0,
+        "beg": [
+          5204,
+          9213
+        ],
+        "end": [
+          5204,
+          5807
+        ]
+      }
+    ],
+    "exact_counts": {
+      "walls": 9,
+      "doors": 1,
+      "windows": 0,
+      "rooms": 3,
+      "slabs": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/E_model_checking11/env"
+      }
+    ]
+  }
+}

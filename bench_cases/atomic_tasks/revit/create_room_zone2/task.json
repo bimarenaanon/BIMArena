@@ -1,0 +1,50 @@
+{
+  "id": "create_room_zone2",
+  "legacy_id": "create_room2",
+  "atom": "create_room",
+  "category": "Creation",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Room/Zone (×1)",
+  "instruction": "The interior partition divides the building into two enclosures. The eastern one already holds a room; create a room in the WESTERN enclosure named 'Storage' with number '10'. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name_contains": [
+          "storage"
+        ],
+        "number": "10",
+        "inside": [
+          2000,
+          5000
+        ],
+        "area_m2": 47.3,
+        "area_ratio": 0.05
+      },
+      {
+        "name_contains": [
+          "office"
+        ],
+        "inside": [
+          8000,
+          5000
+        ],
+        "existing": true
+      }
+    ],
+    "exact_counts": {
+      "rooms": 2
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/create_room_zone2/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "id": "B_element_creation22",
+  "legacy_id": "E_cross_view3",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Wall (×6); Inspect Project (×1); Query Types (×1)",
+  "instruction": "Create ONLY the exterior walls of the ground floor (walls only — no doors, windows, stairs, or furniture). Do NOT create any new wall composite — use these EXISTING composites: the front facade wall uses '100 Block Insulated Cavity'; every other exterior wall uses 'Double 50 Block Cavity'. Author every wall with its exterior face pointing outward. Walls:\n- front facade: (0, 0) → (6143, 0)\n- east wall: (6143, 0) → (6143, 9060)\n- rear wall (east part): (6143, 9060) → (4143, 9060)\n- rear jog wall: (4143, 9060) → (4143, 10838)\n- rear wall (west part): (4143, 10838) → (0, 10838)\n- west wall: (0, 10838) → (0, 0)\nCreate nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "label": "front facade wall",
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          6143,
+          0
+        ],
+        "floor": 0,
+        "composite": [
+          "100 Block Insulated Cavity",
+          "100 Block Insulated Cavity Plastered",
+          "140 Block Insulated Cavity",
+          "140 Block Insulated Cavity Plastered",
+          "215 Block Insulated Cavity",
+          "215 Block Insulated Cavity Plastered"
+        ],
+        "faces": "outward"
+      },
+      {
+        "label": "east wall",
+        "beg": [
+          6143,
+          0
+        ],
+        "end": [
+          6143,
+          9060
+        ],
+        "floor": 0,
+        "composite": [
+          "Double 50 Block Cavity",
+          "Double 50 Block Cavity Plastered"
+        ],
+        "faces": "outward"
+      },
+      {
+        "label": "rear wall (east part)",
+        "beg": [
+          6143,
+          9060
+        ],
+        "end": [
+          4143,
+          9060
+        ],
+        "floor": 0,
+        "composite": [
+          "Double 50 Block Cavity",
+          "Double 50 Block Cavity Plastered"
+        ],
+        "faces": "outward"
+      },
+      {
+        "label": "rear jog wall",
+        "beg": [
+          4143,
+          9060
+        ],
+        "end": [
+          4143,
+          10838
+        ],
+        "floor": 0,
+        "composite": [
+          "Double 50 Block Cavity",
+          "Double 50 Block Cavity Plastered"
+        ],
+        "faces": "outward"
+      },
+      {
+        "label": "rear wall (west part)",
+        "beg": [
+          4143,
+          10838
+        ],
+        "end": [
+          0,
+          10838
+        ],
+        "floor": 0,
+        "composite": [
+          "Double 50 Block Cavity",
+          "Double 50 Block Cavity Plastered"
+        ],
+        "faces": "outward"
+      },
+      {
+        "label": "west wall",
+        "beg": [
+          0,
+          10838
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "floor": 0,
+        "composite": [
+          "Double 50 Block Cavity",
+          "Double 50 Block Cavity Plastered"
+        ],
+        "faces": "outward"
+      }
+    ],
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 100,
+    "no_extra_walls": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/B_element_creation22/env"
+      }
+    ]
+  }
+}

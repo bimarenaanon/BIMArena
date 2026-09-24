@@ -1,0 +1,108 @@
+{
+  "id": "B_element_creation20",
+  "legacy_id": "E_cross_view1",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "F02",
+  "required_capabilities": "Switch Active Story (×1); Create Window (×6); Inspect Project (×1)",
+  "instruction": "The two-storey building's walls are already created, but there are no windows yet. Place six windows in total, all 1500 × 1500 mm, on the east vertical exterior wall: on EACH of the two storeys, three windows centred at y = 1800, y = 4200 and y = 6600 mm. Ground-storey windows get a 900 mm sill height; upper-storey windows get a 1000 mm sill height. Do not create or modify any walls, and place no extra windows.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "label": "window 1 (storey 0)",
+        "floor": 0,
+        "center": [
+          7000,
+          1800
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 900
+      },
+      {
+        "label": "window 2 (storey 0)",
+        "floor": 0,
+        "center": [
+          7000,
+          4200
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 900
+      },
+      {
+        "label": "window 3 (storey 0)",
+        "floor": 0,
+        "center": [
+          7000,
+          6600
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 900
+      },
+      {
+        "label": "window 1 (storey 1)",
+        "floor": 1,
+        "center": [
+          7000,
+          1800
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      },
+      {
+        "label": "window 2 (storey 1)",
+        "floor": 1,
+        "center": [
+          7000,
+          4200
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      },
+      {
+        "label": "window 3 (storey 1)",
+        "floor": 1,
+        "center": [
+          7000,
+          6600
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      }
+    ],
+    "exact_counts": {
+      "windows": 6,
+      "walls": 8,
+      "doors": 1,
+      "slabs": 2,
+      "stairs": 1,
+      "rooms": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "slabs",
+      "stairs"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "opening_pos_tolerance_mm": 10
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/B_element_creation20/env"
+      }
+    ]
+  }
+}

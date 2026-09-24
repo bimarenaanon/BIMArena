@@ -1,0 +1,44 @@
+{
+  "id": "create_window2",
+  "legacy_id": "place_window2",
+  "atom": "place_window",
+  "category": "Creation",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Window (×1)",
+  "instruction": "Place two windows, both with their glazing facing outward: one 900 x 1500 mm window with a 1200 mm sill in the SOUTH exterior wall, and one 1500 x 1000 mm window with an 1800 mm sill in the EAST exterior wall. Where along each wall they go is your call. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "host_side": "south",
+        "width_mm": 900,
+        "height_mm": 1500,
+        "sill_mm": 1200,
+        "swing": "out"
+      },
+      {
+        "host_side": "east",
+        "width_mm": 1500,
+        "height_mm": 1000,
+        "sill_mm": 1800,
+        "swing": "out"
+      }
+    ],
+    "exact_counts": {
+      "windows": 3,
+      "doors": 1,
+      "walls": 5
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_window2/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "create_door1",
+  "legacy_id": "place_door1",
+  "atom": "place_door",
+  "category": "Creation",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Door (×1)",
+  "instruction": "Place one 1200 x 2100 mm door in the WEST exterior wall, positioned so that exactly 2000 mm of wall remains between the door opening's south edge and the building's bottom-left corner, measured along the wall, opening into the room. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "center": [
+          0,
+          2600
+        ],
+        "width_mm": 1200,
+        "height_mm": 2100,
+        "swing": "in",
+        "label": "west door, south edge 2000 from the bottom-left corner"
+      }
+    ],
+    "exact_counts": {
+      "doors": 2,
+      "windows": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_door1/env"
+      }
+    ]
+  }
+}

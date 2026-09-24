@@ -1,0 +1,55 @@
+{
+  "id": "move_element1",
+  "legacy_id": "modify_slab1",
+  "atom": "modify_slab",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Move Element (×1)",
+  "instruction": "Extend the floor slab 1000 mm further in +x, keeping one single slab and the same composite, and switch its reference plane to the CORE BOTTOM while keeping the slab body exactly where it is — its top surface stays at the same elevation.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "slabs": [
+      {
+        "floor": "active",
+        "level_mm": -200,
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            12129,
+            0
+          ],
+          [
+            12129,
+            10205
+          ],
+          [
+            0,
+            10205
+          ]
+        ],
+        "composite": "Concrete Floor with 10mm Tile",
+        "reference_plane": "Core Bottom",
+        "reference_plane_offset_mm": 230,
+        "match": "any"
+      }
+    ],
+    "exact_counts": {
+      "slabs": 1
+    },
+    "iou_min": 0.95
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/move_element1/env"
+      }
+    ]
+  }
+}

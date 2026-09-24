@@ -1,0 +1,621 @@
+{
+  "id": "F_end_to_end4",
+  "legacy_id": "I_long_sequence5",
+  "category": "End-to-End Modeling",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Stories (×1); Switch Active Story (×2); Create Wall (×33); Create Slab (×3); Create Slab Opening (×2); Create Door (×10); Create Window (×6); Create Stair (×2); Inspect Project (×1)",
+  "instruction": "Create this three-storey building using any suitable existing types. Exterior walls, one closed outline: (0,8280) → (8920,8280) → (8920,3020) → (7560,3020) → (7560,0) → (0,0) → (0,8280). Interior walls: (4480,4320) → (4480,8280); (0,3020) → (5380,3020); (2940,1400) → (5380,1400); (2940,3020) → (2940,1400); (5380,3020) → (5380,0). Windows (900 × 1500 mm, sill 1000 mm) at (6460,8280) and (0,1460); doors (900 × 2100 mm) at (720,8280), (2280,3020), (5380,2400), (5380,790), each opening hosted by the wall at its position. Repeat the full layout on ALL THREE storeys, except that a door in an exterior wall only makes sense at grade - place exterior-wall doors on the ground floor only. Create one slab per storey following the exterior-wall footprint, keeping the upper slabs clear where the stairs rise. Create stairs connecting the ground floor to the first and the first to the second, each fitting inside the east strip of the plan (east of x = 7560). Use any suitable and consistent storey levels and heights.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          0,
+          8280
+        ],
+        "end": [
+          8920,
+          8280
+        ],
+        "floor": 0,
+        "label": "exterior segment 1 (floor 0)"
+      },
+      {
+        "beg": [
+          8920,
+          8280
+        ],
+        "end": [
+          8920,
+          3020
+        ],
+        "floor": 0,
+        "label": "exterior segment 2 (floor 0)"
+      },
+      {
+        "beg": [
+          8920,
+          3020
+        ],
+        "end": [
+          7560,
+          3020
+        ],
+        "floor": 0,
+        "label": "exterior segment 3 (floor 0)"
+      },
+      {
+        "beg": [
+          7560,
+          3020
+        ],
+        "end": [
+          7560,
+          0
+        ],
+        "floor": 0,
+        "label": "exterior segment 4 (floor 0)"
+      },
+      {
+        "beg": [
+          7560,
+          0
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "floor": 0,
+        "label": "exterior segment 5 (floor 0)"
+      },
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          0,
+          8280
+        ],
+        "floor": 0,
+        "label": "exterior segment 6 (floor 0)"
+      },
+      {
+        "beg": [
+          4480,
+          4320
+        ],
+        "end": [
+          4480,
+          8280
+        ],
+        "floor": 0,
+        "label": "divider (vertical — see reason) (floor 0)"
+      },
+      {
+        "beg": [
+          0,
+          3020
+        ],
+        "end": [
+          5380,
+          3020
+        ],
+        "floor": 0,
+        "label": "interior 2 (floor 0)"
+      },
+      {
+        "beg": [
+          2940,
+          1400
+        ],
+        "end": [
+          5380,
+          1400
+        ],
+        "floor": 0,
+        "label": "interior 3 (floor 0)"
+      },
+      {
+        "beg": [
+          2940,
+          3020
+        ],
+        "end": [
+          2940,
+          1400
+        ],
+        "floor": 0,
+        "label": "interior 4 (floor 0)"
+      },
+      {
+        "beg": [
+          5380,
+          3020
+        ],
+        "end": [
+          5380,
+          0
+        ],
+        "floor": 0,
+        "label": "interior 5 (floor 0)"
+      },
+      {
+        "beg": [
+          0,
+          8280
+        ],
+        "end": [
+          8920,
+          8280
+        ],
+        "floor": 1,
+        "label": "exterior segment 1 (floor 1)"
+      },
+      {
+        "beg": [
+          8920,
+          8280
+        ],
+        "end": [
+          8920,
+          3020
+        ],
+        "floor": 1,
+        "label": "exterior segment 2 (floor 1)"
+      },
+      {
+        "beg": [
+          8920,
+          3020
+        ],
+        "end": [
+          7560,
+          3020
+        ],
+        "floor": 1,
+        "label": "exterior segment 3 (floor 1)"
+      },
+      {
+        "beg": [
+          7560,
+          3020
+        ],
+        "end": [
+          7560,
+          0
+        ],
+        "floor": 1,
+        "label": "exterior segment 4 (floor 1)"
+      },
+      {
+        "beg": [
+          7560,
+          0
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "floor": 1,
+        "label": "exterior segment 5 (floor 1)"
+      },
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          0,
+          8280
+        ],
+        "floor": 1,
+        "label": "exterior segment 6 (floor 1)"
+      },
+      {
+        "beg": [
+          4480,
+          4320
+        ],
+        "end": [
+          4480,
+          8280
+        ],
+        "floor": 1,
+        "label": "divider (vertical — see reason) (floor 1)"
+      },
+      {
+        "beg": [
+          0,
+          3020
+        ],
+        "end": [
+          5380,
+          3020
+        ],
+        "floor": 1,
+        "label": "interior 2 (floor 1)"
+      },
+      {
+        "beg": [
+          2940,
+          1400
+        ],
+        "end": [
+          5380,
+          1400
+        ],
+        "floor": 1,
+        "label": "interior 3 (floor 1)"
+      },
+      {
+        "beg": [
+          2940,
+          3020
+        ],
+        "end": [
+          2940,
+          1400
+        ],
+        "floor": 1,
+        "label": "interior 4 (floor 1)"
+      },
+      {
+        "beg": [
+          5380,
+          3020
+        ],
+        "end": [
+          5380,
+          0
+        ],
+        "floor": 1,
+        "label": "interior 5 (floor 1)"
+      },
+      {
+        "beg": [
+          0,
+          8280
+        ],
+        "end": [
+          8920,
+          8280
+        ],
+        "floor": 2,
+        "label": "exterior segment 1 (floor 2)"
+      },
+      {
+        "beg": [
+          8920,
+          8280
+        ],
+        "end": [
+          8920,
+          3020
+        ],
+        "floor": 2,
+        "label": "exterior segment 2 (floor 2)"
+      },
+      {
+        "beg": [
+          8920,
+          3020
+        ],
+        "end": [
+          7560,
+          3020
+        ],
+        "floor": 2,
+        "label": "exterior segment 3 (floor 2)"
+      },
+      {
+        "beg": [
+          7560,
+          3020
+        ],
+        "end": [
+          7560,
+          0
+        ],
+        "floor": 2,
+        "label": "exterior segment 4 (floor 2)"
+      },
+      {
+        "beg": [
+          7560,
+          0
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "floor": 2,
+        "label": "exterior segment 5 (floor 2)"
+      },
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          0,
+          8280
+        ],
+        "floor": 2,
+        "label": "exterior segment 6 (floor 2)"
+      },
+      {
+        "beg": [
+          4480,
+          4320
+        ],
+        "end": [
+          4480,
+          8280
+        ],
+        "floor": 2,
+        "label": "divider (vertical — see reason) (floor 2)"
+      },
+      {
+        "beg": [
+          0,
+          3020
+        ],
+        "end": [
+          5380,
+          3020
+        ],
+        "floor": 2,
+        "label": "interior 2 (floor 2)"
+      },
+      {
+        "beg": [
+          2940,
+          1400
+        ],
+        "end": [
+          5380,
+          1400
+        ],
+        "floor": 2,
+        "label": "interior 3 (floor 2)"
+      },
+      {
+        "beg": [
+          2940,
+          3020
+        ],
+        "end": [
+          2940,
+          1400
+        ],
+        "floor": 2,
+        "label": "interior 4 (floor 2)"
+      },
+      {
+        "beg": [
+          5380,
+          3020
+        ],
+        "end": [
+          5380,
+          0
+        ],
+        "floor": 2,
+        "label": "interior 5 (floor 2)"
+      }
+    ],
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "center": [
+          720,
+          8280
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 0,
+        "label": "door 1 (floor 0)"
+      },
+      {
+        "center": [
+          2280,
+          3020
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 0,
+        "label": "door 2 (floor 0)"
+      },
+      {
+        "center": [
+          5380,
+          2400
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 0,
+        "label": "door 3 (floor 0)"
+      },
+      {
+        "center": [
+          5380,
+          790
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 0,
+        "label": "door 4 (floor 0)"
+      },
+      {
+        "center": [
+          2280,
+          3020
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 1,
+        "label": "door 1 (floor 1)"
+      },
+      {
+        "center": [
+          5380,
+          2400
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 1,
+        "label": "door 2 (floor 1)"
+      },
+      {
+        "center": [
+          5380,
+          790
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 1,
+        "label": "door 3 (floor 1)"
+      },
+      {
+        "center": [
+          2280,
+          3020
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 2,
+        "label": "door 1 (floor 2)"
+      },
+      {
+        "center": [
+          5380,
+          2400
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 2,
+        "label": "door 2 (floor 2)"
+      },
+      {
+        "center": [
+          5380,
+          790
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "floor": 2,
+        "label": "door 3 (floor 2)"
+      }
+    ],
+    "windows": [
+      {
+        "center": [
+          6460,
+          8280
+        ],
+        "floor": 0,
+        "label": "window 1 (floor 0)"
+      },
+      {
+        "center": [
+          0,
+          1460
+        ],
+        "floor": 0,
+        "label": "window 2 (floor 0)"
+      },
+      {
+        "center": [
+          6460,
+          8280
+        ],
+        "floor": 1,
+        "label": "window 1 (floor 1)"
+      },
+      {
+        "center": [
+          0,
+          1460
+        ],
+        "floor": 1,
+        "label": "window 2 (floor 1)"
+      },
+      {
+        "center": [
+          6460,
+          8280
+        ],
+        "floor": 2,
+        "label": "window 1 (floor 2)"
+      },
+      {
+        "center": [
+          0,
+          1460
+        ],
+        "floor": 2,
+        "label": "window 2 (floor 2)"
+      }
+    ],
+    "slabs": [
+      {
+        "floor": 0,
+        "outline": "footprint"
+      },
+      {
+        "floor": 1,
+        "outline": "footprint",
+        "clear_of_stair": true
+      },
+      {
+        "floor": 2,
+        "outline": "footprint",
+        "clear_of_stair": true
+      }
+    ],
+    "stairs": [
+      {
+        "floor": 0,
+        "region": [
+          7560,
+          3020,
+          8920,
+          8280
+        ]
+      },
+      {
+        "floor": 1,
+        "region": [
+          7560,
+          3020,
+          8920,
+          8280
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 10,
+      "windows": 6,
+      "slabs": 3,
+      "stairs": 2,
+      "rooms": 0,
+      "objects": 0
+    },
+    "wall_tolerance_mm": 150,
+    "opening_pos_tolerance_mm": 300,
+    "composites": [],
+    "no_extra_composites": true,
+    "size_tolerance_mm": 30
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/F_end_to_end4/env"
+      }
+    ]
+  }
+}

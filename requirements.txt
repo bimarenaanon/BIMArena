@@ -1,0 +1,29 @@
+# BIM Authoring Bench - Python dependencies
+# Tested on Python 3.14. Install into a venv:
+#   python3 -m venv bench_env && ./bench_env/bin/pip install -r requirements.txt
+#   (Windows: python -m venv bench_env && bench_env\Scripts\pip install -r requirements.txt)
+
+# ---- LLM providers (install the ones you use; every call goes to the vendor's own API) ----
+openai==2.41.1            # OpenAI (Responses API); also Qwen/DashScope, Meta and a self-hosted
+                          # EvoCUA (their own OpenAI-compatible APIs); skill-retrieval embeddings
+anthropic==0.109.2        # Claude
+google-genai==2.8.0       # Gemini
+
+# ---- the agent: GUI control + drawing input ----
+pyautogui==0.9.54         # screen capture + mouse/keyboard (the GUI action space)
+pyperclip==1.11.0         # clipboard paste for typed text (GUI controller, harness dialogs)
+PyGetWindow==0.0.9        # window lookup/focus (harness focus gate, open/save dialogs; Windows)
+Pillow==12.2.0            # screenshots, image re-encoding, the calibration probe images
+PyMuPDF==1.27.2.3         # PDF -> PNG rasterization of input drawings; cutting the sourced
+                          # figures out of the user's own PDF (imported as `fitz`)
+
+# ---- the harness: application backends + grading ----
+archicad==29.3000         # Archicad JSON API client (READ ops; element creation needs the Tapir
+                          # add-on inside Archicad). The Revit side talks HTTP to the C# add-in
+                          # (standard library only).
+shapely==2.1.2            # 2D clash checks, polygon IoU / footprint maths in the verifier
+numpy==2.4.6
+psutil==7.2.2             # per-PID window enumeration (the Revit dialog closer, app liveness)
+
+# ---- environment / config ----
+python-dotenv==1.2.2      # loads .env (API keys)

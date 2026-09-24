@@ -1,0 +1,378 @@
+{
+  "id": "D_model_completion2",
+  "legacy_id": "I_long_sequence3",
+  "category": "Model Completion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Load Library Element Type (×2); Create Wall (×15); Create Slab (×1); Create Slab Opening (×1); Create Door (×5); Create Window (×2); Inspect Project (×1); Query Types (×1)",
+  "instruction": "The ground floor is already created in the project. Create the upper floor (on the level at 4000 mm) exactly as follows, reusing the types already used on the ground floor. Do not create or modify any types, and do not alter the ground floor.\nWalls, all 'Generic - 200mm' (draw each exactly on the line given):\n- (99, 2499) → (9899, 2499)\n- (9999, 2599) → (9999, 13099)\n- (9899, 13199) → (99, 13199)\n- (-1, 13099) → (-1, 2599)\n- (-1, 13099) → (-1, 16299)\n- (99, 16399) → (4199, 16399)\n- (4299, 16299) → (4299, 13099)\n- (5899, 2599) → (5899, 8999)\n- (5899, 7599) → (2899, 7599)\n- (2899, 7599) → (2899, 6599)\n- (2899, 6599) → (99, 6599)\n- (5027, 13099) → (5027, 8999)\n- (5027, 8999) → (9899, 8999)\n- (7299, 8999) → (7299, 6699)\n- (7299, 6699) → (9899, 6699)\nDoors, all 915 × 2134 mm: centred at (5899, 8349) opening toward -x; (6599, 8999) opening toward +y; (5899, 6142) opening toward +x; (8057, 6699) opening toward +y; (3342, 13099) opening toward +y.\nWindows, both 1400 × 1800 mm with 900 mm sill: centred at (1542, 13099) and (7463, 13099).\nFloor slab on the upper level (level 4000 mm) using type 'Generic 150mm', outline (4299, 16399), (4299, 13199), (9999, 13199), (9999, 2499), (5999, 2499), (5999, -1), (-1, -1), (-1, 16399) — and keep it CLEAR of the existing stair (cut the stairwell opening so the stair passes through).",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "floor": 1,
+        "beg": [
+          99,
+          2499
+        ],
+        "end": [
+          9899,
+          2499
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          9999,
+          2599
+        ],
+        "end": [
+          9999,
+          13099
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          9899,
+          13199
+        ],
+        "end": [
+          99,
+          13199
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          -1,
+          13099
+        ],
+        "end": [
+          -1,
+          2599
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          -1,
+          13099
+        ],
+        "end": [
+          -1,
+          16299
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          99,
+          16399
+        ],
+        "end": [
+          4199,
+          16399
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          4299,
+          16299
+        ],
+        "end": [
+          4299,
+          13099
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          5899,
+          2599
+        ],
+        "end": [
+          5899,
+          8999
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          5899,
+          7599
+        ],
+        "end": [
+          2899,
+          7599
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          2899,
+          7599
+        ],
+        "end": [
+          2899,
+          6599
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          2899,
+          6599
+        ],
+        "end": [
+          99,
+          6599
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          5027,
+          13099
+        ],
+        "end": [
+          5027,
+          8999
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          5027,
+          8999
+        ],
+        "end": [
+          9899,
+          8999
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          7299,
+          8999
+        ],
+        "end": [
+          7299,
+          6699
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          7299,
+          6699
+        ],
+        "end": [
+          9899,
+          6699
+        ],
+        "composite": "Generic - 200mm",
+        "label": "upper-floor wall"
+      }
+    ],
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "floor": 1,
+        "center": [
+          5899,
+          8349
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "label": "upper door 1",
+        "open_into": [
+          4899,
+          8349
+        ]
+      },
+      {
+        "floor": 1,
+        "center": [
+          6599,
+          8999
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "label": "upper door 2",
+        "open_into": [
+          6599,
+          9999
+        ]
+      },
+      {
+        "floor": 1,
+        "center": [
+          5899,
+          6142
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "label": "upper door 3",
+        "open_into": [
+          6899,
+          6142
+        ]
+      },
+      {
+        "floor": 1,
+        "center": [
+          8057,
+          6699
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "label": "upper door 4",
+        "open_into": [
+          8057,
+          7699
+        ]
+      },
+      {
+        "floor": 1,
+        "center": [
+          3342,
+          13099
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "label": "upper door 5",
+        "open_into": [
+          3342,
+          14099
+        ]
+      }
+    ],
+    "opening_pos_tolerance_mm": 300,
+    "windows": [
+      {
+        "floor": 1,
+        "center": [
+          1542,
+          13099
+        ],
+        "width_mm": 1400,
+        "height_mm": 1800,
+        "sill_mm": 900,
+        "label": "upper window 1"
+      },
+      {
+        "floor": 1,
+        "center": [
+          7463,
+          13099
+        ],
+        "width_mm": 1400,
+        "height_mm": 1800,
+        "sill_mm": 900,
+        "label": "upper window 2"
+      }
+    ],
+    "slabs": [
+      {
+        "floor": 1,
+        "outline": [
+          [
+            4299,
+            16399
+          ],
+          [
+            4299,
+            13199
+          ],
+          [
+            9999,
+            13199
+          ],
+          [
+            9999,
+            2499
+          ],
+          [
+            5999,
+            2499
+          ],
+          [
+            5999,
+            -1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            16399
+          ]
+        ],
+        "level_mm": 4000,
+        "composite": "Generic 150mm",
+        "label": "upper-floor slab with stairwell opening",
+        "clear_of_stair": true,
+        "ignore_holes": true
+      }
+    ],
+    "exact_counts": {
+      "doors": 9,
+      "windows": 4,
+      "slabs": 2,
+      "rooms": 0,
+      "stairs": 1,
+      "objects": 0
+    },
+    "preserve": [
+      "stairs",
+      "walls",
+      "doors",
+      "windows",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 100
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/D_model_completion2/env"
+      }
+    ]
+  }
+}

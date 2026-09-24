@@ -1,0 +1,204 @@
+{
+  "id": "B_element_creation6",
+  "legacy_id": "B_walls5",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "B03",
+  "required_capabilities": "Create Wall (×12); Inspect Project (×1)",
+  "instruction": "The project is empty. Create exactly the following twelve walls, all 200 mm wide, using the wall type 'Generic - structural' (create no composites):\n- W1: (0, 9150) → (10200, 9150)\n- W2: (10200, 9150) → (10200, 4750)\n- W3: (9500, 4750) → (9500, 0)\n- W4: (9500, 0) → (0, 0)\n- W5: (0, 0) → (0, 9150)\n- W6: (8450, 9150) → (8450, 4750)\n- W7: (3279, 4750) → (10200, 4750)\n- W8: (0, 4750) → (2379, 4750)\n- W9: (2150, 4750) → (2150, 1700)\n- W10: (2150, 1700) → (0, 1700)\n- W11: (3300, 2100) → (3300, 0)\n- W12: (3750, 9150) → (3750, 4750)\nThe gap between W7 and W8 along y = 4750 is an open passage — leave it exactly as specified. Place no doors and no windows anywhere.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          0,
+          9150
+        ],
+        "end": [
+          10200,
+          9150
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          10200,
+          9150
+        ],
+        "end": [
+          10200,
+          4750
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          9500,
+          4750
+        ],
+        "end": [
+          9500,
+          0
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          9500,
+          0
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          0,
+          9150
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          8450,
+          9150
+        ],
+        "end": [
+          8450,
+          4750
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          3279,
+          4750
+        ],
+        "end": [
+          10200,
+          4750
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          0,
+          4750
+        ],
+        "end": [
+          2379,
+          4750
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          2150,
+          4750
+        ],
+        "end": [
+          2150,
+          1700
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          2154,
+          1700
+        ],
+        "end": [
+          0,
+          1700
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          3300,
+          2100
+        ],
+        "end": [
+          3300,
+          0
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          3750,
+          9150
+        ],
+        "end": [
+          3750,
+          4750
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      }
+    ],
+    "no_extra_walls": true,
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 300,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/B_element_creation6/env"
+      }
+    ]
+  }
+}

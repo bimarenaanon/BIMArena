@@ -1,0 +1,36 @@
+{
+  "id": "create_stair1",
+  "atom": "create_stair",
+  "category": "Creation",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Stair (×1)",
+  "instruction": "Create one straight stair from Level 1 up to Level 2. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stairs": [
+      {
+        "height_mm": 4000
+      }
+    ],
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 1,
+      "objects": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/create_stair1/env"
+      }
+    ]
+  }
+}

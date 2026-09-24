@@ -1,0 +1,54 @@
+{
+  "id": "create_window3",
+  "legacy_id": "place_window3",
+  "atom": "place_window",
+  "category": "Creation",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Window (×1)",
+  "instruction": "Place one fixed window of the stock '0915 x 1220mm' type in the WEST exterior wall, with a sill height of 900 mm, positioned so that exactly 1500 mm of wall remains between the window opening's north edge and the wall's north end, measured along the wall. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "host_side": "west",
+        "center": [
+          175,
+          7867.5
+        ],
+        "type_contains": [
+          "0915"
+        ],
+        "width_mm": 915,
+        "height_mm": 1220,
+        "sill_mm": 900,
+        "label": "west window, north edge 1500 from the north end"
+      }
+    ],
+    "opening_pos_tolerance_mm": 200,
+    "exact_counts": {
+      "windows": 2,
+      "doors": 1,
+      "walls": 6,
+      "slabs": 1,
+      "rooms": 1,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows"
+    ]
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/create_window3/env"
+      }
+    ]
+  }
+}

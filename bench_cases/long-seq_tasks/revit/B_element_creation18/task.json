@@ -1,0 +1,132 @@
+{
+  "id": "B_element_creation18",
+  "legacy_id": "D_slabs_stairs_rooms7",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Room/Zone (×14); Inspect Project (×1)",
+  "instruction": "The walls are already built; do not move or create any walls. Create exactly eleven named rooms, one per enclosed area, each placed inside the matching area so it fills that room:\n- 'Bedroom 1' at (1467, 6235)\n- 'Bedroom 2' at (1822, 3621)\n- 'Living Room' at (5940, 5985)\n- 'Kitchen' at (9568, 5577)\n- 'Bathroom' at (11060, 3163)\n- 'Sauna' at (11340, 1193)\n- 'Entry' at (8855, 1400)\n- 'Hall' at (7236, 3373)\n- 'Utility' at (3881, 1828)\n- 'Walk-in Closet' at (5554, 1828)\n- 'WC' at (7250, 1828)\nWhere areas are not fully separated by walls (Living Room / Kitchen / Hall), add room separation lines as needed so the three rooms tile the open area without overlapping.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name": "Bedroom 1",
+        "inside": [
+          1467,
+          6235
+        ],
+        "area_m2": 10.1
+      },
+      {
+        "name": "Bedroom 2",
+        "inside": [
+          1822,
+          3621
+        ],
+        "area_m2": 10.9
+      },
+      {
+        "name": "Living Room",
+        "inside": [
+          5940,
+          5985
+        ],
+        "area_m2": 20.6,
+        "area_ratio": 0.1
+      },
+      {
+        "name": "Kitchen",
+        "inside": [
+          9568,
+          5577
+        ],
+        "area_m2": 19.5,
+        "area_ratio": 0.1
+      },
+      {
+        "name": "Bathroom",
+        "inside": [
+          11060,
+          3163
+        ],
+        "area_m2": 5.0
+      },
+      {
+        "name": "Sauna",
+        "inside": [
+          11340,
+          1193
+        ],
+        "area_m2": 6.1
+      },
+      {
+        "name": "Entry",
+        "inside": [
+          8855,
+          1400
+        ],
+        "area_m2": 4.1
+      },
+      {
+        "name": "Hall",
+        "inside": [
+          7236,
+          3373
+        ],
+        "area_m2": 10.5,
+        "area_ratio": 0.1
+      },
+      {
+        "name": "Utility",
+        "inside": [
+          3881,
+          1828
+        ],
+        "area_m2": 2.0
+      },
+      {
+        "name": "Walk-in Closet",
+        "inside": [
+          5554,
+          1828
+        ],
+        "area_m2": 2.3
+      },
+      {
+        "name": "WC",
+        "inside": [
+          7250,
+          1828
+        ],
+        "area_m2": 2.1
+      }
+    ],
+    "exact_counts": {
+      "rooms": 11,
+      "walls": 21,
+      "doors": 8,
+      "windows": 4,
+      "slabs": 1,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs"
+    ],
+    "room_area_ratio": 0.05,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/B_element_creation18/env"
+      }
+    ]
+  }
+}

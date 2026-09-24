@@ -1,0 +1,46 @@
+{
+  "id": "inspect_project3",
+  "legacy_id": "get_selection3",
+  "atom": "get_selection",
+  "category": "Query & Selection",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Inspect Project (×1)",
+  "instruction": "Select the zone, then read the selection back and REPORT its name and its zone number. Answer in the form \"<label>: <value>\", one line each, using the labels name and number.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs",
+      "rooms"
+    ],
+    "answer_items": [
+      {
+        "label": "name",
+        "min": 1,
+        "contains": [
+          "Office"
+        ],
+        "exact": true
+      }
+    ],
+    "answer_values": {
+      "number": {
+        "value": 1,
+        "tol": 0
+      }
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/inspect_project3/env"
+      }
+    ]
+  }
+}

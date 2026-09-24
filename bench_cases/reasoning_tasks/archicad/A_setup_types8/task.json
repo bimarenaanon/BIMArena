@@ -1,0 +1,56 @@
+{
+  "id": "A_setup_types8",
+  "legacy_id": "A_setup_types9",
+  "category": "Project Initialization",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Stories (×1); Switch Active Story (×1); Inspect Project (×1)",
+  "instruction": "Based on the provided section view, set up the corresponding storeys in the project, including the correct number of levels, elevations, and storey heights: create one storey for every level datum marked on the section, including the eaves and the ridge datums.  When done, make the second floor the active storey and leave its floorplan open.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "stories": [
+      {
+        "elevation_mm": 150
+      },
+      {
+        "elevation_mm": 3000
+      },
+      {
+        "elevation_mm": 6000
+      },
+      {
+        "elevation_mm": 8550
+      },
+      {
+        "elevation_mm": 12110
+      }
+    ],
+    "stories_exact": true,
+    "active_story": [
+      1,
+      2
+    ],
+    "story_elev_tolerance_mm": 0,
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/A_setup_types8/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "delete_element8",
+  "atom": "delete_element",
+  "category": "Deletion",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Delete Element (×1)",
+  "instruction": "Delete the composite structure named \"100 Block Insulated Cavity\" from this project's attribute library, leaving every other composite and the model untouched.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites_absent": [
+      "100 Block Insulated Cavity"
+    ],
+    "composites_preserved": [
+      "Concrete Floor Insulated with Parquet",
+      "Concrete Floor Insulated with 10mm Tile",
+      "Concrete Floor with 10mm Tile",
+      "100 Block Insulated Cavity Plastered",
+      "100 Block Double Plastered",
+      "215 Block Insulated Cavity Plastered",
+      "Double 50 Block Cavity Plastered",
+      "Stud Partition",
+      "Double 50 Block Cavity",
+      "Brick Double Plastered",
+      "Brick Single Plastered",
+      "140 Block Insulated Cavity",
+      "Concrete Floor with Parquet",
+      "215 Block Insulated Cavity",
+      "140 Block Insulated Cavity Plastered",
+      "Roof Aluminium",
+      "Roof Tiled",
+      "Basement Wall",
+      "Roof Zinc",
+      "Flat Roof",
+      "Generic Wall/Shell",
+      "Generic Slab/Roof",
+      "Generic Roof/Shell"
+    ],
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/delete_element8/env"
+      }
+    ]
+  }
+}

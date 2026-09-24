@@ -1,0 +1,64 @@
+{
+  "id": "D_model_completion6",
+  "legacy_id": "D_slabs_stairs_rooms5",
+  "category": "Model Completion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Slab (×1); Create Slab Opening (×1); Create Stair (×1); Inspect Project (×1)",
+  "instruction": "Both floors of the two-storey building, with the same layout, are already created, but no stair and no second-floor slab exist yet. Two steps. (1) Create one straight stair connecting the ground floor to the first floor, placed entirely inside the region x = 11840..13905, y = 3686..9948 (the east corridor), running along the y direction, with valid connections at both storey levels. (2) Create the upper floor's slab (on the level at 4000 mm) using the existing floor type 'Standard Timber-Wood Finish', following the exterior-wall footprint, and cut an opening in it where the stair passes through. Do not modify the existing walls.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stairs": [
+      {
+        "floor": 0,
+        "region": [
+          11840,
+          3686,
+          13905,
+          9948
+        ],
+        "axis": "y",
+        "label": "east-corridor stair, run along +y"
+      }
+    ],
+    "exact_counts": {
+      "stairs": 1,
+      "slabs": 2,
+      "walls": 19,
+      "doors": 8,
+      "windows": 10,
+      "rooms": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs"
+    ],
+    "slabs": [
+      {
+        "label": "second-floor slab (stair opening)",
+        "floor": 1,
+        "level_mm": 4000,
+        "outline": "footprint",
+        "composite": "Standard Timber-Wood Finish",
+        "ignore_holes": true,
+        "clear_of_stair": true
+      }
+    ],
+    "iou_min": 0.99,
+    "composites": [],
+    "no_extra_composites": true,
+    "tolerance_mm": 0
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/D_model_completion6/env"
+      }
+    ]
+  }
+}

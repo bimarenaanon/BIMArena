@@ -1,0 +1,62 @@
+{
+  "id": "create_wall_type1",
+  "legacy_id": "create_type_wall1",
+  "atom": "create_type_wall",
+  "category": "Config. & Types",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Wall Type (×1)",
+  "instruction": "Create a new compound wall type named 'Insulated Brick 160'. Its layer build-up, exterior to interior, is: 10 mm Render, Tan, Textured, 50 mm Cavity Fill, 100 mm Brick, Common. Use only materials that already exist in the project, and do not place any wall.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "name_contains": [
+          "insulated brick",
+          "brick 160"
+        ],
+        "skins": [
+          {
+            "material_contains": [
+              "Render, Tan, Textured"
+            ],
+            "thickness_mm": 10
+          },
+          {
+            "material_contains": [
+              "Cavity Fill"
+            ],
+            "thickness_mm": 50
+          },
+          {
+            "material_contains": [
+              "Brick, Common"
+            ],
+            "thickness_mm": 100
+          }
+        ],
+        "layers_exact": true
+      }
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/create_wall_type1/env"
+      }
+    ]
+  }
+}

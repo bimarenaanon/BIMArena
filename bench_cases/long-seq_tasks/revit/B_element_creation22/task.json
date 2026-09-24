@@ -1,0 +1,152 @@
+{
+  "id": "B_element_creation22",
+  "legacy_id": "E_cross_view3",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Wall (×6); Inspect Project (×1); Query Types (×1)",
+  "instruction": "Create ONLY the exterior walls of the ground floor (walls only - no doors, windows, stairs, or furniture). Do NOT create any new wall type - use these EXISTING types: the front facade wall uses the brick type 'Exterior - Brick on Mtl. Stud'; every other exterior wall uses the block type 'Exterior - Block on Mtl. Stud'. Author every wall with its exterior face pointing outward. Draw each wall exactly on the line given (corner offsets already included):\n- front facade (brick): (230, 0) → (5913, 0)\n- right side wall: (6143, 175) → (6143, 8830)\n- porch recess horizontal: (5913, 9060) → (3912, 9060)\n- porch recess vertical: (4142, 8830) → (4142, 10608)\n- rear facade: (3912, 10838) → (230, 10838)\n- left side wall: (0, 10608) → (0, 175)\nCreate nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "label": "front facade (brick)",
+        "beg": [
+          230,
+          0
+        ],
+        "end": [
+          5913,
+          0
+        ],
+        "composite": [
+          "Brick",
+          "masonry",
+          "cw"
+        ],
+        "faces": "outward"
+      },
+      {
+        "label": "right side wall",
+        "beg": [
+          6143,
+          175
+        ],
+        "end": [
+          6143,
+          8830
+        ],
+        "faces": "outward",
+        "composite_not": [
+          "Brick",
+          "masonry",
+          "cw",
+          "Interior",
+          "Generic",
+          "Curtain"
+        ]
+      },
+      {
+        "label": "porch recess horizontal",
+        "beg": [
+          5913,
+          9060
+        ],
+        "end": [
+          4142,
+          9060
+        ],
+        "faces": "outward",
+        "composite_not": [
+          "Brick",
+          "masonry",
+          "cw",
+          "Interior",
+          "Generic",
+          "Curtain"
+        ]
+      },
+      {
+        "label": "porch recess vertical",
+        "beg": [
+          4142,
+          9060
+        ],
+        "end": [
+          4142,
+          10608
+        ],
+        "faces": "outward",
+        "composite_not": [
+          "Brick",
+          "masonry",
+          "cw",
+          "Interior",
+          "Generic",
+          "Curtain"
+        ]
+      },
+      {
+        "label": "rear facade",
+        "beg": [
+          3912,
+          10838
+        ],
+        "end": [
+          230,
+          10838
+        ],
+        "faces": "outward",
+        "composite_not": [
+          "Brick",
+          "masonry",
+          "cw",
+          "Interior",
+          "Generic",
+          "Curtain"
+        ]
+      },
+      {
+        "label": "left side wall",
+        "beg": [
+          0,
+          10608
+        ],
+        "end": [
+          0,
+          175
+        ],
+        "faces": "outward",
+        "composite_not": [
+          "Brick",
+          "masonry",
+          "cw",
+          "Interior",
+          "Generic",
+          "Curtain"
+        ]
+      }
+    ],
+    "no_extra_walls": true,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "wall_tolerance_mm": 100,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/B_element_creation22/env"
+      }
+    ]
+  }
+}

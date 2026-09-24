@@ -1,0 +1,72 @@
+{
+  "id": "B_element_creation11",
+  "legacy_id": "C_openings7",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Window (×3); Replace Element Type (×3); Inspect Project (×1)",
+  "instruction": "The model contains one rectangular room enclosed by four exterior walls. On the active storey, place exactly three windows using the same existing window type, all with a 900 mm sill height: one roughly centred on the left (west) wall, 1800 × 1800 mm; one roughly centred on the right (east) wall, 1500 × 1500 mm; one roughly centred on the top (north) wall, 900 × 1500 mm. Do not create, move, or modify any walls, and do not place additional windows.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "host_side": "left",
+        "center": [
+          493,
+          10295
+        ],
+        "width_mm": 1800,
+        "height_mm": 1800,
+        "sill_mm": 900,
+        "label": "west window"
+      },
+      {
+        "host_side": "right",
+        "center": [
+          15493,
+          10295
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 900,
+        "label": "east window"
+      },
+      {
+        "host_side": "top",
+        "center": [
+          7993,
+          15295
+        ],
+        "width_mm": 900,
+        "height_mm": 1500,
+        "sill_mm": 900,
+        "label": "north window"
+      }
+    ],
+    "exact_counts": {
+      "windows": 3,
+      "doors": 0,
+      "walls": 4,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "slabs"
+    ],
+    "opening_pos_tolerance_mm": 300,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/B_element_creation11/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "id": "C_model_editing11",
+  "legacy_id": "F_design_change6",
+  "category": "Model Revision",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "G06",
+  "required_capabilities": "Create Window (×1); Move with Constraints (×1); Replace Element Type (×3); Inspect Project (×1); Query Library (×1)",
+  "instruction": "Execute this combined client change on the complete single-storey model: enlarge Bedroom by moving its west wall 1500 mm further west — handle the knock-on effects of the wall move, so the floor slab, the zone boundaries, and every element attached to or connected with the moved wall follow the change; replace the Bedroom's 900 mm swing door with an interior 1500 x 2100 mm sliding door at the same position; add a new 1800 x 1500 mm window anywhere in the Bedroom's south exterior wall; and rename the Bedroom zone to 'Accessible Bedroom'. Leave everything else untouched.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "label": "wall 1",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          -1500,
+          0
+        ],
+        "end": [
+          -1500,
+          7500
+        ],
+        "width_mm": 250,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ],
+        "body_side": "outside"
+      },
+      {
+        "label": "wall 2",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          -1500,
+          7500
+        ],
+        "end": [
+          12000,
+          7500
+        ],
+        "width_mm": 250,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ],
+        "body_side": "outside"
+      },
+      {
+        "label": "wall 3",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          12000,
+          7500
+        ],
+        "end": [
+          12000,
+          2000
+        ],
+        "width_mm": 250,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ],
+        "body_side": "outside"
+      },
+      {
+        "label": "wall 4",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          12000,
+          2000
+        ],
+        "end": [
+          5500,
+          2000
+        ],
+        "width_mm": 250,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ],
+        "body_side": "outside"
+      },
+      {
+        "label": "wall 5",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5500,
+          2000
+        ],
+        "end": [
+          5500,
+          0
+        ],
+        "width_mm": 250,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ],
+        "body_side": "outside"
+      },
+      {
+        "label": "wall 6",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5500,
+          0
+        ],
+        "end": [
+          -1500,
+          0
+        ],
+        "width_mm": 250,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ],
+        "body_side": "outside"
+      },
+      {
+        "label": "wall 7",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5500,
+          2000
+        ],
+        "end": [
+          5500,
+          7500
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 8",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5500,
+          4029.3
+        ],
+        "end": [
+          9671.6,
+          4029.3
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 9",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          -1500,
+          4864.3
+        ],
+        "end": [
+          5500,
+          4864.3
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 10",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          3176.7,
+          4864.3
+        ],
+        "end": [
+          3176.7,
+          2792.1
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 11",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          3176.7,
+          2792.1
+        ],
+        "end": [
+          -1500,
+          2792.1
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      }
+    ],
+    "wall_tolerance_mm": 10,
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "label": "bedroom sliding door (replaces the 900 swing door)",
+        "near": [
+          5500,
+          2940
+        ],
+        "width_mm": 1500,
+        "height_mm": 2100,
+        "type_contains": [
+          "sliding",
+          "slide"
+        ],
+        "type_not_contains": [
+          "exterior"
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "label": "new window in the south exterior wall (any position)",
+        "host_side": "bottom",
+        "floor": 0,
+        "width_mm": 1800,
+        "height_mm": 1500
+      }
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "slabs": [
+      {
+        "label": "floor slab (follows the moved wall)",
+        "existing": true,
+        "floor": 0,
+        "outline": [
+          [
+            -1750,
+            7750
+          ],
+          [
+            12250,
+            7750
+          ],
+          [
+            12250,
+            1750
+          ],
+          [
+            5750,
+            1750
+          ],
+          [
+            5750,
+            -250
+          ],
+          [
+            -1750,
+            -250
+          ],
+          [
+            -1750,
+            7750
+          ]
+        ],
+        "level_mm": 0
+      }
+    ],
+    "iou_min": 0.99,
+    "tolerance_mm": 0,
+    "rooms": [
+      {
+        "name": "Accessible Bedroom",
+        "existing": true,
+        "inside": [
+          2000,
+          2396
+        ],
+        "area_m2": 24.0
+      },
+      {
+        "name": "Bathroom",
+        "existing": true,
+        "inside": [
+          763,
+          3828
+        ],
+        "area_m2": 8.0
+      },
+      {
+        "name": "Gaming",
+        "existing": true,
+        "inside": [
+          2000,
+          6182
+        ],
+        "area_m2": 18.4
+      },
+      {
+        "name": "Kitchen",
+        "existing": true,
+        "inside": [
+          8825,
+          2940
+        ],
+        "area_m2": 11.9
+      },
+      {
+        "name": "Living Room",
+        "existing": true,
+        "inside": [
+          8825,
+          5765
+        ],
+        "area_m2": 22.4
+      }
+    ],
+    "room_area_ratio": 0.05,
+    "exact_counts": {
+      "doors": 4,
+      "windows": 4,
+      "slabs": 1,
+      "rooms": 5,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            5500,
+            2940
+          ]
+        ]
+      },
+      "windows"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/C_model_editing11/env"
+      }
+    ]
+  }
+}

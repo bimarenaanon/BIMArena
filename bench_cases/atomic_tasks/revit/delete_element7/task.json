@@ -1,0 +1,106 @@
+{
+  "id": "delete_element7",
+  "atom": "delete_element",
+  "category": "Deletion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Delete Element (×1)",
+  "instruction": "Delete both interior partition walls, leaving the four exterior walls and the windows exactly as they are. The two doors hosted in those partitions go with them - that is expected; the entrance door in the south exterior wall must survive.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "existing": true,
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          11000,
+          0
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "existing": true,
+        "beg": [
+          11000,
+          0
+        ],
+        "end": [
+          11000,
+          10000
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "existing": true,
+        "beg": [
+          11000,
+          10000
+        ],
+        "end": [
+          0,
+          10000
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "existing": true,
+        "beg": [
+          0,
+          10000
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      }
+    ],
+    "exact_counts": {
+      "walls": 4,
+      "doors": 1,
+      "windows": 3
+    },
+    "preserve": [
+      "windows",
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            5500,
+            5000
+          ],
+          [
+            8250,
+            5000
+          ]
+        ]
+      },
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            5500,
+            2500
+          ],
+          [
+            8250,
+            5000
+          ]
+        ]
+      }
+    ]
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/delete_element7/env"
+      }
+    ]
+  }
+}

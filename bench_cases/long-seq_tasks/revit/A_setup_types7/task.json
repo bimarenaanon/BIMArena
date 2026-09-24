@@ -1,0 +1,68 @@
+{
+  "id": "A_setup_types7",
+  "legacy_id": "A_setup_types8",
+  "category": "Project Initialization",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Wall Type (×1); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Create a new interior wall type using 3TF bricks, with three layers: (1) 10 mm plaster, (2) a 175 mm brick masonry core, (3) 10 mm plaster. Create the wall type only - do not place any walls.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "skins": [
+          {
+            "material_contains": [
+              "Gypsum",
+              "Plaster",
+              "Render"
+            ],
+            "thickness_mm": [
+              10,
+              12,
+              15
+            ]
+          },
+          {
+            "material_contains": [
+              "Brick",
+              "Masonry"
+            ],
+            "thickness_mm": 175
+          },
+          {
+            "material_contains": [
+              "Gypsum",
+              "Plaster",
+              "Render"
+            ],
+            "thickness_mm": [
+              10,
+              12,
+              15
+            ]
+          }
+        ]
+      }
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/A_setup_types7/env"
+      }
+    ]
+  }
+}

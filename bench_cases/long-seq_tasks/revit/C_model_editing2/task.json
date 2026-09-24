@@ -1,0 +1,61 @@
+{
+  "id": "C_model_editing2",
+  "legacy_id": "B_walls10",
+  "category": "Model Revision",
+  "authoring_tool": "Revit",
+  "v2_template": "B05",
+  "required_capabilities": "Move Element (×1); Move with Constraints (×3); Inspect Project (×1)",
+  "instruction": "The project already contains a finished room layout with room labels. By moving the EXTERIOR walls, resize two rooms to these clear internal dimensions:\n- Kitchen: 2000 x 3500 mm\n- Livingroom: 5000 x 5000 mm\nKeep every interior wall on its existing line (trim or extend endpoints only as needed for clean connections), update the rooms to match the new layout, and adjust the floor slab so it stays flush with the moved exterior walls' outer face. Do not create, move, or modify any room labels or wall types.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "rooms": 4,
+      "slabs": 1
+    },
+    "preserve": [
+      "doors",
+      "windows"
+    ],
+    "wall_tolerance_mm": 50,
+    "rooms": [
+      {
+        "name": "Kitchen",
+        "existing": true,
+        "dims_mm": [
+          2000,
+          3500
+        ]
+      },
+      {
+        "name": "Livingroom",
+        "existing": true,
+        "dims_mm": [
+          5000,
+          5000
+        ]
+      }
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "slabs": [
+      {
+        "floor": 0,
+        "outline": "footprint",
+        "level_mm": 0,
+        "label": "floor slab following the moved exterior walls",
+        "match": "any"
+      }
+    ],
+    "room_area_ratio": 0.1
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/C_model_editing2/env"
+      }
+    ]
+  }
+}

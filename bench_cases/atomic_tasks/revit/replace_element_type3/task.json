@@ -1,0 +1,35 @@
+{
+  "id": "replace_element_type3",
+  "legacy_id": "modify_window1",
+  "atom": "modify_window",
+  "category": "Editing",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Change the sill height of the window on the north wall to 1100 mm, changing nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "sill_mm": 1100,
+        "near": [
+          4000,
+          10000
+        ]
+      }
+    ],
+    "exact_counts": {
+      "windows": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/replace_element_type3/env"
+      }
+    ]
+  }
+}

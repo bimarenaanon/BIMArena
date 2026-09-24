@@ -1,0 +1,164 @@
+{
+  "id": "E_model_checking15",
+  "legacy_id": "H_domain_reasoning8",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "I10",
+  "required_capabilities": "Create Wall Type (×1); Replace Element Type (×6); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "All exterior walls currently use an uninsulated wall type whose single layer is 300 mm reinforced concrete. Upgrade the building envelope to achieve U <= 0.20 W/(m2*K) by adding a layer of mineral-wool insulation on the exterior face of the reinforced-concrete core. Use the following thermal data: mineral wool lambda = 0.035 W/(m*K) and reinforced concrete lambda = 2.30 W/(m*K). Use Rsi = 0.13 m2*K/W and Rse = 0.04 m2*K/W. Insulation boards are available only in 10 mm increments from 100 mm to 200 mm. Select the thinnest available board that satisfies the target U-value. Create a new wall type named 'External Wall EW-U020'. The completed wall build-up should be suitable for normal exterior exposure, using an appropriate existing project material to protect the insulation as the outer finish. Assign the new wall type to all exterior walls. Do not modify any internal partitions, wall geometry, wall location lines, openings, heights, or constraints.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "label": "External Wall EW-U020",
+        "name_contains": [
+          "EW-U020"
+        ],
+        "layers_exact": false,
+        "skins": [
+          {
+            "material_contains": [
+              "Render",
+              "Stucco",
+              "Plaster",
+              "Brick",
+              "Masonry",
+              "Siding",
+              "Cement"
+            ]
+          },
+          {
+            "material_contains": [
+              "Insulation",
+              "Wool"
+            ],
+            "thickness_mm": 170
+          },
+          {
+            "material_contains": [
+              "Concrete"
+            ],
+            "thickness_mm": 300
+          }
+        ]
+      }
+    ],
+    "no_extra_composites": true,
+    "preserve": [
+      "walls"
+    ],
+    "walls": [
+      {
+        "label": "exterior wall 356291",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          149,
+          14393
+        ],
+        "end": [
+          13549,
+          14393
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      },
+      {
+        "label": "exterior wall 356327",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          13789,
+          14153
+        ],
+        "end": [
+          13789,
+          5953
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      },
+      {
+        "label": "exterior wall 356351",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          13549,
+          6193
+        ],
+        "end": [
+          17649,
+          6193
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      },
+      {
+        "label": "exterior wall 356392",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          17889,
+          5953
+        ],
+        "end": [
+          17889,
+          153
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      },
+      {
+        "label": "exterior wall 356452",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          17649,
+          -87
+        ],
+        "end": [
+          149,
+          -87
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      },
+      {
+        "label": "exterior wall 356495",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          -91,
+          153
+        ],
+        "end": [
+          -91,
+          14153
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      }
+    ],
+    "no_extra_walls": true,
+    "wall_tolerance_mm": 150,
+    "exact_counts": {
+      "walls": 6,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/E_model_checking15/env"
+      }
+    ]
+  }
+}

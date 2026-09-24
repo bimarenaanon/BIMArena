@@ -1,0 +1,49 @@
+{
+  "id": "B_element_creation16",
+  "legacy_id": "D_slabs_stairs_rooms4",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "D04",
+  "required_capabilities": "Create Stair (×1); Inspect Project (×1)",
+  "instruction": "The walls are already built and enclose the layout. Create exactly one straight stair inside the bottom-left room (the wall-enclosed space in the bottom-left corner), ascending to the right (walking line in +x). Size and position it to fit entirely inside that room, clashing with nothing. Do not create or modify walls, rooms, or slabs; only place the one stair.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stairs": [
+      {
+        "floor": 0,
+        "region": [
+          -1517,
+          14606,
+          4499,
+          16606
+        ],
+        "axis": "x"
+      }
+    ],
+    "tolerance_mm": 0,
+    "exact_counts": {
+      "stairs": 1,
+      "walls": 13,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 1,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation16/env"
+      }
+    ]
+  }
+}

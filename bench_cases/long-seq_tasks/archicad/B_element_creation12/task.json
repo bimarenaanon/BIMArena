@@ -1,0 +1,93 @@
+{
+  "id": "B_element_creation12",
+  "legacy_id": "C_openings8",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Load Library Element Type (×2); Create Window (×4); Replace Element Type (×4); Inspect Project (×1)",
+  "instruction": "The model contains one rectangular room enclosed by four exterior walls. On the active storey, place exactly four windows; do not create or modify any walls. All distances are measured along the host wall, with corner distances taken from the outer face of the adjoining wall. Use a Triple Window type for two windows, both 1500 × 1500 mm with a 1000 mm sill height: one on the bottom (south) wall with its right edge 1500 mm from that wall's right corner, and one on the top (north) wall with its left edge 2000 mm from that wall's left corner. Use a Double-Hung Window type for the other two: one on the right (east) wall, 900 × 1500 mm with a 1000 mm sill height, with its top edge 1200 mm below the top-right corner; one on the left (west) wall, 1000 × 1500 mm with a 1100 mm sill height, with its bottom edge 2100 mm above the bottom-left corner.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "center": [
+          8125,
+          4291
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "type_contains": [
+          "Triple Window"
+        ],
+        "label": "south triple"
+      },
+      {
+        "center": [
+          3075,
+          16291
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "type_contains": [
+          "Triple Window"
+        ],
+        "label": "north triple"
+      },
+      {
+        "center": [
+          10325,
+          14641
+        ],
+        "width_mm": 900,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "type_contains": [
+          "Double-Hung Window",
+          "Double Hung"
+        ],
+        "label": "east double-hung"
+      },
+      {
+        "center": [
+          325,
+          6841
+        ],
+        "width_mm": 1000,
+        "height_mm": 1500,
+        "sill_mm": 1100,
+        "type_contains": [
+          "Double-Hung Window",
+          "Double Hung"
+        ],
+        "label": "west double-hung"
+      }
+    ],
+    "exact_counts": {
+      "windows": 4,
+      "walls": 4,
+      "doors": 0,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "slabs"
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/B_element_creation12/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "id": "C_model_editing3",
+  "legacy_id": "C_openings4",
+  "category": "Model Revision",
+  "authoring_tool": "Revit",
+  "v2_template": "C04",
+  "required_capabilities": "Create Door/Window Type (×3); Replace Element Type (×3); Inspect Project (×1); Query Library (×1)",
+  "instruction": "The floorplan layout and all room labels are already created in the project. All doors are currently single-leaf, 915 × 2134 mm. Modify the door types as follows:\n- Replace the entrance door (connecting the building to the outside) with an 'M_Door-Exterior-Double-Full Glass-Wood_Clad' door, 1800 × 2400 mm.\n- Replace the bathroom door with an 'M_Door-Interior-Single-2_Panel-Wood' door, 900 × 2100 mm.\n- Replace the balcony door with an 'M_Door-Double-Glass' door, 2100 × 2100 mm.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "near": [
+          6361,
+          132
+        ],
+        "width_mm": 1800,
+        "height_mm": 2400,
+        "type_contains": [
+          "Exterior-Double-Full Glass"
+        ],
+        "label": "entrance -> Exterior-Double-Full Glass-Wood_Clad 1800x2400",
+        "open_into": [
+          6361,
+          -868
+        ]
+      },
+      {
+        "near": [
+          2927,
+          8399
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "type_contains": [
+          "Interior-Single-2_Panel"
+        ],
+        "label": "bathroom -> Interior-Single-2_Panel-Wood 900x2100",
+        "open_into": [
+          3927,
+          8399
+        ]
+      },
+      {
+        "near": [
+          1309,
+          13896
+        ],
+        "width_mm": 2100,
+        "height_mm": 2100,
+        "type_contains": [
+          "Double-Glass"
+        ],
+        "label": "balcony -> Double-Glass 2100x2100",
+        "open_into": [
+          1309,
+          12896
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 6,
+      "walls": 17,
+      "windows": 0,
+      "slabs": 1,
+      "rooms": 3,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            6361,
+            132
+          ],
+          [
+            2927,
+            8399
+          ],
+          [
+            1309,
+            13896
+          ]
+        ]
+      },
+      "walls",
+      "rooms",
+      "slabs"
+    ],
+    "opening_pos_tolerance_mm": 50,
+    "composites": [],
+    "no_extra_composites": true,
+    "size_tolerance_mm": 0
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/C_model_editing3/env"
+      }
+    ]
+  }
+}

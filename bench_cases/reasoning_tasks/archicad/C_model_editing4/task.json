@@ -1,0 +1,74 @@
+{
+  "id": "C_model_editing4",
+  "legacy_id": "C_openings9",
+  "category": "Model Revision",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Replace Element Type (×6); Inspect Project (×1); Query Library (×1)",
+  "instruction": "The floorplan layout and all room labels are already created; all windows currently share one size and type. Work out which window serves which room and replace exactly three: the bedroom window with a Horizontal Multi-Sash Window, 2100 x 1500 mm, sill 500 mm; the kitchen window with a Triple Window matching the bedroom window's width, 1200 mm high, sill 1250 mm; the living room window with a Triple Window with Side Transoms, 100 mm narrower than the others, 1500 mm high, sill 1000 mm.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "near": [
+          9943,
+          11208
+        ],
+        "width_mm": 2100,
+        "height_mm": 1500,
+        "sill_mm": 500,
+        "type": "Horizontal Multi-Sash Window",
+        "label": "bedroom -> Horizontal Multi-Sash Window 2100x1500"
+      },
+      {
+        "near": [
+          9943,
+          5016
+        ],
+        "width_mm": 2100,
+        "height_mm": 1200,
+        "sill_mm": 1250,
+        "type": "Triple Window",
+        "label": "kitchen -> Triple Window 2100x1200"
+      },
+      {
+        "near": [
+          3247,
+          12581
+        ],
+        "width_mm": 2000,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "type": "Triple Window with Side Transoms",
+        "label": "living room -> Triple Window with Side Transoms 2000x1500"
+      }
+    ],
+    "exact_counts": {
+      "windows": 3,
+      "walls": 12,
+      "doors": 5,
+      "slabs": 1,
+      "rooms": 4,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "rooms",
+      "slabs"
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/C_model_editing4/env"
+      }
+    ]
+  }
+}

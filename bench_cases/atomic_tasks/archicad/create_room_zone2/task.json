@@ -1,0 +1,38 @@
+{
+  "id": "create_room_zone2",
+  "legacy_id": "create_zone2",
+  "atom": "create_zone",
+  "category": "Creation",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Room/Zone (×1)",
+  "instruction": "Create one zone named 'Storage' with number '10' filling the area the exterior walls enclose. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name_contains": [
+          "storage"
+        ],
+        "number": "10",
+        "inside": [
+          5500,
+          5000
+        ]
+      }
+    ],
+    "exact_counts": {
+      "rooms": 1
+    }
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_room_zone2/env"
+      }
+    ]
+  }
+}

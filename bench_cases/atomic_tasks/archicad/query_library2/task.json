@@ -1,0 +1,46 @@
+{
+  "id": "query_library2",
+  "legacy_id": "list_library_door1",
+  "atom": "list_library_door",
+  "category": "Query & Selection",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Query Library (×1)",
+  "instruction": "Browse the door library beyond the project favorites and REPORT the names of three GARAGE door parts. Answer in the form \"<label>: <value>\", one line each, using the label garage door.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    },
+    "answer_items": [
+      {
+        "label": "garage door",
+        "min": 3,
+        "contains": [
+          "garage double door",
+          "high-speed door",
+          "high-speed roll-up door",
+          "overhead garage door",
+          "tilt garage door",
+          "vertical sliding garage door"
+        ]
+      }
+    ]
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/query_library2/env"
+      }
+    ]
+  }
+}

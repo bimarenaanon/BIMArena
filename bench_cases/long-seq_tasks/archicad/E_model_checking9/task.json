@@ -1,0 +1,66 @@
+{
+  "id": "E_model_checking9",
+  "legacy_id": "G_model_check5",
+  "category": "Model Checking",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Move Element (×5); Inspect Project (×1); Check Clash (×1)",
+  "instruction": "Some doors and windows are not attached to any wall: the doors near (10468, 8000), (4167, 3921) and (-1076, 0), and the windows near (6788, 10000) and (10146, -1107). Attach each of these five openings to its nearest wall, keeping type and size. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "openings_no_clash": true,
+    "exact_counts": {
+      "walls": 12,
+      "doors": 7,
+      "windows": 3,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            10468,
+            8000
+          ],
+          [
+            4167,
+            3921
+          ],
+          [
+            -1076,
+            0
+          ]
+        ]
+      },
+      {
+        "bucket": "windows",
+        "except_near": [
+          [
+            6788,
+            10000
+          ],
+          [
+            10146,
+            -1107
+          ]
+        ]
+      }
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/E_model_checking9/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "D_model_completion4",
+  "legacy_id": "C_openings5",
+  "category": "Model Completion",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "C05",
+  "required_capabilities": "Create Window (×3); Inspect Project (×1)",
+  "instruction": "The walls in this floorplan drawing are already built. Add the windows so the model matches the drawing exactly: place every window the plan shows; host each window on its correct wall, and make its position and size match the drawing. Do not touch the walls.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "center": [
+          -912,
+          17512
+        ],
+        "width_mm": 1200,
+        "height_mm": 1500
+      },
+      {
+        "center": [
+          2193,
+          17512
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500
+      },
+      {
+        "center": [
+          4938,
+          17362
+        ],
+        "width_mm": 800,
+        "height_mm": 1500
+      }
+    ],
+    "opening_pos_tolerance_mm": 300,
+    "size_tolerance_mm": 250,
+    "exact_counts": {
+      "windows": 3,
+      "walls": 16,
+      "doors": 4,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/D_model_completion4/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "E_model_checking2",
+  "legacy_id": "E_cross_view5",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "F07",
+  "required_capabilities": "Move Element (×3); Inspect Project (×1); Check Clash (×1)",
+  "instruction": "The project opens in a 3D view in which some of the windows are clearly wrong. Diagnose what the problems are and repair them, keeping every window's type and size. Do not modify any walls, and leave the correct openings untouched.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "doors",
+      "slabs",
+      {
+        "bucket": "windows",
+        "except_near": [
+          [
+            11400,
+            4305
+          ],
+          [
+            6300,
+            4405
+          ],
+          [
+            6300,
+            105
+          ],
+          [
+            2200,
+            105
+          ]
+        ]
+      }
+    ],
+    "openings_no_clash": true,
+    "composites": [],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "windows": 4,
+      "doors": 0,
+      "walls": 10,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/E_model_checking2/env"
+      }
+    ]
+  }
+}

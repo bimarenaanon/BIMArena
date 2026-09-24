@@ -1,0 +1,34 @@
+{
+  "id": "move_element2",
+  "legacy_id": "move_door1",
+  "atom": "move_door",
+  "category": "Editing",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Move Element (×1)",
+  "instruction": "Move the door on the south wall 2000 mm in -x along its wall, keeping its type unchanged. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "near": [
+          2000,
+          0
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/move_element2/env"
+      }
+    ]
+  }
+}

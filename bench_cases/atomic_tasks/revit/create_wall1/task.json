@@ -1,0 +1,86 @@
+{
+  "id": "create_wall1",
+  "atom": "create_wall",
+  "category": "Creation",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Wall (×1)",
+  "instruction": "Create four walls using the existing wall type 'Exterior - Brick on Mtl. Stud', through (0, 0) → (6000, 0) → (6000, 4000) → (0, 4000) → (0, 0), with the exterior brick face of every wall pointing outward and their height connected up to Level 2. Create no other elements and do not create or modify any wall type.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          6000,
+          0
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud",
+        "faces": "outward",
+        "height_mm": 4000
+      },
+      {
+        "beg": [
+          6000,
+          0
+        ],
+        "end": [
+          6000,
+          4000
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud",
+        "faces": "outward",
+        "height_mm": 4000
+      },
+      {
+        "beg": [
+          6000,
+          4000
+        ],
+        "end": [
+          0,
+          4000
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud",
+        "faces": "outward",
+        "height_mm": 4000
+      },
+      {
+        "beg": [
+          0,
+          4000
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud",
+        "faces": "outward",
+        "height_mm": 4000
+      }
+    ],
+    "no_extra_walls": true,
+    "exact_counts": {
+      "walls": 4,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/create_wall1/env"
+      }
+    ]
+  }
+}

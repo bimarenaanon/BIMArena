@@ -1,0 +1,290 @@
+{
+  "id": "D_model_completion7",
+  "legacy_id": "I_long_sequence3",
+  "category": "Model Completion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Wall (×11); Create Slab (×1); Create Slab Opening (×1); Create Door (×2); Create Window (×4); Inspect Project (×1); Query Types (×1); Query Library (×1)",
+  "instruction": "The ground floor is already created in the project. Create the upper floor (on the level at 4000 mm) exactly as follows, reusing the types already used on the ground floor. Do not create or modify any types, and do not alter the ground floor.\nExterior walls, 'Exterior - Brick on Mtl. Stud' (draw each exactly on the line given):\n- (171, 2343) → (9171, 2343)\n- (9346, 2518) → (9346, 13518)\n- (9171, 13693) → (171, 13693)\n- (-4, 13518) → (-4, 2518)\nInterior walls, 'Interior - 138mm Partition (1-hr)':\n- (9171, 6362) → (171, 6362)\n- (4796, 6431) → (4796, 13331)\n- (4102, 2718) → (4102, 4493)\n- (4171, 4562) → (2971, 4562)\n- (3012, 4437) → (1974, 3662) (a short diagonal)\n- (1864, 3718) → (1864, 2518)\n- (2902, 4493) → (2902, 6431)\nDoors, both 915 × 2134 mm: centred at (4100, 6431) opening toward +y, and (5654, 6431) opening toward +y.\nWindows, 1400 × 1800 mm with 900 mm sill unless noted: centred at (2246, 13518); (7096, 13518); (5202, 2518); (2627, 2518) 850 × 900 mm.\nFloor slab on the upper level using type 'Concrete-Commercial 362mm', outline (9346, 13693), (9346, 2343), (-4, 2343), (-4, 13693) — keep it CLEAR of the existing stair (cut the stairwell opening so the stair passes through).",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "floor": 1,
+        "beg": [
+          171,
+          2343
+        ],
+        "end": [
+          9171,
+          2343
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud",
+        "label": "upper exterior"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          9346,
+          2518
+        ],
+        "end": [
+          9346,
+          13518
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud",
+        "label": "upper exterior"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          9171,
+          13693
+        ],
+        "end": [
+          171,
+          13693
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud",
+        "label": "upper exterior"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          -4,
+          13518
+        ],
+        "end": [
+          -4,
+          2518
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud",
+        "label": "upper exterior"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          9171,
+          6362
+        ],
+        "end": [
+          171,
+          6362
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "upper interior"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          4796,
+          6431
+        ],
+        "end": [
+          4796,
+          13331
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "upper interior"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          4102,
+          2718
+        ],
+        "end": [
+          4102,
+          4493
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "upper interior"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          4171,
+          4562
+        ],
+        "end": [
+          2971,
+          4562
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "upper interior"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          3012,
+          4437
+        ],
+        "end": [
+          1974,
+          3662
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "upper interior"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          1864,
+          3718
+        ],
+        "end": [
+          1864,
+          2518
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "upper interior"
+      },
+      {
+        "floor": 1,
+        "beg": [
+          2902,
+          4493
+        ],
+        "end": [
+          2902,
+          6431
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "upper interior"
+      }
+    ],
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "floor": 1,
+        "center": [
+          4100,
+          6431
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "label": "upper door 1",
+        "open_into": [
+          4100,
+          7431
+        ]
+      },
+      {
+        "floor": 1,
+        "center": [
+          5654,
+          6431
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "label": "upper door 2",
+        "open_into": [
+          5654,
+          7431
+        ]
+      }
+    ],
+    "opening_pos_tolerance_mm": 300,
+    "windows": [
+      {
+        "floor": 1,
+        "center": [
+          2246,
+          13518
+        ],
+        "width_mm": 1400,
+        "height_mm": 1800,
+        "sill_mm": 900,
+        "label": "upper window 1"
+      },
+      {
+        "floor": 1,
+        "center": [
+          7096,
+          13518
+        ],
+        "width_mm": 1400,
+        "height_mm": 1800,
+        "sill_mm": 900,
+        "label": "upper window 2"
+      },
+      {
+        "floor": 1,
+        "center": [
+          5202,
+          2518
+        ],
+        "width_mm": 1400,
+        "height_mm": 1800,
+        "sill_mm": 900,
+        "label": "upper window 3"
+      },
+      {
+        "floor": 1,
+        "center": [
+          2627,
+          2518
+        ],
+        "width_mm": 850,
+        "height_mm": 900,
+        "sill_mm": 900,
+        "label": "upper window 4"
+      }
+    ],
+    "slabs": [
+      {
+        "floor": 1,
+        "outline": [
+          [
+            9346,
+            13693
+          ],
+          [
+            9346,
+            2343
+          ],
+          [
+            -4,
+            2343
+          ],
+          [
+            -4,
+            13693
+          ]
+        ],
+        "level_mm": 4000,
+        "composite": "Concrete-Commercial 362mm",
+        "label": "upper-floor slab (stairwell opening)",
+        "clear_of_stair": true,
+        "ignore_holes": true
+      }
+    ],
+    "exact_counts": {
+      "doors": 7,
+      "windows": 6,
+      "slabs": 2,
+      "stairs": 1,
+      "rooms": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs",
+      "stairs"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 150
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/D_model_completion7/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "replace_element_type7",
+  "legacy_id": "replace_slab_composite1",
+  "atom": "replace_slab_composite",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Switch the floor slab to the existing composite 'Concrete Floor Insulated with Parquet', keeping its outline and level unchanged. Author no new composites.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "slabs": [
+      {
+        "existing": true,
+        "floor": "active",
+        "level_mm": 0,
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            11129,
+            0
+          ],
+          [
+            11129,
+            10205
+          ],
+          [
+            0,
+            10205
+          ]
+        ],
+        "composite": "Concrete Floor Insulated with Parquet"
+      }
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "slabs": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/replace_element_type7/env"
+      }
+    ]
+  }
+}

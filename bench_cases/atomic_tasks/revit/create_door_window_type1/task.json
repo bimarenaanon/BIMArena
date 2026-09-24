@@ -1,0 +1,35 @@
+{
+  "id": "create_door_window_type1",
+  "legacy_id": "create_type_door1",
+  "atom": "create_type_door",
+  "category": "Config. & Types",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Door/Window Type (×1)",
+  "instruction": "Duplicate a single-flush door family type to create a new door type 750 mm wide and 2000 mm high, named '0750 x 2000mm', then place one door of that new type in any wall to show it exists. Position does not matter. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "width_mm": 750,
+        "height_mm": 2000,
+        "type_contains": [
+          "0750"
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 2
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/create_door_window_type1/env"
+      }
+    ]
+  }
+}

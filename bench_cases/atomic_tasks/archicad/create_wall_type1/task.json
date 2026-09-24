@@ -1,0 +1,61 @@
+{
+  "id": "create_wall_type1",
+  "legacy_id": "create_composite_wall1",
+  "atom": "create_composite_wall",
+  "category": "Config. & Types",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Wall Type (×1)",
+  "instruction": "Author a new wall composite named 'Insulated Stud Partition 126' with this build-up from one face to the other: 13 mm Plaster - Gypsum, 100 mm Insulation - Mineral Soft, 13 mm Plaster - Gypsum, using existing project materials — create no new materials. Do not place any elements.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "name_contains": [
+          "insulated stud"
+        ],
+        "skins": [
+          {
+            "material_contains": [
+              "Plaster - Gypsum"
+            ],
+            "thickness_mm": 13
+          },
+          {
+            "material_contains": [
+              "Insulation - Mineral Soft"
+            ],
+            "thickness_mm": 100
+          },
+          {
+            "material_contains": [
+              "Plaster - Gypsum"
+            ],
+            "thickness_mm": 13
+          }
+        ],
+        "layers_exact": true
+      }
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_wall_type1/env"
+      }
+    ]
+  }
+}

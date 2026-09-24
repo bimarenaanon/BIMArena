@@ -1,0 +1,69 @@
+{
+  "id": "B_element_creation17",
+  "legacy_id": "D_slabs_stairs_rooms6",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "E01",
+  "required_capabilities": "Create Room/Zone (×3); Inspect Project (×1)",
+  "instruction": "The walls are already built; do not move or create any walls. Create exactly three named zones, one in each enclosed room, so that each zone fills its room:\n- 'Living Room' in the room containing point (8231, 9866); the living room is open to the entrance hall at its south-east corner through a wall-less gap — stop the zone on the line between the two wall ends there, and give the hall no zone\n- 'Bedroom' in the enclosed area containing point (13881, 9916)\n- 'Kitchen' in the enclosed area containing point (5681, 5866)",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name": "Living Room",
+        "inside": [
+          8231,
+          9866
+        ],
+        "outside": [
+          13500,
+          6300
+        ]
+      },
+      {
+        "name": "Bedroom",
+        "inside": [
+          13881,
+          9916
+        ],
+        "area_m2": 16.0
+      },
+      {
+        "name": "Kitchen",
+        "inside": [
+          5681,
+          5866
+        ],
+        "area_m2": 16.3
+      }
+    ],
+    "room_area_ratio": 0.05,
+    "exact_counts": {
+      "rooms": 3,
+      "walls": 16,
+      "doors": 5,
+      "windows": 3,
+      "slabs": 1,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/B_element_creation17/env"
+      }
+    ]
+  }
+}

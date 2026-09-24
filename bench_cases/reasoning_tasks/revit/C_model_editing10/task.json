@@ -1,0 +1,161 @@
+{
+  "id": "C_model_editing10",
+  "legacy_id": "F_design_change5",
+  "category": "Model Revision",
+  "authoring_tool": "Revit",
+  "v2_template": "G05",
+  "required_capabilities": "Create Stories (×1); Replace Element Type (×16); Inspect Project (×1)",
+  "instruction": "The two-storey project has already been built. The ground floor's height up to Level 2 becomes 2750 mm and the second storey's wall height becomes 3500 mm. Raise every ground-floor (Level 1) window's sill height by 300 mm relative to its storey; the second-storey windows keep their sills. Do not move, add, or delete anything else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stories": [
+      {
+        "elevation_mm": 0
+      },
+      {
+        "elevation_mm": 2750
+      }
+    ],
+    "stories_exact": true,
+    "story_elev_tolerance_mm": 0,
+    "composites": [],
+    "no_extra_composites": true,
+    "windows": [
+      {
+        "existing": true,
+        "floor": 0,
+        "near": [
+          102,
+          8011
+        ],
+        "sill_mm": 1200,
+        "label": "floor-0 window sill 1200"
+      },
+      {
+        "existing": true,
+        "floor": 0,
+        "near": [
+          11402,
+          9061
+        ],
+        "sill_mm": 1200,
+        "label": "floor-0 window sill 1200"
+      },
+      {
+        "existing": true,
+        "floor": 0,
+        "near": [
+          15002,
+          1911
+        ],
+        "sill_mm": 1200,
+        "label": "floor-0 window sill 1200"
+      },
+      {
+        "existing": true,
+        "floor": 0,
+        "near": [
+          4802,
+          111
+        ],
+        "sill_mm": 1200,
+        "label": "floor-0 window sill 1200"
+      },
+      {
+        "existing": true,
+        "floor": 1,
+        "near": [
+          102,
+          8004
+        ],
+        "sill_mm": 900,
+        "label": "floor-1 window sill 900"
+      },
+      {
+        "existing": true,
+        "floor": 1,
+        "near": [
+          11402,
+          9054
+        ],
+        "sill_mm": 900,
+        "label": "floor-1 window sill 900"
+      },
+      {
+        "existing": true,
+        "floor": 1,
+        "near": [
+          15002,
+          1904
+        ],
+        "sill_mm": 900,
+        "label": "floor-1 window sill 900"
+      },
+      {
+        "existing": true,
+        "floor": 1,
+        "near": [
+          4802,
+          104
+        ],
+        "sill_mm": 900,
+        "label": "floor-1 window sill 900"
+      }
+    ],
+    "slabs": [
+      {
+        "existing": true,
+        "floor": 0,
+        "level_mm": 0,
+        "label": "ground slab unchanged"
+      },
+      {
+        "existing": true,
+        "floor": 1,
+        "level_mm": 2750,
+        "label": "upper slab follows Level 2 down to 2750",
+        "match": "any"
+      }
+    ],
+    "wall_height_mm": {
+      "0": 2750,
+      "1": 3500
+    },
+    "wall_height_tolerance_mm": 10,
+    "exact_counts": {
+      "walls": 24,
+      "doors": 5,
+      "windows": 8,
+      "slabs": 2,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      {
+        "bucket": "slabs",
+        "except_near": [
+          [
+            7302,
+            7104
+          ]
+        ]
+      }
+    ],
+    "tolerance_mm": 0,
+    "opening_pos_tolerance_mm": 10
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/C_model_editing10/env"
+      }
+    ]
+  }
+}

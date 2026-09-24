@@ -1,0 +1,88 @@
+{
+  "id": "B_element_creation12",
+  "legacy_id": "C_openings8",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Load Library Element Type (×2); Create Window (×4); Replace Element Type (×4); Inspect Project (×1)",
+  "instruction": "The model contains one rectangular room enclosed by four exterior walls. On the active storey, place exactly four windows; do not create or modify any walls. All distances are measured along the host wall, with corner distances taken from the inner (room-side) face of the adjoining wall. Use an 'M_Window-Double-Hung-Double' type for two windows, both 1900 × 1550 mm with a 1000 mm sill height: one on the bottom (south) wall with its right edge 1500 mm from that wall's right corner, and one on the top (north) wall with its left edge 2000 mm from that wall's left corner. Use an 'M_Window-Sliding-Four' type for the other two: one on the left (west) wall, 1650 × 600 mm, with its top edge 1200 mm below the top-left corner; one on the right (east) wall, 1650 × 900 mm, with its bottom edge 2100 mm above the bottom-right corner.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "center": [
+          10550,
+          100
+        ],
+        "width_mm": 1900,
+        "height_mm": 1550,
+        "sill_mm": 1000,
+        "type_contains": [
+          "Double-Hung-Double"
+        ],
+        "label": "south double-hung-double"
+      },
+      {
+        "center": [
+          3150,
+          10100
+        ],
+        "width_mm": 1900,
+        "height_mm": 1550,
+        "sill_mm": 1000,
+        "type_contains": [
+          "Double-Hung-Double"
+        ],
+        "label": "north double-hung-double"
+      },
+      {
+        "center": [
+          100,
+          7975
+        ],
+        "width_mm": 1650,
+        "height_mm": 600,
+        "type_contains": [
+          "Sliding-Four"
+        ],
+        "label": "west sliding-four"
+      },
+      {
+        "center": [
+          13100,
+          3125
+        ],
+        "width_mm": 1650,
+        "height_mm": 900,
+        "type_contains": [
+          "Sliding-Four"
+        ],
+        "label": "east sliding-four"
+      }
+    ],
+    "exact_counts": {
+      "windows": 4,
+      "walls": 4,
+      "doors": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls"
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/B_element_creation12/env"
+      }
+    ]
+  }
+}

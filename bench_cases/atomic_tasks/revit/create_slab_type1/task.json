@@ -1,0 +1,56 @@
+{
+  "id": "create_slab_type1",
+  "legacy_id": "create_type_slab1",
+  "atom": "create_type_slab",
+  "category": "Config. & Types",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Slab Type (×1)",
+  "instruction": "Create a new floor type named 'Tile on Cast Concrete 250'. Its build-up, top to bottom, is: 50 mm Ceramic Tile, Cast In Situ 200 mm. Use only materials that already exist in the project, and do not place any floor.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "name_contains": [
+          "tile on cast",
+          "cast concrete 250"
+        ],
+        "skins": [
+          {
+            "material_contains": [
+              "Ceramic Tile"
+            ],
+            "thickness_mm": 50
+          },
+          {
+            "material_contains": [
+              "Cast In Situ"
+            ],
+            "thickness_mm": 200
+          }
+        ],
+        "layers_exact": true
+      }
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/create_slab_type1/env"
+      }
+    ]
+  }
+}

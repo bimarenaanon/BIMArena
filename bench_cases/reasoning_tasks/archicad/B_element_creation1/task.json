@@ -1,0 +1,86 @@
+{
+  "id": "B_element_creation1",
+  "legacy_id": "A_setup_types3",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "A03",
+  "required_capabilities": "Create Wall Type (×1); Create Wall (×1); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Based on the build-up drawing, create the matching wall composite. Create a 6 m long, 3 m high external cavity wall using it.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "skins": [
+          {
+            "material_contains": [
+              "brick",
+              "masonry"
+            ],
+            "thickness_mm": 115
+          },
+          {
+            "material_contains": [
+              "cavity",
+              "air"
+            ],
+            "thickness_mm": 50
+          },
+          {
+            "material_contains": [
+              "insulation",
+              "cavity fill",
+              "wool"
+            ],
+            "thickness_mm": 50
+          },
+          {
+            "material_contains": [
+              "masonry",
+              "brick",
+              "block",
+              "cmu",
+              "concrete masonry"
+            ],
+            "thickness_mm": 175
+          },
+          {
+            "material_contains": [
+              "plaster"
+            ],
+            "thickness_mm": 15
+          }
+        ]
+      }
+    ],
+    "walls": [
+      {
+        "length_mm": 6000,
+        "height_mm": 3000,
+        "composite": "$new",
+        "label": "the 6 m cavity wall"
+      }
+    ],
+    "no_extra_composites": true,
+    "no_extra_walls": true,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation1/env"
+      }
+    ]
+  }
+}

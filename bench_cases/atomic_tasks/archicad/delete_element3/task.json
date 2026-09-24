@@ -1,0 +1,46 @@
+{
+  "id": "delete_element3",
+  "atom": "delete_element",
+  "category": "Deletion",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Delete Element (×1)",
+  "instruction": "Delete every element in this model, leaving an empty project. Leave the storey stack as it is.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "stories": [
+      {
+        "name": "Ground Floor",
+        "elevation_mm": 0
+      },
+      {
+        "name": "First Floor",
+        "elevation_mm": 3000
+      },
+      {
+        "name": "Second Floor",
+        "elevation_mm": 6000
+      }
+    ],
+    "stories_exact": true
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/delete_element3/env"
+      }
+    ]
+  }
+}

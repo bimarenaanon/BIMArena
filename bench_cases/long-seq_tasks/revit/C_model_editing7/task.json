@@ -1,0 +1,87 @@
+{
+  "id": "C_model_editing7",
+  "legacy_id": "F_design_change2",
+  "category": "Model Revision",
+  "authoring_tool": "Revit",
+  "v2_template": "G02",
+  "required_capabilities": "Create Wall (×1); Create Door (×1); Create Window (×1); Delete Element (×2); Inspect Project (×1)",
+  "instruction": "The floor plan is already built in the model. Apply exactly these four changes and touch nothing else:\n1. ADD a door on the west exterior wall: 915 × 2134 mm, centred at (178, 2032), opening OUT of the building (toward -x), hinge on the jamb near (178, 2490).\n2. ADD a window on the same west exterior wall: 1400 × 1800 mm, sill height 900 mm, centred at (178, 8148).\n3. DELETE the 1800 mm interior wall that runs (5760, 3918) → (7560, 3918), i.e. the one near (6660, 4025); the parallel wall 95 mm south of it stays.\n4. DELETE the door near (11796, 173).",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "label": "added dining door (opens outward, west)",
+        "near": [
+          178,
+          2032
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "open_into": [
+          -822,
+          2032
+        ],
+        "hinge_near": [
+          178,
+          2490
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "label": "added bedroom west window",
+        "near": [
+          178,
+          8148
+        ],
+        "width_mm": 1400,
+        "height_mm": 1800,
+        "sill_mm": 900
+      }
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 15,
+      "doors": 5,
+      "windows": 4,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            6660,
+            4025
+          ]
+        ]
+      },
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            11796,
+            173
+          ]
+        ]
+      },
+      "windows",
+      "slabs"
+    ],
+    "opening_pos_tolerance_mm": 100
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/C_model_editing7/env"
+      }
+    ]
+  }
+}

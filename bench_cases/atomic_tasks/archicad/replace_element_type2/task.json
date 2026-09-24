@@ -1,0 +1,38 @@
+{
+  "id": "replace_element_type2",
+  "legacy_id": "modify_door2",
+  "atom": "modify_door",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Raise the sill of the door on the south wall to 50 mm, keeping its size, position and type unchanged. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "near": [
+          4000,
+          0
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "sill_mm": 50,
+        "sill_tolerance_mm": 25
+      }
+    ],
+    "exact_counts": {
+      "doors": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/replace_element_type2/env"
+      }
+    ]
+  }
+}

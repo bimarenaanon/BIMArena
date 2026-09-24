@@ -1,0 +1,40 @@
+{
+  "id": "replace_element_type6",
+  "legacy_id": "replace_wall_type1",
+  "atom": "replace_wall_type",
+  "category": "Editing",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Change the interior partition wall's type in place to the existing type 'Interior - Blockwork 140'. Do not create or modify any wall type, and change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "existing": true,
+        "beg": [
+          5500,
+          0
+        ],
+        "end": [
+          5500,
+          10000
+        ],
+        "composite": "Interior - Blockwork 140"
+      }
+    ],
+    "exact_counts": {
+      "walls": 6
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/replace_element_type6/env"
+      }
+    ]
+  }
+}

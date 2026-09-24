@@ -1,0 +1,60 @@
+{
+  "id": "B_element_creation15",
+  "legacy_id": "D_slabs_stairs_rooms3",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Slab Type (×1); Create Slab (×1); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Two steps: (1) create a new floor type with a TOTAL thickness of exactly 340 mm whose top finish layer uses a wood material (e.g. Oak flooring); the remaining layers are your choice. (2) Create one floor slab on the active storey using this new floor type, covering the entire footprint of the existing exterior walls, flush with the walls' outer surface, and placed so its TOP surface sits at the storey level. Do not create or modify any walls; only create the new floor type and the one slab.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "skins": [
+          {
+            "material_contains": [
+              "Oak",
+              "Wood",
+              "Softwood"
+            ]
+          }
+        ],
+        "layers_exact": false,
+        "total_thickness_mm": 340,
+        "thickness_tolerance_mm": 1
+      }
+    ],
+    "no_extra_composites": true,
+    "slabs": [
+      {
+        "floor": 0,
+        "outline": "footprint",
+        "level_mm": 0,
+        "composite": "$new"
+      }
+    ],
+    "exact_counts": {
+      "slabs": 1,
+      "walls": 11,
+      "doors": 0,
+      "windows": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls"
+    ],
+    "iou_min": 0.99,
+    "tolerance_mm": 0
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/B_element_creation15/env"
+      }
+    ]
+  }
+}

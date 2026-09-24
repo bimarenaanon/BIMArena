@@ -1,0 +1,77 @@
+{
+  "id": "D_model_completion4",
+  "legacy_id": "C_openings5",
+  "category": "Model Completion",
+  "authoring_tool": "Revit",
+  "v2_template": "C05",
+  "required_capabilities": "Load Library Element Type (×1); Create Window (×3); Inspect Project (×1); Query Library (×1)",
+  "instruction": "The walls are already built; do not touch them. Place exactly three windows using the 'M_Window-Casement-Triple-Side-Transom' family, all with a 900 mm sill height, each hosted on the wall at its position:\n- about 2150 mm wide, centred at (1828, 12177)\n- about 2150 mm wide, centred at (6953, 12177)\n- about 1550 mm wide, centred at (11678, 12177)\nPick suitable type sizes from the family so the widths match. Place no other windows.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "center": [
+          1828,
+          12177
+        ],
+        "width_mm": 2150,
+        "sill_mm": 900,
+        "type_contains": [
+          "Casement-Triple"
+        ],
+        "label": "left wide window"
+      },
+      {
+        "center": [
+          6953,
+          12177
+        ],
+        "width_mm": 2150,
+        "sill_mm": 900,
+        "type_contains": [
+          "Casement-Triple"
+        ],
+        "label": "middle wide window"
+      },
+      {
+        "center": [
+          11678,
+          12177
+        ],
+        "width_mm": 1550,
+        "sill_mm": 900,
+        "type_contains": [
+          "Casement-Triple"
+        ],
+        "label": "right narrow window"
+      }
+    ],
+    "opening_pos_tolerance_mm": 300,
+    "size_tolerance_mm": 250,
+    "exact_counts": {
+      "windows": 3,
+      "walls": 15,
+      "doors": 0,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/D_model_completion4/env"
+      }
+    ]
+  }
+}

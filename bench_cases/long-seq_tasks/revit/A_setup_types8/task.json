@@ -1,0 +1,54 @@
+{
+  "id": "A_setup_types8",
+  "legacy_id": "A_setup_types9",
+  "category": "Project Initialization",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Stories (×1); Switch Active Story (×1); Inspect Project (×1)",
+  "instruction": "Set up the project's level structure with exactly five levels, from the bottom up at elevations 150 mm, 3000 mm, 6000 mm, 8550 mm and 12110 mm. When done, make the second level from the bottom the active storey and leave its floor plan open. Do not create any elements.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stories": [
+      {
+        "elevation_mm": 150
+      },
+      {
+        "elevation_mm": 3000
+      },
+      {
+        "elevation_mm": 6000
+      },
+      {
+        "elevation_mm": 8550
+      },
+      {
+        "elevation_mm": 12110
+      }
+    ],
+    "stories_exact": true,
+    "active_story": [
+      1,
+      2
+    ],
+    "story_elev_tolerance_mm": 0,
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/A_setup_types8/env"
+      }
+    ]
+  }
+}

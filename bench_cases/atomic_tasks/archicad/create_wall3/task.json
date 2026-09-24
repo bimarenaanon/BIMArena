@@ -1,0 +1,48 @@
+{
+  "id": "create_wall3",
+  "atom": "create_wall",
+  "category": "Creation",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Wall (×1)",
+  "instruction": "Create ONE straight wall from (0, 0) to (5000, 0), 2700 mm high, using the existing composite 'Brick Double Plastered'. Create no other elements and do not create or modify any composite.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          5000,
+          0
+        ],
+        "composite": "Brick Double Plastered",
+        "height_mm": 2700
+      }
+    ],
+    "no_extra_walls": true,
+    "composites": [],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 1,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_wall3/env"
+      }
+    ]
+  }
+}

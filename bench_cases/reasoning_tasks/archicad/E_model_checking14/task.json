@@ -1,0 +1,139 @@
+{
+  "id": "E_model_checking14",
+  "legacy_id": "H_domain_reasoning5",
+  "category": "Model Checking",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "I07",
+  "required_capabilities": "Move with Constraints (×1); Inspect Project (×1)",
+  "instruction": "A student-residence floor plan has already been created in the project. Check whether the students' living areas are reasonable; if not, adjust the interior walls to correct the room areas.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "label": "Living bay 1",
+        "name": "Living",
+        "existing": true,
+        "inside": [
+          5200,
+          7500
+        ],
+        "min_area_m2": 8
+      },
+      {
+        "label": "Living bay 2",
+        "name": "Living",
+        "existing": true,
+        "inside": [
+          8500,
+          7500
+        ],
+        "min_area_m2": 8
+      },
+      {
+        "label": "Living bay 3",
+        "name": "Living",
+        "existing": true,
+        "inside": [
+          11800,
+          7500
+        ],
+        "min_area_m2": 8
+      },
+      {
+        "label": "Living bay 4",
+        "name": "Living",
+        "existing": true,
+        "inside": [
+          15200,
+          7500
+        ],
+        "min_area_m2": 8
+      }
+    ],
+    "exact_counts": {
+      "doors": 6,
+      "windows": 0,
+      "rooms": 5,
+      "slabs": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            6825,
+            7848
+          ],
+          [
+            10150,
+            7848
+          ],
+          [
+            13475,
+            7848
+          ],
+          [
+            10212,
+            6711
+          ]
+        ]
+      },
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            6168,
+            6711
+          ],
+          [
+            9575,
+            6711
+          ],
+          [
+            12903,
+            6711
+          ],
+          [
+            16128,
+            6711
+          ]
+        ]
+      },
+      {
+        "bucket": "rooms",
+        "except_near": [
+          [
+            4905,
+            7511
+          ],
+          [
+            8230,
+            7911
+          ],
+          [
+            11555,
+            7911
+          ],
+          [
+            14880,
+            7911
+          ]
+        ]
+      }
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/E_model_checking14/env"
+      }
+    ]
+  }
+}

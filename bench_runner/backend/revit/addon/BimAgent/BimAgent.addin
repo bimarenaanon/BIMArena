@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Revit add-in manifest. Deploy alongside BimAgent.dll into
+     %APPDATA%\Autodesk\Revit\Addins\2027\  (the csproj post-build does this).
+     <Assembly> is the bare DLL name, resolved relative to this manifest's folder. -->
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>BimAgent</Name>
+    <Assembly>BimAgent.dll</Assembly>
+    <FullClassName>BimAgent.App</FullClassName>
+    <AddInId>7e3b2c10-9a4d-4b6e-8f21-2c5d9e0a1b33</AddInId>
+    <VendorId>BIMBENCH</VendorId>
+    <VendorDescription>BIMArena — the bench harness backend for Revit</VendorDescription>
+  </AddIn>
+</RevitAddIns>

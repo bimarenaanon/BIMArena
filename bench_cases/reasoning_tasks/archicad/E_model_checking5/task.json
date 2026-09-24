@@ -1,0 +1,205 @@
+{
+  "id": "E_model_checking5",
+  "legacy_id": "G_model_check1",
+  "category": "Model Checking",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "H01",
+  "required_capabilities": "Move Element (×8); Inspect Project (×1)",
+  "instruction": "The Bathroom and Bedroom zones are not fully enclosed by their walls. Repair each broken wall into ONE continuous straight wall — merge fragmented or offset collinear segments instead of leaving a wall assembled from several pieces.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "label": "wall 1",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          0,
+          8800
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 2",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          0,
+          8800
+        ],
+        "end": [
+          12000,
+          8800
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 3",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          12000,
+          8800
+        ],
+        "end": [
+          12000,
+          5000
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 4",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          12000,
+          5000
+        ],
+        "end": [
+          8500,
+          5000
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 5",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          8500,
+          5000
+        ],
+        "end": [
+          8500,
+          0
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 6",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          8500,
+          0
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 7",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          8250,
+          5250
+        ],
+        "end": [
+          8250,
+          8800
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 8",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          8500,
+          2250
+        ],
+        "end": [
+          4450,
+          2250
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 9",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          4450,
+          5250
+        ],
+        "end": [
+          0,
+          5250
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 10",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          4450,
+          0
+        ],
+        "end": [
+          4450,
+          8800
+        ],
+        "width_mm": 200,
+        "tolerance_mm": 300
+      }
+    ],
+    "wall_tolerance_mm": 10,
+    "no_extra_walls": true,
+    "rooms": [
+      {
+        "name": "Bedroom",
+        "existing": true,
+        "inside": [
+          2250,
+          3750
+        ],
+        "area_m2": 20.0
+      },
+      {
+        "name": "Bathroom",
+        "existing": true,
+        "inside": [
+          6350,
+          1250
+        ],
+        "area_m2": 7.6
+      }
+    ],
+    "room_area_ratio": 0.05,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 1,
+      "rooms": 2,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 10
+    },
+    "preserve": [
+      "doors",
+      "windows",
+      "slabs",
+      "rooms"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/E_model_checking5/env"
+      }
+    ]
+  }
+}

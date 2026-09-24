@@ -1,0 +1,318 @@
+{
+  "id": "D_model_completion2",
+  "legacy_id": "I_long_sequence3",
+  "category": "Model Completion",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Load Library Element Type (×2); Create Wall (×15); Create Slab (×1); Create Slab Opening (×1); Create Door (×5); Create Window (×2); Inspect Project (×1); Query Types (×1)",
+  "instruction": "The ground floor (shown on the right) is already created in the project. Create the upper floor from the floorplan on the left: all exterior and interior walls, doors, windows, and the floor slab, matching the layout, positions, and connections shown. Reuse the wall, door, window, and slab types already used on the ground floor. Do not create or modify any types, and do not alter the ground floor.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          1528,
+          11144
+        ],
+        "end": [
+          5528,
+          11144
+        ],
+        "label": "exterior 1 (top-left)"
+      },
+      {
+        "beg": [
+          5528,
+          11144
+        ],
+        "end": [
+          5528,
+          8644
+        ],
+        "label": "exterior 2 (porch jog)"
+      },
+      {
+        "beg": [
+          5528,
+          8644
+        ],
+        "end": [
+          10028,
+          8644
+        ],
+        "label": "exterior 3 (top-right)"
+      },
+      {
+        "beg": [
+          10028,
+          8644
+        ],
+        "end": [
+          10028,
+          -1859
+        ],
+        "label": "exterior 4 (right)"
+      },
+      {
+        "beg": [
+          10028,
+          -1859
+        ],
+        "end": [
+          1528,
+          -1859
+        ],
+        "label": "exterior 5 (bottom)"
+      },
+      {
+        "beg": [
+          1528,
+          -1859
+        ],
+        "end": [
+          1528,
+          11144
+        ],
+        "label": "exterior 6 (left)"
+      },
+      {
+        "beg": [
+          5278,
+          8394
+        ],
+        "end": [
+          1528,
+          8394
+        ],
+        "label": "interior 1 (bedroom front)"
+      },
+      {
+        "beg": [
+          6278,
+          8644
+        ],
+        "end": [
+          6278,
+          3894
+        ],
+        "label": "interior 2 (bedroom divider)"
+      },
+      {
+        "beg": [
+          6278,
+          3894
+        ],
+        "end": [
+          10028,
+          3894
+        ],
+        "label": "interior 3 (bedroom back)"
+      },
+      {
+        "beg": [
+          6478,
+          -1606
+        ],
+        "end": [
+          6478,
+          3894
+        ],
+        "label": "interior 4 (corridor, jogged 200 from interior 2)"
+      },
+      {
+        "beg": [
+          6478,
+          2594
+        ],
+        "end": [
+          4278,
+          2594
+        ],
+        "label": "interior 5 (bathroom top)"
+      },
+      {
+        "beg": [
+          4278,
+          2594
+        ],
+        "end": [
+          4278,
+          1594
+        ],
+        "label": "interior 6 (bathroom jog)"
+      },
+      {
+        "beg": [
+          4278,
+          1594
+        ],
+        "end": [
+          1528,
+          1594
+        ],
+        "label": "interior 7 (bathroom front)"
+      },
+      {
+        "beg": [
+          7953,
+          3894
+        ],
+        "end": [
+          7953,
+          2244
+        ],
+        "label": "interior 8 (closet side)"
+      },
+      {
+        "beg": [
+          7953,
+          2244
+        ],
+        "end": [
+          10028,
+          2244
+        ],
+        "label": "interior 9 (closet bottom)"
+      }
+    ],
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "center": [
+          4564,
+          8394
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "door 1 (bedroom front)"
+      },
+      {
+        "center": [
+          6478,
+          3225
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "door 2 (corridor upper)"
+      },
+      {
+        "center": [
+          7192,
+          3894
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "door 3 (bedroom back)"
+      },
+      {
+        "center": [
+          8490,
+          2244
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "door 4 (closet)"
+      },
+      {
+        "center": [
+          6478,
+          1525
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "door 5 (corridor lower)"
+      }
+    ],
+    "opening_pos_tolerance_mm": 300,
+    "windows": [
+      {
+        "center": [
+          2780,
+          8394
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "label": "window 1 (bedroom front)"
+      },
+      {
+        "center": [
+          8584,
+          8644
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000,
+        "label": "window 2 (top exterior)"
+      }
+    ],
+    "slabs": [
+      {
+        "floor": 1,
+        "outline": [
+          [
+            1528,
+            11144
+          ],
+          [
+            5528,
+            11144
+          ],
+          [
+            5528,
+            8644
+          ],
+          [
+            10028,
+            8644
+          ],
+          [
+            10028,
+            -1859
+          ],
+          [
+            1528,
+            -1859
+          ],
+          [
+            1528,
+            11144
+          ]
+        ],
+        "level_mm": 3000,
+        "composite": "Generic Slab/Roof",
+        "exclude_region": [
+          8033,
+          -1601,
+          9033,
+          1222
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 9,
+      "windows": 4,
+      "slabs": 2,
+      "rooms": 0,
+      "stairs": 1,
+      "objects": 0
+    },
+    "preserve": [
+      "stairs"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 100
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/D_model_completion2/env"
+      }
+    ]
+  }
+}

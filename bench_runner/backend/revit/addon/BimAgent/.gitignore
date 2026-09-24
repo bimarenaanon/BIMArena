@@ -1,0 +1,4 @@
+# .NET build artifacts — the add-in is built locally and deployed to the Revit Addins folder.
+bin/
+obj/
+*.user

@@ -1,0 +1,111 @@
+{
+  "id": "D_model_completion1",
+  "legacy_id": "B_walls6",
+  "category": "Model Completion",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "B04",
+  "required_capabilities": "Create Wall (×6); Inspect Project (×1)",
+  "instruction": "Most walls already exist in the project. Create ONLY the following missing wall segments; do not create or modify anything else and do not create composites.\nInterior segments, existing composite 'Brick Double Plastered':\n- (9158, 13747) → (12358, 13747)\n- (10033, 13747) → (10033, 14760)\n- (10033, 17747) → (10033, 16460)\nExterior segments, existing composite '100 Block Insulated Cavity Plastered', exterior finish facing outward:\n- (358, 17747) → (358, 11947)\n- (358, 11947) → (3358, 11947)\n- (3358, 11947) → (3358, 9747)",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          9158,
+          13747
+        ],
+        "end": [
+          12358,
+          13747
+        ],
+        "composite": "Brick Double Plastered",
+        "tolerance_mm": 300
+      },
+      {
+        "beg": [
+          10033,
+          13747
+        ],
+        "end": [
+          10033,
+          14760
+        ],
+        "composite": "Brick Double Plastered",
+        "tolerance_mm": 300
+      },
+      {
+        "beg": [
+          10033,
+          17747
+        ],
+        "end": [
+          10033,
+          16460
+        ],
+        "composite": "Brick Double Plastered",
+        "tolerance_mm": 300
+      },
+      {
+        "beg": [
+          358,
+          17747
+        ],
+        "end": [
+          358,
+          11947
+        ],
+        "composite": "100 Block Insulated Cavity Plastered",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          358,
+          11947
+        ],
+        "end": [
+          3358,
+          11947
+        ],
+        "composite": "100 Block Insulated Cavity Plastered",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          3358,
+          11947
+        ],
+        "end": [
+          3358,
+          9747
+        ],
+        "composite": "100 Block Insulated Cavity Plastered",
+        "faces": "outward"
+      }
+    ],
+    "no_extra_walls": true,
+    "wall_tolerance_mm": 100,
+    "composites": [],
+    "no_extra_composites": true,
+    "preserve": [
+      "walls"
+    ],
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/D_model_completion1/env"
+      }
+    ]
+  }
+}

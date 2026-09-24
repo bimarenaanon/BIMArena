@@ -1,0 +1,71 @@
+{
+  "id": "B_element_creation17",
+  "legacy_id": "D_slabs_stairs_rooms6",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "E01",
+  "required_capabilities": "Create Room/Zone (×3); Inspect Project (×1)",
+  "instruction": "The walls are already built. Create one named zone for each room the floorplan drawing shows, placing each zone inside the matching enclosed area with the name shown in the drawing. The living room is open to the entrance hall through a wall-less gap: stop the Living Room zone on the line between the two wall ends and give the hall no zone. Do not move or create any walls; only place the zones.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name": "Living Room",
+        "inside": [
+          8231,
+          9866
+        ],
+        "outside": [
+          13500,
+          6300
+        ]
+      },
+      {
+        "name": "Bedroom",
+        "inside": [
+          13881,
+          9916
+        ],
+        "area_m2": 16.0
+      },
+      {
+        "name": "Kitchen",
+        "inside": [
+          5681,
+          5866
+        ],
+        "area_m2": 16.3
+      }
+    ],
+    "room_area_ratio": 0.05,
+    "exact_counts": {
+      "rooms": 3,
+      "walls": 16,
+      "doors": 5,
+      "windows": 3,
+      "slabs": 1,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation17/env"
+      }
+    ]
+  }
+}

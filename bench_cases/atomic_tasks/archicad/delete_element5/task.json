@@ -1,0 +1,35 @@
+{
+  "id": "delete_element5",
+  "atom": "delete_element",
+  "category": "Deletion",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Delete Element (×1)",
+  "instruction": "Delete the floor slab, leaving every other element exactly as it is.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "slabs": 0,
+      "walls": 5,
+      "doors": 1,
+      "windows": 1,
+      "rooms": 1
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "rooms"
+    ]
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/delete_element5/env"
+      }
+    ]
+  }
+}

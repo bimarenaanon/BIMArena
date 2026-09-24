@@ -1,0 +1,89 @@
+{
+  "id": "C_model_editing7",
+  "legacy_id": "F_design_change2",
+  "category": "Model Revision",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "G02",
+  "required_capabilities": "Create Wall (×1); Create Door (×1); Create Window (×1); Delete Element (×2); Inspect Project (×1)",
+  "instruction": "The floorplan shown in the attached drawing has already been built in the current model. The drawing carries redline annotations marking the required design changes: every RED door, window, and wall is an element that must be ADDED to the model, and every element marked with a RED CROSS must be DELETED. Create the red elements at the marked positions — for the added door, match the swing shown in the drawing, including the hinge side and whether it opens into or out of the room — delete the crossed-out ones, and do not touch any unmarked element.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "label": "added entrance door (west wall)",
+        "center": [
+          0,
+          1450
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "open_into": [
+          -1000,
+          1450
+        ],
+        "hinge_near": [
+          0,
+          1900
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "label": "added window (west wall)",
+        "center": [
+          0,
+          7550
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      }
+    ],
+    "opening_pos_tolerance_mm": 100,
+    "exact_counts": {
+      "walls": 15,
+      "doors": 5,
+      "windows": 4,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            5551,
+            3476
+          ]
+        ]
+      },
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            10766,
+            0
+          ]
+        ]
+      },
+      "windows",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/C_model_editing7/env"
+      }
+    ]
+  }
+}

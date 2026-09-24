@@ -1,0 +1,73 @@
+{
+  "id": "A_setup_types3",
+  "legacy_id": "A_setup_types4",
+  "category": "Project Initialization",
+  "authoring_tool": "Revit",
+  "v2_template": "A05",
+  "required_capabilities": "Create Slab Type (×1); Replace Element Type (×1); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Based on the build-up drawing, create the matching slab type. An intermediate floor slab already exists within the exterior-wall footprint. Change this existing slab to use the newly created floor type. Do not modify the slab's boundary, its level, its height offset from that level, or the existing exterior walls.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "skins": [
+          {
+            "material_contains": [
+              "Oak",
+              "Wood",
+              "Softwood"
+            ],
+            "thickness_mm": 15
+          },
+          {
+            "material_contains": [
+              "Cement Screed"
+            ],
+            "thickness_mm": 60
+          },
+          {
+            "material_contains": [
+              "Concrete"
+            ],
+            "thickness_mm": 200
+          }
+        ]
+      }
+    ],
+    "slabs": [
+      {
+        "existing": true,
+        "floor": 0,
+        "composite": "$new",
+        "level_mm": 0,
+        "label": "existing slab switched to the new composite"
+      }
+    ],
+    "preserve": [
+      "walls",
+      "slabs"
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 4,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/A_setup_types3/env"
+      }
+    ]
+  }
+}

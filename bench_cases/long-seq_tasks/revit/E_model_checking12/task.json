@@ -1,0 +1,94 @@
+{
+  "id": "E_model_checking12",
+  "legacy_id": "H_domain_reasoning4",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "I05",
+  "required_capabilities": "Move with Constraints (×4); Inspect Project (×1)",
+  "instruction": "A dwelling floor plan for a three-person household is already created. Resize the two bedrooms by MOVING interior walls, then update the rooms: Bedroom 2 (the child's bedroom) must be at least 2600 × 3100 mm clear, and Bedroom 1 (the parents' bedroom) at least 3600 × 3500 mm clear. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            2296,
+            9651
+          ],
+          [
+            1196,
+            7951
+          ],
+          [
+            7398,
+            10151
+          ],
+          [
+            8923,
+            8951
+          ]
+        ]
+      },
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            2296,
+            10294
+          ],
+          [
+            9691,
+            8951
+          ]
+        ]
+      }
+    ],
+    "rooms": [
+      {
+        "name": "Bedroom 2",
+        "existing": true,
+        "inside": [
+          1496,
+          9651
+        ],
+        "min_dims_mm": {
+          "x": 2600,
+          "y": 3100
+        }
+      },
+      {
+        "name": "Bedroom 1",
+        "existing": true,
+        "inside": [
+          8548,
+          9501
+        ],
+        "min_dims_mm": {
+          "x": 3600,
+          "y": 3500
+        }
+      }
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "doors": 3,
+      "windows": 0,
+      "rooms": 2,
+      "slabs": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/E_model_checking12/env"
+      }
+    ]
+  }
+}

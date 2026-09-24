@@ -1,0 +1,52 @@
+{
+  "id": "replace_element_type5",
+  "legacy_id": "replace_slab_type1",
+  "atom": "replace_slab_type",
+  "category": "Editing",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Switch the floor's type in place to the existing type 'Concrete-Domestic 425mm', keeping its outline and elevation unchanged. Do not create or modify any floor type.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "slabs": [
+      {
+        "existing": true,
+        "floor": "active",
+        "level_mm": 0,
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            11000,
+            0
+          ],
+          [
+            11000,
+            10000
+          ],
+          [
+            0,
+            10000
+          ]
+        ],
+        "composite": "Concrete-Domestic 425mm"
+      }
+    ],
+    "exact_counts": {
+      "slabs": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/replace_element_type5/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "id": "C_model_editing6",
+  "legacy_id": "F_design_change1",
+  "category": "Model Revision",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "G01",
+  "required_capabilities": "Create Wall (×2); Move with Constraints (×1); Inspect Project (×1)",
+  "instruction": "The single-storey model is already built. Modify the walls so the FINAL wall layout is exactly the following (walls not listed must not exist; tolerance is tight). Exterior loop, 250 mm 'Generic - Structural' walls with the exterior face outward: (0, -2000) → (0, 7000) → (15000, 7000) → (15000, -2000) → (0, -2000). Interior walls, 150 mm 'Generic - Structural':\n- (13000, 7000) → (13000, -2000)\n- (4500, 7000) → (4500, -2000)\n- (4500, 4250) → (7000, 4250)\n- (7000, 4250) → (7000, 7000)\n- (6500, -2000) → (6500, 1750)\n- (6000, 1750) → (8000, 1750)\n- (8000, 1750) → (8000, -2000)\n- (13000, 4100) → (12246, 4100)\n- (10350, 7000) → (10350, 4250)\n- (8000, 4250) → (10350, 4250)\nUpdate ALL related elements: the door hosted on the south wall stays at its position along that wall; extend the floor slab to the new outline (0, -2000), (15000, -2000), (15000, 7000), (0, 7000); update the zones to the new room boundaries. Do not add or remove any door or window.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "label": "wall 1",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          0,
+          -2000
+        ],
+        "end": [
+          0,
+          7000
+        ],
+        "width_mm": 250,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ],
+        "faces": "outward"
+      },
+      {
+        "label": "wall 2",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          0,
+          7000
+        ],
+        "end": [
+          15000,
+          7000
+        ],
+        "width_mm": 250,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ],
+        "faces": "outward"
+      },
+      {
+        "label": "wall 3",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          15000,
+          7000
+        ],
+        "end": [
+          15000,
+          -2000
+        ],
+        "width_mm": 250,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ],
+        "faces": "outward"
+      },
+      {
+        "label": "wall 4",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          15000,
+          -2000
+        ],
+        "end": [
+          0,
+          -2000
+        ],
+        "width_mm": 250,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ],
+        "faces": "outward"
+      },
+      {
+        "label": "wall 5",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          13000,
+          7000
+        ],
+        "end": [
+          13000,
+          -2000
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 6",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          4500,
+          7000
+        ],
+        "end": [
+          4500,
+          -2000
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 7",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          4500,
+          4250
+        ],
+        "end": [
+          7000,
+          4250
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 8",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          7000,
+          4250
+        ],
+        "end": [
+          7000,
+          7000
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 9",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          6500,
+          -2000
+        ],
+        "end": [
+          6500,
+          1750
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 10",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          6000,
+          1750
+        ],
+        "end": [
+          8000,
+          1750
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 11",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          8000,
+          1750
+        ],
+        "end": [
+          8000,
+          -2000
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 12",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          13000,
+          4100
+        ],
+        "end": [
+          12246.3,
+          4100
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 13",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          10350,
+          7000
+        ],
+        "end": [
+          10350,
+          4250
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      },
+      {
+        "label": "wall 14",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          8000,
+          4250
+        ],
+        "end": [
+          10350,
+          4250
+        ],
+        "width_mm": 150,
+        "material_contains": [
+          "GENERIC - STRUCTURAL"
+        ]
+      }
+    ],
+    "wall_tolerance_mm": 10,
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "label": "south-wall door (follows the moved wall)",
+        "near": [
+          5303,
+          -2000
+        ],
+        "width_mm": 900,
+        "height_mm": 2100
+      }
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "slabs": [
+      {
+        "label": "floor slab (extended)",
+        "existing": true,
+        "floor": 0,
+        "outline": [
+          [
+            0,
+            -2000
+          ],
+          [
+            15000,
+            -2000
+          ],
+          [
+            15000,
+            7000
+          ],
+          [
+            0,
+            7000
+          ],
+          [
+            0,
+            -2000
+          ]
+        ],
+        "level_mm": 0
+      }
+    ],
+    "iou_min": 0.99,
+    "tolerance_mm": 0,
+    "rooms": [
+      {
+        "name": "Bedroom",
+        "existing": true,
+        "inside": [
+          2300,
+          2500
+        ],
+        "area_m2": 34.9
+      },
+      {
+        "name": "Bathroom",
+        "existing": true,
+        "inside": [
+          5750,
+          5500
+        ],
+        "area_m2": 6.2
+      },
+      {
+        "name": "Dinning Room",
+        "existing": true,
+        "inside": [
+          11600,
+          5500
+        ],
+        "area_m2": 6.2
+      }
+    ],
+    "room_area_ratio": 0.05,
+    "exact_counts": {
+      "doors": 5,
+      "windows": 4,
+      "slabs": 1,
+      "rooms": 3,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            5303,
+            0
+          ]
+        ]
+      },
+      "windows"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/C_model_editing6/env"
+      }
+    ]
+  }
+}

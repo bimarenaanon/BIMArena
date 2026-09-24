@@ -1,0 +1,235 @@
+{
+  "id": "A_setup_types5",
+  "legacy_id": "A_setup_types6",
+  "category": "Project Initialization",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "A07",
+  "required_capabilities": "Create Wall Type (×2); Create Slab Type (×1); Replace Element Type (×8); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "The project contains four exterior walls, three interior walls, and one slab, all using generic types. Three build-up drawings are provided: an exterior wall, an interior wall, and a floor slab. Create one matching composite from each wall drawing and one slab composite from the slab drawing (layers, materials, thicknesses, and order as drawn). Then switch the four exterior walls to the new exterior composite, the three interior walls to the new interior composite, and the slab to the new slab composite. Do not change any wall or slab geometry.",
+  "input": {
+    "drawing": [
+      "drawing1.png",
+      "drawing2.png",
+      "drawing3.png"
+    ]
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "label": "exterior wall composite (concrete sandwich 460)",
+        "total_thickness_mm": 460,
+        "layers_exact": true,
+        "skins": [
+          {
+            "material_contains": [
+              "concrete"
+            ],
+            "thickness_mm": 150
+          },
+          {
+            "material_contains": [
+              "insulation"
+            ],
+            "thickness_mm": 150
+          },
+          {
+            "material_contains": [
+              "concrete"
+            ],
+            "thickness_mm": 150
+          },
+          {
+            "material_contains": [
+              "gypsum",
+              "plaster"
+            ],
+            "thickness_mm": 10
+          }
+        ]
+      },
+      {
+        "label": "interior wall composite (brick 205)",
+        "total_thickness_mm": 205,
+        "layers_exact": true,
+        "skins": [
+          {
+            "material_contains": [
+              "gypsum",
+              "plaster"
+            ],
+            "thickness_mm": 15
+          },
+          {
+            "material_contains": [
+              "brick",
+              "masonry"
+            ],
+            "thickness_mm": 175
+          },
+          {
+            "material_contains": [
+              "gypsum",
+              "plaster"
+            ],
+            "thickness_mm": 15
+          }
+        ]
+      },
+      {
+        "label": "floor slab composite (tile 275)",
+        "total_thickness_mm": 275,
+        "layers_exact": true,
+        "skins": [
+          {
+            "material_contains": [
+              "tile"
+            ],
+            "thickness_mm": 10
+          },
+          {
+            "material_contains": [
+              "filler",
+              "screed",
+              "concrete"
+            ],
+            "thickness_mm": 65
+          },
+          {
+            "material_contains": [
+              "reinforced concrete",
+              "concrete"
+            ],
+            "thickness_mm": 200
+          }
+        ]
+      }
+    ],
+    "walls": [
+      {
+        "existing": true,
+        "beg": [
+          546,
+          -2348
+        ],
+        "end": [
+          10546,
+          -2348
+        ],
+        "composite": "$new:0",
+        "faces": "outward",
+        "label": "south exterior wall"
+      },
+      {
+        "existing": true,
+        "beg": [
+          10546,
+          -2348
+        ],
+        "end": [
+          10546,
+          9652
+        ],
+        "composite": "$new:0",
+        "faces": "outward",
+        "label": "east exterior wall"
+      },
+      {
+        "existing": true,
+        "beg": [
+          10546,
+          9652
+        ],
+        "end": [
+          546,
+          9652
+        ],
+        "composite": "$new:0",
+        "faces": "outward",
+        "label": "north exterior wall"
+      },
+      {
+        "existing": true,
+        "beg": [
+          546,
+          9652
+        ],
+        "end": [
+          546,
+          -2348
+        ],
+        "composite": "$new:0",
+        "faces": "outward",
+        "label": "west exterior wall"
+      },
+      {
+        "existing": true,
+        "beg": [
+          6546,
+          9652
+        ],
+        "end": [
+          6546,
+          -2348
+        ],
+        "composite": "$new:1",
+        "label": "interior wall (vertical)"
+      },
+      {
+        "existing": true,
+        "beg": [
+          546,
+          6652
+        ],
+        "end": [
+          10546,
+          6652
+        ],
+        "composite": "$new:1",
+        "label": "interior wall (upper horizontal)"
+      },
+      {
+        "existing": true,
+        "beg": [
+          546,
+          652
+        ],
+        "end": [
+          10546,
+          652
+        ],
+        "composite": "$new:1",
+        "label": "interior wall (lower horizontal)"
+      }
+    ],
+    "slabs": [
+      {
+        "existing": true,
+        "floor": 0,
+        "composite": "$new:2",
+        "label": "existing slab switched to the new floor composite"
+      }
+    ],
+    "no_extra_composites": true,
+    "preserve": [
+      "walls",
+      "slabs"
+    ],
+    "exact_counts": {
+      "walls": 7,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/A_setup_types5/env"
+      }
+    ]
+  }
+}

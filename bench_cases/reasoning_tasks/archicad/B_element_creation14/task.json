@@ -1,0 +1,150 @@
+{
+  "id": "B_element_creation14",
+  "legacy_id": "D_slabs_stairs_rooms2",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Slab (×2); Create Slab Opening (×1); Inspect Project (×1)",
+  "instruction": "The walls and rooms of both floors are already created, but there are no slabs yet. Create the floor slab for BOTH floors, each following its storey's exterior-wall footprint, with the boundary flush with the exterior walls' OUTER face. Use existing slab composites — create none. Do not modify any walls or rooms.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "slabs": [
+      {
+        "label": "first-floor slab",
+        "floor": 0,
+        "outline": [
+          [
+            3928.5,
+            20331.9
+          ],
+          [
+            7928.5,
+            20331.9
+          ],
+          [
+            7928.5,
+            21831.9
+          ],
+          [
+            9428.5,
+            21831.9
+          ],
+          [
+            9428.5,
+            20331.9
+          ],
+          [
+            14428.5,
+            20331.9
+          ],
+          [
+            14428.5,
+            13831.9
+          ],
+          [
+            3928.5,
+            13831.9
+          ],
+          [
+            3928.5,
+            20331.9
+          ]
+        ],
+        "level_mm": 0
+      },
+      {
+        "label": "second-floor slab (stairwell opening)",
+        "floor": 1,
+        "outline": [
+          [
+            3928.5,
+            20331.9
+          ],
+          [
+            7928.5,
+            20331.9
+          ],
+          [
+            7928.5,
+            21831.9
+          ],
+          [
+            9428.5,
+            21831.9
+          ],
+          [
+            9428.5,
+            20331.9
+          ],
+          [
+            14428.5,
+            20331.9
+          ],
+          [
+            14428.5,
+            13831.9
+          ],
+          [
+            3928.5,
+            13831.9
+          ],
+          [
+            3928.5,
+            20331.9
+          ]
+        ],
+        "holes": [
+          [
+            [
+              14228.5,
+              14031.9
+            ],
+            [
+              14228.5,
+              17127.1
+            ],
+            [
+              12066.5,
+              17127.1
+            ],
+            [
+              12066.5,
+              14031.9
+            ],
+            [
+              14228.5,
+              14031.9
+            ]
+          ]
+        ],
+        "level_mm": 3000
+      }
+    ],
+    "iou_min": 0.99,
+    "tolerance_mm": 0,
+    "exact_counts": {
+      "slabs": 2,
+      "walls": 28,
+      "doors": 0,
+      "windows": 0,
+      "rooms": 6,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "rooms"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation14/env"
+      }
+    ]
+  }
+}

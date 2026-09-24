@@ -1,0 +1,248 @@
+{
+  "id": "E_model_checking10",
+  "legacy_id": "H_domain_reasoning1",
+  "category": "Model Checking",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "I01",
+  "required_capabilities": "Replace Element Type (×9); Inspect Project (×1); Query Types (×1)",
+  "instruction": "The project's walls and rooms are already created; every internal wall currently uses the generic composite. Reassign the internal partition walls to the following EXISTING composites (reuse them, create none; preserve all wall centrelines and room boundaries; the six exterior 'Generic Wall/Shell' loop walls stay unchanged):\n'INT_125_Moisture_Acoustic':\n- (10500, 5800) → (7050, 5793)\n- (7050, 5793) → (7050, 4000)\n- (4550, 4300) → (4550, 2500)\n- (4550, 4300) → (7050, 4300)\n- (7050, 4300) → (7050, 2500)\n'INT_125_Acoustic_Partition':\n- (7050, 10500) → (7050, 5793)\n- (3500, 6679) → (3500, 10500)\n'INT_150_Fire_Rated_Stair_Wall':\n- (4550, 4300) → (0, 4300)\n- (3500, 6679) → (0, 6679)",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "label": "SW - 001 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          2500,
+          0
+        ],
+        "composite": "Generic Wall/Shell"
+      },
+      {
+        "label": "SW - 002 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          2500,
+          0
+        ],
+        "end": [
+          2500,
+          2500
+        ],
+        "composite": "Generic Wall/Shell"
+      },
+      {
+        "label": "SW - 003 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          2500,
+          2500
+        ],
+        "end": [
+          10500,
+          2500
+        ],
+        "composite": "Generic Wall/Shell"
+      },
+      {
+        "label": "SW - 004 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          10500,
+          2500
+        ],
+        "end": [
+          10500,
+          10500
+        ],
+        "composite": "Generic Wall/Shell"
+      },
+      {
+        "label": "SW - 005 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          10500,
+          10500
+        ],
+        "end": [
+          0,
+          10500
+        ],
+        "composite": "Generic Wall/Shell"
+      },
+      {
+        "label": "SW - 006 (kept generic)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          0,
+          10500
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "Generic Wall/Shell"
+      },
+      {
+        "label": "SW - 010 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          10500,
+          5800
+        ],
+        "end": [
+          7050,
+          5793
+        ],
+        "composite": "INT_125_Moisture_Acoustic"
+      },
+      {
+        "label": "SW - 012 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          7050,
+          10500
+        ],
+        "end": [
+          7050,
+          5793
+        ],
+        "composite": "INT_125_Acoustic_Partition"
+      },
+      {
+        "label": "SW - 012 (reassigned, segment 2)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          7050,
+          5793
+        ],
+        "end": [
+          7050,
+          4000
+        ],
+        "composite": "INT_125_Moisture_Acoustic"
+      },
+      {
+        "label": "SW - 013 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          4550,
+          4300
+        ],
+        "end": [
+          0,
+          4300
+        ],
+        "composite": "INT_150_Fire_Rated_Stair_Wall"
+      },
+      {
+        "label": "SW - 014 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          4550,
+          4300
+        ],
+        "end": [
+          4550,
+          2500
+        ],
+        "composite": "INT_125_Moisture_Acoustic"
+      },
+      {
+        "label": "SW - 016 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          3500,
+          6679
+        ],
+        "end": [
+          3500,
+          10500
+        ],
+        "composite": "INT_125_Acoustic_Partition"
+      },
+      {
+        "label": "SW - 017 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          3500,
+          6679
+        ],
+        "end": [
+          0,
+          6679
+        ],
+        "composite": "INT_150_Fire_Rated_Stair_Wall"
+      },
+      {
+        "label": "SW - 018 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          4550,
+          4300
+        ],
+        "end": [
+          7050,
+          4300
+        ],
+        "composite": "INT_125_Moisture_Acoustic"
+      },
+      {
+        "label": "SW - 020 (reassigned)",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          7050,
+          4300
+        ],
+        "end": [
+          7050,
+          2500
+        ],
+        "composite": "INT_125_Moisture_Acoustic"
+      }
+    ],
+    "wall_tolerance_mm": 200,
+    "composites": [],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 15,
+      "rooms": 6,
+      "stairs": 1,
+      "doors": 0,
+      "windows": 0
+    },
+    "preserve": [
+      "walls",
+      "stairs"
+    ]
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/E_model_checking10/env"
+      }
+    ]
+  }
+}

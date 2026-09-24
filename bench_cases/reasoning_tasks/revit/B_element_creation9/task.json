@@ -1,0 +1,101 @@
+{
+  "id": "B_element_creation9",
+  "legacy_id": "C_openings1",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "v2_template": "C01",
+  "required_capabilities": "Create Door/Window Type (×1); Create Door (×4); Inspect Project (×1)",
+  "instruction": "The room is a simple rectangle with four exterior walls already built; do not create, move, or modify them. Place four doors, one roughly centred on each wall: single-leaf 915 x 2134 mm on the top and bottom walls, double-leaf 1700 x 2000 mm on the left and right walls. The two double doors are escape doors; by code an escape door swings in the escape direction, and every other door swings into the room it serves. Place no additional doors.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "host_side": "top",
+        "center": [
+          7500,
+          11000
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "label": "top single door",
+        "open_into": [
+          7597,
+          10101
+        ]
+      },
+      {
+        "host_side": "bottom",
+        "center": [
+          7500,
+          0
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "label": "bottom single door",
+        "open_into": [
+          7597,
+          1101
+        ]
+      },
+      {
+        "host_side": "left",
+        "center": [
+          0,
+          5500
+        ],
+        "width_mm": 1700,
+        "height_mm": 2000,
+        "type_contains": [
+          "double"
+        ],
+        "label": "left double door",
+        "open_into": [
+          -903,
+          5601
+        ]
+      },
+      {
+        "host_side": "right",
+        "center": [
+          15000,
+          5500
+        ],
+        "width_mm": 1700,
+        "height_mm": 2000,
+        "type_contains": [
+          "double"
+        ],
+        "label": "right double door",
+        "open_into": [
+          16097,
+          5601
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 4,
+      "windows": 0,
+      "walls": 4,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls"
+    ],
+    "opening_pos_tolerance_mm": 300,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/B_element_creation9/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "replace_element_type3",
+  "legacy_id": "modify_wall1",
+  "atom": "modify_wall",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Change the interior partition wall to 2400 mm high and 400 mm thick, change the material to Glass. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          5784,
+          0
+        ],
+        "end": [
+          5784,
+          10205
+        ],
+        "height_mm": 2400,
+        "width_mm": 400,
+        "reference": "center",
+        "material_contains": [
+          "Glass"
+        ]
+      }
+    ],
+    "exact_counts": {
+      "walls": 5
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/replace_element_type3/env"
+      }
+    ]
+  }
+}

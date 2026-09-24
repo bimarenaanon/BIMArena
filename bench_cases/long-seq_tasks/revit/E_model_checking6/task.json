@@ -1,0 +1,261 @@
+{
+  "id": "E_model_checking6",
+  "legacy_id": "G_model_check2",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "H02",
+  "required_capabilities": "Create Door (×1); Create Window (×1); Move Element (×2); Inspect Project (×1); Query Library (×1)",
+  "instruction": "The current model deviates from the intended layout. Make the model match EXACTLY the following target, leaving everything that already matches untouched.\nFinal wall layout — eleven 200 mm walls (walls not listed must not exist; draw each exactly on the line given):\n- (-1, 9097) → (-1, 3097)\n- (99, 3097) → (5499, 3097)\n- (2199, 3097) → (2199, 97)\n- (2299, -3) → (10499, -3)\n- (10599, 97) → (10599, 11397)\n- (10499, 11497) → (5499, 11497)\n- (5399, 11397) → (5399, 9097)\n- (10499, 9197) → (99, 9197)\n- (5499, 3097) → (5499, 9097)\n- (2799, 5497) → (2799, 3097)\n- (99, 5497) → (5499, 5497)\nDoors to ADD, both 915 × 2134 mm:\n- centred at (4149, 3097), opening toward -y (south), hinge on the jamb near (3692, 3097)\n- centred at (6799, 9097), opening toward +y (north), hinge on the jamb near (6342, 9097)\nREPLACE the misplaced door near (2799, 9097): delete it and place a window there instead — 1400 × 1800 mm, sill height 900 mm, centred at (2799, 9097).\nLeave all other doors, all windows, and the slab untouched.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            7699,
+            4597
+          ]
+        ]
+      },
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            2799,
+            9097
+          ]
+        ]
+      },
+      "windows",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "walls": [
+      {
+        "label": "wall 1",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          -1,
+          9097
+        ],
+        "end": [
+          -1,
+          3097
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 2",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          99,
+          3097
+        ],
+        "end": [
+          5499,
+          3097
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 3",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          2199,
+          3097
+        ],
+        "end": [
+          2199,
+          97
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 4",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          2299,
+          -3
+        ],
+        "end": [
+          10499,
+          -3
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 5",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          10599,
+          97
+        ],
+        "end": [
+          10599,
+          11397
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 6",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          10499,
+          11497
+        ],
+        "end": [
+          5499,
+          11497
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 7",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5399,
+          11397
+        ],
+        "end": [
+          5399,
+          9097
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 8",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          10499,
+          9197
+        ],
+        "end": [
+          99,
+          9197
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 9",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5499,
+          3097
+        ],
+        "end": [
+          5499,
+          9097
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 10",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          2799,
+          5497
+        ],
+        "end": [
+          2799,
+          3097
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 11",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          99,
+          5497
+        ],
+        "end": [
+          5499,
+          5497
+        ],
+        "width_mm": 200
+      }
+    ],
+    "no_extra_walls": true,
+    "wall_tolerance_mm": 10,
+    "doors": [
+      {
+        "center": [
+          4149,
+          3097
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "label": "added door (south room)",
+        "open_into": [
+          4149,
+          2097
+        ],
+        "hinge_near": [
+          3692,
+          3097
+        ]
+      },
+      {
+        "center": [
+          6799,
+          9097
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "label": "added door (north wall, moved from the window's spot)",
+        "open_into": [
+          6799,
+          10097
+        ],
+        "hinge_near": [
+          6342,
+          9097
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "center": [
+          2799,
+          9097
+        ],
+        "width_mm": 1400,
+        "height_mm": 1800,
+        "sill_mm": 900,
+        "label": "window replacing the misplaced door"
+      }
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "exact_counts": {
+      "doors": 5,
+      "windows": 2,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/E_model_checking6/env"
+      }
+    ]
+  }
+}

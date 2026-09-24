@@ -1,0 +1,185 @@
+{
+  "id": "B_element_creation3",
+  "legacy_id": "B_walls2",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Wall Type (×1); Create Wall (×10); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Two steps. (1) Create a new exterior wall composite with four layers, outside to inside: 10 mm plaster render, 120 mm insulation, a 150 mm concrete core, 10 mm plaster. Create no other composites. (2) Draw all exterior walls with this new composite as one continuous closed loop through these vertices (the coordinates are the OUTSIDE face of the walls; draw the loop so every wall's exterior finish faces outward): (2225, 7825) → (11100, 7825) → (11100, 2200) → (9850, 2200) → (9850, 0) → (2225, 0) → (2225, 425) → (0, 425) → (0, 4375) → (2225, 4375) → (2225, 7825). Create no other walls.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "skins": [
+          {
+            "material_contains": [
+              "Plaster",
+              "CLADDING"
+            ],
+            "thickness_mm": 10.0
+          },
+          {
+            "material_contains": [
+              "Insulation"
+            ],
+            "thickness_mm": 120.0
+          },
+          {
+            "material_contains": [
+              "Concrete"
+            ],
+            "thickness_mm": 150.0
+          },
+          {
+            "material_contains": [
+              "Plaster"
+            ],
+            "thickness_mm": 10.0
+          }
+        ]
+      }
+    ],
+    "no_extra_composites": true,
+    "walls": [
+      {
+        "beg": [
+          2225,
+          7825
+        ],
+        "end": [
+          11100,
+          7825
+        ],
+        "composite": "$new",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          11100,
+          7825
+        ],
+        "end": [
+          11100,
+          2200
+        ],
+        "composite": "$new",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          11100,
+          2200
+        ],
+        "end": [
+          9850,
+          2200
+        ],
+        "composite": "$new",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          9850,
+          2200
+        ],
+        "end": [
+          9850,
+          0
+        ],
+        "composite": "$new",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          9850,
+          0
+        ],
+        "end": [
+          2225,
+          0
+        ],
+        "composite": "$new",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          2225,
+          0
+        ],
+        "end": [
+          2225,
+          425
+        ],
+        "composite": "$new",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          2225,
+          425
+        ],
+        "end": [
+          0,
+          425
+        ],
+        "composite": "$new",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          0,
+          425
+        ],
+        "end": [
+          0,
+          4375
+        ],
+        "composite": "$new",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          0,
+          4375
+        ],
+        "end": [
+          2225,
+          4375
+        ],
+        "composite": "$new",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          2225,
+          4375
+        ],
+        "end": [
+          2225,
+          7825
+        ],
+        "composite": "$new",
+        "faces": "outward"
+      }
+    ],
+    "no_extra_walls": true,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "wall_tolerance_mm": 100
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/B_element_creation3/env"
+      }
+    ]
+  }
+}

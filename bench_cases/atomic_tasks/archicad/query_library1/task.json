@@ -1,0 +1,49 @@
+{
+  "id": "query_library1",
+  "legacy_id": "list_favorites1",
+  "atom": "list_favorites",
+  "category": "Query & Selection",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Query Library (×1)",
+  "instruction": "Look up this project's FAVORITES and REPORT the names of three favorite DOOR types. Answer in the form \"<label>: <value>\", one line each, using the label door.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    },
+    "answer_items": [
+      {
+        "label": "door",
+        "min": 3,
+        "contains": [
+          "Double Entrance Door",
+          "Entrance Door",
+          "Generic Door",
+          "Internal Door",
+          "Pocket Door",
+          "Sliding Door",
+          "Garage Door",
+          "Revolving Door"
+        ],
+        "exact": true
+      }
+    ]
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/query_library1/env"
+      }
+    ]
+  }
+}

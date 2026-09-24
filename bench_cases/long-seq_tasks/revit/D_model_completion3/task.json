@@ -1,0 +1,139 @@
+{
+  "id": "D_model_completion3",
+  "legacy_id": "C_openings2",
+  "category": "Model Completion",
+  "authoring_tool": "Revit",
+  "v2_template": "C02",
+  "required_capabilities": "Create Door (×5); Inspect Project (×1)",
+  "instruction": "The walls are already built; do not create, move, or modify them. Place exactly five single-flush 915 × 2134 mm doors:\n1. Centred at (1604, 3144), opening toward +x (east), hinge on the jamb near (1604, 3602).\n2. Centred at (5354, 4101), opening toward -y (south), hinge on the jamb near (5812, 4101).\n3. Centred at (7204, 4101), opening toward +y (north), hinge on the jamb near (7662, 4101).\n4. Centred at (8304, 7559), opening toward -x (west), hinge on the jamb near (8304, 8016).\n5. Centred at (4604, 8344), opening toward -x (west), hinge on the jamb near (4604, 8802).\nPlace no other doors.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "center": [
+          1604,
+          3144
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "type_contains": [
+          "0915 x 2134"
+        ],
+        "label": "door 1",
+        "open_into": [
+          2604,
+          3144
+        ],
+        "hinge_near": [
+          1604,
+          3602
+        ]
+      },
+      {
+        "center": [
+          5354,
+          4101
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "type_contains": [
+          "0915 x 2134"
+        ],
+        "label": "door 2",
+        "open_into": [
+          5354,
+          3101
+        ],
+        "hinge_near": [
+          5812,
+          4101
+        ]
+      },
+      {
+        "center": [
+          7204,
+          4101
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "type_contains": [
+          "0915 x 2134"
+        ],
+        "label": "door 3",
+        "open_into": [
+          7204,
+          5101
+        ],
+        "hinge_near": [
+          7662,
+          4101
+        ]
+      },
+      {
+        "center": [
+          8304,
+          7559
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "type_contains": [
+          "0915 x 2134"
+        ],
+        "label": "door 4",
+        "open_into": [
+          7304,
+          7559
+        ],
+        "hinge_near": [
+          8304,
+          8016
+        ]
+      },
+      {
+        "center": [
+          4604,
+          8344
+        ],
+        "width_mm": 915,
+        "height_mm": 2134,
+        "type_contains": [
+          "0915 x 2134"
+        ],
+        "label": "door 5",
+        "open_into": [
+          3604,
+          8344
+        ],
+        "hinge_near": [
+          4604,
+          8802
+        ]
+      }
+    ],
+    "opening_pos_tolerance_mm": 300,
+    "exact_counts": {
+      "doors": 5,
+      "walls": 13,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/D_model_completion3/env"
+      }
+    ]
+  }
+}

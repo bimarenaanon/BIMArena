@@ -1,0 +1,94 @@
+{
+  "id": "delete_element7",
+  "atom": "delete_element",
+  "category": "Deletion",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Delete Element (×1)",
+  "instruction": "Delete the interior partition wall, leaving every other element exactly as it is.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "existing": true,
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          11129,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "existing": true,
+        "beg": [
+          11129,
+          0
+        ],
+        "end": [
+          11129,
+          10205
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "existing": true,
+        "beg": [
+          11129,
+          10205
+        ],
+        "end": [
+          0,
+          10205
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "existing": true,
+        "beg": [
+          0,
+          10205
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity"
+      }
+    ],
+    "exact_counts": {
+      "walls": 4,
+      "doors": 1,
+      "windows": 1,
+      "slabs": 1,
+      "rooms": 1
+    },
+    "preserve": [
+      "doors",
+      "windows",
+      "slabs",
+      "rooms",
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            5784,
+            5102
+          ]
+        ]
+      }
+    ]
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/delete_element7/env"
+      }
+    ]
+  }
+}

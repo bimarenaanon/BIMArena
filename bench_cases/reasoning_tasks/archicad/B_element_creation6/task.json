@@ -1,0 +1,206 @@
+{
+  "id": "B_element_creation6",
+  "legacy_id": "B_walls5",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "B03",
+  "required_capabilities": "Create Wall (×12); Inspect Project (×1)",
+  "instruction": "Based on the provided floorplan drawing, create the corresponding BIM model. Reproduce the walls shown in the drawing. The following room dimensions are clear internal dimensions between finished wall faces:\n- Kitchen: 3350 × 4200 mm\n- Bedroom: 4500 × 4200 mm\n- Balcony: 1550 × 4200 mm\n- Living room: 6000 × 4350 mm\n- Entry area including WC: 2900 × 4350 mm\n- WC: 1750 × 2650 mm\n. Wall type Generic - structural with width 200 mm should be used for the exterior and interior walls. Read the wall openings from the drawing and treat the two kinds differently. Where a DOOR or a WINDOW symbol sits in a wall, that wall runs through behind it: build it as one continuous wall and leave no gap there. Where a wall simply STOPS and starts again with no door or window symbol — an open passage between two rooms — leave that gap exactly as drawn. Place no doors, no windows, no zones and no slabs anywhere in the model. Every wall must otherwise be properly connected to its neighbours.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          0,
+          9150
+        ],
+        "end": [
+          10200,
+          9150
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          10200,
+          9150
+        ],
+        "end": [
+          10200,
+          4750
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          9500,
+          4750
+        ],
+        "end": [
+          9500,
+          0
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          9500,
+          0
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          0,
+          9150
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          8450,
+          9150
+        ],
+        "end": [
+          8450,
+          4750
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          3279,
+          4750
+        ],
+        "end": [
+          10200,
+          4750
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          0,
+          4750
+        ],
+        "end": [
+          2379,
+          4750
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          2150,
+          4750
+        ],
+        "end": [
+          2150,
+          1700
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          2154,
+          1700
+        ],
+        "end": [
+          0,
+          1700
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          3300,
+          2100
+        ],
+        "end": [
+          3300,
+          0
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      },
+      {
+        "beg": [
+          3750,
+          9150
+        ],
+        "end": [
+          3750,
+          4750
+        ],
+        "width_mm": 200,
+        "material_contains": [
+          "Generic - Structural"
+        ]
+      }
+    ],
+    "no_extra_walls": true,
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 300,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation6/env"
+      }
+    ]
+  }
+}

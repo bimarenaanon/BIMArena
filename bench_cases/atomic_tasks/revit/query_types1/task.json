@@ -1,0 +1,63 @@
+{
+  "id": "query_types1",
+  "legacy_id": "list_types1",
+  "atom": "list_types",
+  "category": "Query & Selection",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Query Types (×1)",
+  "instruction": "Without creating or modifying anything, list the wall types available in this project and REPORT in your final answer the names of two INTERIOR wall types and two EXTERIOR wall types, spelled exactly as the project has them. Answer in the form \"<label>: <value>\", one line each, using the labels interior wall and exterior wall.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    },
+    "answer_items": [
+      {
+        "label": "interior wall",
+        "min": 2,
+        "contains": [
+          "Interior - 135mm Partition (2-hr)",
+          "Interior - 138mm Partition (1-hr)",
+          "Interior - 79mm Partition (1-hr)",
+          "Interior - Blockwork 100",
+          "Interior - Blockwork 140",
+          "Interior - Blockwork 190"
+        ],
+        "exact": true
+      },
+      {
+        "label": "exterior wall",
+        "min": 2,
+        "contains": [
+          "Exterior - Block on Mtl. Stud",
+          "Exterior - Brick on Mtl. Stud",
+          "Exterior - Render on Brick on Block",
+          "CW 102-50-100p",
+          "CW 102-50-140p",
+          "CW 102-50-215p",
+          "CW 102-85-100p",
+          "CW 102-85-140p",
+          "CW 102-85-215p"
+        ],
+        "exact": true
+      }
+    ]
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/query_types1/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "B_element_creation15",
+  "legacy_id": "D_slabs_stairs_rooms3",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Slab Type (×1); Create Slab (×1); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Two steps: (1) create a new slab composite with a timber parquet finish based on the provided section view; (2) create one floor slab on the active storey using this slab composite, covering the entire footprint of the existing exterior walls, flush with the walls' outer surface, tracing the outline from the live model. Set the slab's reference plane to Core Top, positioned at the storey level. Do not create or modify any walls; only create the new slab composite and the one slab on the active storey.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "skins": [
+          {
+            "material_contains": [
+              "Timber - Floor"
+            ]
+          }
+        ],
+        "layers_exact": false,
+        "total_thickness_mm": 340,
+        "thickness_tolerance_mm": 0
+      }
+    ],
+    "no_extra_composites": true,
+    "slabs": [
+      {
+        "floor": 0,
+        "outline": [
+          [
+            1086.6,
+            15653.4
+          ],
+          [
+            12686.6,
+            15653.4
+          ],
+          [
+            12686.6,
+            9053.4
+          ],
+          [
+            7686.6,
+            9053.4
+          ],
+          [
+            7686.6,
+            5553.4
+          ],
+          [
+            2886.6,
+            5553.4
+          ],
+          [
+            2886.6,
+            9053.4
+          ],
+          [
+            1086.6,
+            9053.4
+          ],
+          [
+            1086.6,
+            15653.4
+          ]
+        ],
+        "level_mm": 0,
+        "reference_plane": "Core Top",
+        "reference_plane_offset_mm": 40,
+        "composite": "$new"
+      }
+    ],
+    "iou_min": 0.99,
+    "tolerance_mm": 0,
+    "exact_counts": {
+      "slabs": 1,
+      "walls": 12,
+      "doors": 0,
+      "windows": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls"
+    ]
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation15/env"
+      }
+    ]
+  }
+}

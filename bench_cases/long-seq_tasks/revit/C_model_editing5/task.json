@@ -1,0 +1,50 @@
+{
+  "id": "C_model_editing5",
+  "legacy_id": "E_cross_view4",
+  "category": "Model Revision",
+  "authoring_tool": "Revit",
+  "v2_template": "F06",
+  "required_capabilities": "Replace Element Type (×1); Inspect Project (×1)",
+  "instruction": "The project opens in a 3D view showing the level 1 slab and the level 2 slab. Change the LEVEL 2 slab to the existing floor type 'Standard Timber-Wood Finish'. Preserve the slab's footprint, top elevation, and stair opening, and do not alter the ground-floor slab or any other element.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "slabs": [
+      {
+        "label": "Level 2 slab switched to Standard Timber-Wood Finish",
+        "existing": true,
+        "floor": 1,
+        "composite": "Standard Timber-Wood Finish",
+        "level_mm": 4000
+      }
+    ],
+    "preserve": [
+      "walls",
+      "slabs",
+      "stairs",
+      "doors",
+      "windows"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 28,
+      "slabs": 2,
+      "stairs": 1,
+      "doors": 11,
+      "windows": 0,
+      "rooms": 0,
+      "objects": 0
+    },
+    "tolerance_mm": 0
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/C_model_editing5/env"
+      }
+    ]
+  }
+}

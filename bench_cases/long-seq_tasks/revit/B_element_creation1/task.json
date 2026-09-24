@@ -1,0 +1,86 @@
+{
+  "id": "B_element_creation1",
+  "legacy_id": "A_setup_types3",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "v2_template": "A03",
+  "required_capabilities": "Create Wall Type (×1); Create Wall (×1); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Create a 6 m long, 2.7 m high external cavity wall. The wall consists of five layers, outside to inside: 115 mm outer brick facing leaf, 50 mm ventilated cavity, 50 mm mineral wool insulation, 175 mm structural masonry inner leaf, and 15 mm internal plaster.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "skins": [
+          {
+            "material_contains": [
+              "Brick",
+              "Masonry"
+            ],
+            "thickness_mm": 115
+          },
+          {
+            "material_contains": [
+              "Air",
+              "Cavity"
+            ],
+            "thickness_mm": 50
+          },
+          {
+            "material_contains": [
+              "Insulation",
+              "Cavity fill",
+              "Wool"
+            ],
+            "thickness_mm": 50
+          },
+          {
+            "material_contains": [
+              "Brick",
+              "Masonry",
+              "Block",
+              "Cmu",
+              "Concrete masonry"
+            ],
+            "thickness_mm": 175
+          },
+          {
+            "material_contains": [
+              "Gypsum",
+              "Plaster",
+              "Render"
+            ],
+            "thickness_mm": 15
+          }
+        ]
+      }
+    ],
+    "walls": [
+      {
+        "length_mm": 6000,
+        "height_mm": 2700,
+        "composite": "$new",
+        "label": "the 6 m cavity wall"
+      }
+    ],
+    "no_extra_composites": true,
+    "no_extra_walls": true,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/B_element_creation1/env"
+      }
+    ]
+  }
+}

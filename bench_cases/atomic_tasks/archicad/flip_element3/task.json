@@ -1,0 +1,84 @@
+{
+  "id": "flip_element3",
+  "legacy_id": "flip_wall1",
+  "atom": "flip_wall",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Flip Element (×1)",
+  "instruction": "Reverse the layer-stack orientation of ALL the walls: mirror each wall's build-up onto the other side of its reference line. The reference line location setting itself must NOT change. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          11129,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "inward",
+        "floor": 0
+      },
+      {
+        "match": "any",
+        "beg": [
+          11129,
+          0
+        ],
+        "end": [
+          11129,
+          10205
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "inward",
+        "floor": 0
+      },
+      {
+        "match": "any",
+        "beg": [
+          11129,
+          10205
+        ],
+        "end": [
+          0,
+          10205
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "inward",
+        "floor": 0
+      },
+      {
+        "match": "any",
+        "beg": [
+          0,
+          10205
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "inward",
+        "floor": 0
+      }
+    ],
+    "exact_counts": {
+      "walls": 4
+    }
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/flip_element3/env"
+      }
+    ]
+  }
+}

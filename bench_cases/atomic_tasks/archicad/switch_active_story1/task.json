@@ -1,0 +1,31 @@
+{
+  "id": "switch_active_story1",
+  "legacy_id": "set_active_story1",
+  "atom": "set_active_story",
+  "category": "Config. & Types",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Switch Active Story (×1)",
+  "instruction": "Switch the active storey to 'First Floor' and leave it active when you finish. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "active_story": "First Floor",
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs",
+      "rooms"
+    ]
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/switch_active_story1/env"
+      }
+    ]
+  }
+}

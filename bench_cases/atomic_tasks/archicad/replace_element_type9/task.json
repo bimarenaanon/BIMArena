@@ -1,0 +1,40 @@
+{
+  "id": "replace_element_type9",
+  "legacy_id": "replace_window_type1",
+  "atom": "replace_window_type",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Replace Element Type (×1)",
+  "instruction": "Replace the window on the north wall with a 'Sliding Window' type at 1500 x 1500 mm, keeping its position and its sill unchanged.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "windows": [
+      {
+        "near": [
+          4000,
+          10205
+        ],
+        "width_mm": 1500,
+        "height_mm": 1500,
+        "sill_mm": 900,
+        "type_contains": [
+          "sliding"
+        ]
+      }
+    ],
+    "exact_counts": {
+      "windows": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/replace_element_type9/env"
+      }
+    ]
+  }
+}

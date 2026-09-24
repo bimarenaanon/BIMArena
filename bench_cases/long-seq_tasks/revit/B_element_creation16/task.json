@@ -1,0 +1,49 @@
+{
+  "id": "B_element_creation16",
+  "legacy_id": "D_slabs_stairs_rooms4",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "v2_template": "D04",
+  "required_capabilities": "Create Stair (×1); Inspect Project (×1)",
+  "instruction": "The already-built walls enclose one L-shaped space. Create exactly one straight stair inside the bottom-left leg of that space, ascending to the right (walking line in +x). Size and position it to fit entirely inside that leg, clashing with nothing. Do not create or modify walls, rooms, or slabs; only place the one stair.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stairs": [
+      {
+        "floor": 0,
+        "region": [
+          100,
+          99,
+          6300,
+          3999
+        ],
+        "axis": "x"
+      }
+    ],
+    "exact_counts": {
+      "stairs": 1,
+      "walls": 11,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "tolerance_mm": 0
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/B_element_creation16/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "D_model_completion6",
+  "legacy_id": "D_slabs_stairs_rooms5",
+  "category": "Model Completion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Slab (×1); Create Slab Opening (×1); Create Stair (×1); Inspect Project (×1)",
+  "instruction": "The drawing shows a two-storey building; both floors, with the same layout, are already created in the project, but no stair exists yet. Create the stair connecting the ground floor and the first floor: match the location, orientation, and run direction shown in the drawing, and make it start and end at the correct storey levels with valid connections to both floors. Then create the upper floor's slab using the existing floor type 'Standard Timber-Wood Finish', following the exterior-wall footprint, and cut an opening in it where the stair passes through. Do not modify the existing walls.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "stairs": [
+      {
+        "floor": 0,
+        "region": [
+          11840,
+          3686,
+          13905,
+          9948
+        ],
+        "axis": "y",
+        "label": "east-corridor stair, run along +y"
+      }
+    ],
+    "exact_counts": {
+      "stairs": 1,
+      "slabs": 2,
+      "walls": 19,
+      "doors": 8,
+      "windows": 10,
+      "rooms": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs"
+    ],
+    "slabs": [
+      {
+        "label": "second-floor slab (stair opening)",
+        "floor": 1,
+        "level_mm": 4000,
+        "outline": "footprint",
+        "composite": "Standard Timber-Wood Finish",
+        "ignore_holes": true,
+        "clear_of_stair": true
+      }
+    ],
+    "iou_min": 0.99,
+    "composites": [],
+    "no_extra_composites": true,
+    "tolerance_mm": 0
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/D_model_completion6/env"
+      }
+    ]
+  }
+}

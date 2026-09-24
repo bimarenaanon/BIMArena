@@ -1,0 +1,54 @@
+{
+  "id": "delete_element6",
+  "atom": "delete_element",
+  "category": "Deletion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Delete Element (×1)",
+  "instruction": "This model has three doors. Delete the one hosted in an EXTERIOR wall - the entrance door in the south wall - and leave the two interior doors, and every other element, exactly as they are.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "near": [
+          5500,
+          2500
+        ]
+      },
+      {
+        "near": [
+          8250,
+          5000
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 2,
+      "walls": 6,
+      "windows": 3
+    },
+    "preserve": [
+      "walls",
+      "windows",
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            2000,
+            0
+          ]
+        ]
+      }
+    ]
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/delete_element6/env"
+      }
+    ]
+  }
+}

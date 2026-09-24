@@ -1,0 +1,56 @@
+{
+  "id": "query_library3",
+  "legacy_id": "list_library_window1",
+  "atom": "list_library_window",
+  "category": "Query & Selection",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Query Library (×1)",
+  "instruction": "Browse the window library beyond the project favorites and REPORT the names of three parts from its SPECIAL windows group. Answer in the form \"<label>: <value>\", one line each, using the label special window.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    },
+    "answer_items": [
+      {
+        "label": "special window",
+        "min": 3,
+        "contains": [
+          "arch top window",
+          "curved window",
+          "double sash trapezoid window",
+          "glass block",
+          "triangle window",
+          "half round window",
+          "multiside window",
+          "oval window",
+          "pentagon window",
+          "quarter round window",
+          "rhombus window",
+          "round window",
+          "skewed window",
+          "three-centered arch top window",
+          "trapezoid window",
+          "ventilation brick"
+        ]
+      }
+    ]
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/query_library3/env"
+      }
+    ]
+  }
+}

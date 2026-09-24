@@ -1,0 +1,207 @@
+{
+  "id": "C_model_editing8",
+  "legacy_id": "F_design_change3",
+  "category": "Model Revision",
+  "authoring_tool": "Revit",
+  "v2_template": "G03",
+  "required_capabilities": "Move Element (×1); Move with Constraints (×2); Inspect Project (×1)",
+  "instruction": "The project's walls, doors, windows, and rooms are already built. Modify the walls so the FINAL wall layout is exactly the following (walls not listed must not exist; tolerance is tight). All walls are 140 mm 'Generic - 140mm Masonry'; draw each wall exactly on the line given:\n- west exterior (moved 1000 left): (-1000, -2129) → (-1000, 8071)\n- north-west exterior (extended west): (-930, 8141) → (7927, 8141)\n- kitchenette/living partition: (7927, 3071) → (7927, 10111)\n- north-east exterior: (7927, 10181) → (13067, 10181)\n- east exterior (extended south): (13137, 10111) → (13137, -2129)\n- south exterior (moved 2200 down): (13067, -2199) → (-930, -2199)\n- hall wall: (7927, 3071) → (3070, 3071)\n- closet wall (extended south): (3070, 3071) → (3070, -2129)\n- bedroom/bath partition: (5177, 3071) → (5177, 8071)\n- bath/kitchenette partition: (7927, 5541) → (5177, 5541)\n- living north partition: (7927, 8071) → (13067, 8071)\nUpdate ALL related elements: the floor slab follows the new exterior footprint and the rooms update to the new boundaries. Do not add or remove any door or window.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [],
+    "no_extra_composites": true,
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          -1000,
+          -2129
+        ],
+        "end": [
+          -1000,
+          8071
+        ],
+        "width_mm": 140,
+        "label": "west exterior (moved 1000 left)",
+        "composite": "Generic - 140mm Masonry"
+      },
+      {
+        "match": "any",
+        "beg": [
+          -930,
+          8141
+        ],
+        "end": [
+          7927,
+          8141
+        ],
+        "width_mm": 140,
+        "label": "north-west exterior (extended west)",
+        "composite": "Generic - 140mm Masonry"
+      },
+      {
+        "match": "any",
+        "beg": [
+          7927,
+          3071
+        ],
+        "end": [
+          7927,
+          10111
+        ],
+        "width_mm": 140,
+        "label": "kitchenette/living partition",
+        "composite": "Generic - 140mm Masonry"
+      },
+      {
+        "match": "any",
+        "beg": [
+          7927,
+          10181
+        ],
+        "end": [
+          13067,
+          10181
+        ],
+        "width_mm": 140,
+        "label": "north-east exterior",
+        "composite": "Generic - 140mm Masonry"
+      },
+      {
+        "match": "any",
+        "beg": [
+          13137,
+          10111
+        ],
+        "end": [
+          13137,
+          -2129
+        ],
+        "width_mm": 140,
+        "label": "east exterior (extended south)",
+        "composite": "Generic - 140mm Masonry"
+      },
+      {
+        "match": "any",
+        "beg": [
+          13067,
+          -2199
+        ],
+        "end": [
+          -930,
+          -2199
+        ],
+        "width_mm": 140,
+        "label": "south exterior (moved 2200 down)",
+        "composite": "Generic - 140mm Masonry"
+      },
+      {
+        "match": "any",
+        "beg": [
+          7927,
+          3071
+        ],
+        "end": [
+          3070,
+          3071
+        ],
+        "width_mm": 140,
+        "label": "hall wall",
+        "composite": "Generic - 140mm Masonry"
+      },
+      {
+        "match": "any",
+        "beg": [
+          3070,
+          3071
+        ],
+        "end": [
+          3070,
+          -2129
+        ],
+        "width_mm": 140,
+        "label": "closet wall (extended south)",
+        "composite": "Generic - 140mm Masonry"
+      },
+      {
+        "match": "any",
+        "beg": [
+          5177,
+          3071
+        ],
+        "end": [
+          5177,
+          8071
+        ],
+        "width_mm": 140,
+        "label": "bedroom/bath partition",
+        "composite": "Generic - 140mm Masonry"
+      },
+      {
+        "match": "any",
+        "beg": [
+          7927,
+          5541
+        ],
+        "end": [
+          5177,
+          5541
+        ],
+        "width_mm": 140,
+        "label": "bath/kitchenette partition",
+        "composite": "Generic - 140mm Masonry"
+      },
+      {
+        "match": "any",
+        "beg": [
+          7927,
+          8071
+        ],
+        "end": [
+          13067,
+          8071
+        ],
+        "width_mm": 140,
+        "label": "living north partition",
+        "composite": "Generic - 140mm Masonry"
+      }
+    ],
+    "no_extra_walls": true,
+    "slabs": [
+      {
+        "match": "any",
+        "floor": 0,
+        "outline": "footprint",
+        "level_mm": 0,
+        "label": "slab follows both wall moves"
+      }
+    ],
+    "exact_counts": {
+      "doors": 5,
+      "windows": 3,
+      "slabs": 1,
+      "rooms": 6,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "doors",
+      "windows"
+    ],
+    "wall_tolerance_mm": 10,
+    "tolerance_mm": 0,
+    "opening_pos_tolerance_mm": 10,
+    "room_area_ratio": 0.05,
+    "iou_min": 0.99
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/C_model_editing8/env"
+      }
+    ]
+  }
+}

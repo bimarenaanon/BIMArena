@@ -1,0 +1,37 @@
+{
+  "id": "inspect_project5",
+  "legacy_id": "select_elements1",
+  "atom": "select_elements",
+  "category": "Query & Selection",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Inspect Project (×1)",
+  "instruction": "Select the interior wall. Then REPORT in your final answer that wall's width (its total thickness) and its height, both in millimetres. Give your answer as ONE LINE PER ITEM, in the form \"<label>: <value>\", nothing else on the line, using the labels width and height. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs",
+      "rooms"
+    ],
+    "exact_counts": {
+      "walls": 5
+    },
+    "answer_values": {
+      "width": 100,
+      "height": 3000
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/inspect_project5/env"
+      }
+    ]
+  }
+}

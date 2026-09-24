@@ -1,0 +1,51 @@
+{
+  "id": "create_room_zone3",
+  "legacy_id": "create_room_separation_line1",
+  "atom": "create_room_separation_line",
+  "category": "Creation",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Room/Zone (×1)",
+  "instruction": "The WESTERN enclosure is one open space. Split it in two with a room separation line running east-west across it, then create a room in the NORTHERN half named 'Lobby'. Where exactly you split it is your call. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "rooms": [
+      {
+        "name_contains": [
+          "lobby"
+        ],
+        "inside": [
+          2000,
+          9000
+        ],
+        "outside": [
+          2000,
+          1000
+        ]
+      },
+      {
+        "name_contains": [
+          "office"
+        ],
+        "inside": [
+          8000,
+          5000
+        ],
+        "existing": true
+      }
+    ],
+    "exact_counts": {
+      "rooms": 2
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/create_room_zone3/env"
+      }
+    ]
+  }
+}

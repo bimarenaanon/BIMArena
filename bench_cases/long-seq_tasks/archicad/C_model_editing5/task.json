@@ -1,0 +1,51 @@
+{
+  "id": "C_model_editing5",
+  "legacy_id": "E_cross_view4",
+  "category": "Model Revision",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "F06",
+  "required_capabilities": "Replace Element Type (×1); Inspect Project (×1)",
+  "instruction": "The project opens in a 3D view. Identify the upper (first-floor) slab and change it from its current composite to the existing slab composite 'Concrete Floor Insulated with Parquet'. Preserve the slab's footprint, top elevation and do not alter the ground-floor slab or any other element.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "slabs": [
+      {
+        "label": "Level 1 slab",
+        "existing": true,
+        "floor": 1,
+        "composite": "Concrete Floor Insulated with Parquet",
+        "level_mm": 3000,
+        "reference_plane": "Top"
+      }
+    ],
+    "tolerance_mm": 0,
+    "exact_counts": {
+      "slabs": 2,
+      "walls": 30,
+      "doors": 5,
+      "windows": 10,
+      "stairs": 1,
+      "rooms": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs",
+      "stairs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/C_model_editing5/env"
+      }
+    ]
+  }
+}

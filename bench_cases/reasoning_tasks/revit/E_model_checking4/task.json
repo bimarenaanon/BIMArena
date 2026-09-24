@@ -1,0 +1,178 @@
+{
+  "id": "E_model_checking4",
+  "legacy_id": "E_cross_view7",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Switch Active Story (×1); Move Element (×5); Inspect Project (×1)",
+  "instruction": "The building's ground floor and upper floor are both already built, but their exterior-wall outlines currently differ. Adjust the UPPER floor's exterior walls - move them, and add wall segments where necessary - so its outline matches the ground floor's outline exactly. Do not modify any ground-floor element, and keep the upper floor's interior walls unchanged.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            4750,
+            9079
+          ],
+          [
+            9325,
+            7854
+          ],
+          [
+            9050,
+            6629
+          ],
+          [
+            8775,
+            4904
+          ],
+          [
+            6725,
+            3179
+          ]
+        ]
+      },
+      "doors",
+      "windows",
+      "slabs",
+      "stairs"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "walls": [
+      {
+        "label": "upper outline segment 1",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          175,
+          9254
+        ],
+        "end": [
+          9675,
+          9254
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "label": "upper outline segment 2",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          9850,
+          9079
+        ],
+        "end": [
+          9850,
+          4176
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "label": "upper outline segment 3",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          9675,
+          4001
+        ],
+        "end": [
+          6675,
+          4001
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "label": "upper outline segment 4",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          6850,
+          4176
+        ],
+        "end": [
+          6850,
+          3179
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "label": "upper outline segment 5",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          6675,
+          3004
+        ],
+        "end": [
+          4675,
+          3004
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "label": "upper outline segment 6",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          4850,
+          3179
+        ],
+        "end": [
+          4850,
+          179
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "label": "upper outline segment 7",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          4675,
+          4
+        ],
+        "end": [
+          175,
+          4
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      },
+      {
+        "label": "upper outline segment 8",
+        "floor": 1,
+        "match": "any",
+        "beg": [
+          0,
+          179
+        ],
+        "end": [
+          0,
+          9079
+        ],
+        "composite": "Exterior - Brick on Mtl. Stud"
+      }
+    ],
+    "no_extra_walls": true,
+    "wall_tolerance_mm": 10,
+    "exact_counts": {
+      "doors": 6,
+      "windows": 4,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/E_model_checking4/env"
+      }
+    ]
+  }
+}

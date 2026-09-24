@@ -1,0 +1,107 @@
+{
+  "id": "D_model_completion5",
+  "legacy_id": "C_openings6",
+  "category": "Model Completion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Load Library Element Type (×2); Create Door (×4); Inspect Project (×1); Query Library (×1)",
+  "instruction": "The walls are already built; do not create, move, or modify any walls. Place exactly four doors:\n1. Double-leaf 1700 mm wide, centred at (-4633, 11747), opening toward -x (west).\n2. Double-leaf 1700 mm wide, centred at (-3483, 11747), opening toward +x (east).\n3. Single-flush 915 mm wide, centred at (-1133, -103), opening toward -y (out of the building), hinge on the jamb near (-676, -103).\n4. Single-flush 915 mm wide, centred at (117, 5487), opening toward -x (west), hinge on the jamb near (117, 5030).\nDo not add extra doors.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "center": [
+          -4633,
+          11747
+        ],
+        "width_mm": 1700,
+        "type_contains": [
+          "Double"
+        ],
+        "label": "double door (west)",
+        "open_into": [
+          -5633,
+          11747
+        ]
+      },
+      {
+        "center": [
+          -3483,
+          11747
+        ],
+        "width_mm": 1700,
+        "type_contains": [
+          "Double"
+        ],
+        "label": "double door (east)",
+        "open_into": [
+          -2483,
+          11747
+        ]
+      },
+      {
+        "center": [
+          -1133,
+          -103
+        ],
+        "width_mm": 915,
+        "type_contains": [
+          "Single-Flush"
+        ],
+        "label": "single door (south)",
+        "open_into": [
+          -1133,
+          -1103
+        ],
+        "hinge_near": [
+          -676,
+          -103
+        ]
+      },
+      {
+        "center": [
+          117,
+          5487
+        ],
+        "width_mm": 915,
+        "type_contains": [
+          "Single-Flush"
+        ],
+        "label": "single door (middle)",
+        "open_into": [
+          -883,
+          5487
+        ],
+        "hinge_near": [
+          117,
+          5030
+        ]
+      }
+    ],
+    "opening_pos_tolerance_mm": 100,
+    "exact_counts": {
+      "doors": 4,
+      "walls": 20,
+      "windows": 0,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/D_model_completion5/env"
+      }
+    ]
+  }
+}

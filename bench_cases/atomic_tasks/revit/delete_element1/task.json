@@ -1,0 +1,35 @@
+{
+  "id": "delete_element1",
+  "atom": "delete_element",
+  "category": "Deletion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Delete Element (×1)",
+  "instruction": "Delete every door in the model, leaving everything else exactly as it is.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "doors": 0,
+      "windows": 1,
+      "walls": 6,
+      "slabs": 1,
+      "rooms": 1
+    },
+    "preserve": [
+      "walls",
+      "windows",
+      "slabs",
+      "rooms"
+    ]
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/delete_element1/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "create_door3",
+  "legacy_id": "place_door3",
+  "atom": "place_door",
+  "category": "Creation",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Door (×1)",
+  "instruction": "One door already exists in the south exterior wall. Place ONE more 900 x 2100 mm door in the NORTH exterior wall, opening into the room, positioned so that exactly 2000 mm of wall remains between the door opening's west edge and the wall's west end, measured along the wall. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "host_side": "north",
+        "center": [
+          2450,
+          10205
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "swing": "in",
+        "label": "north door, west edge 2000 from the west end"
+      }
+    ],
+    "opening_pos_tolerance_mm": 200,
+    "exact_counts": {
+      "doors": 2,
+      "windows": 1,
+      "walls": 5,
+      "slabs": 1,
+      "rooms": 1,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "windows",
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            2450,
+            10205
+          ]
+        ]
+      }
+    ]
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_door3/env"
+      }
+    ]
+  }
+}

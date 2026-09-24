@@ -1,0 +1,123 @@
+{
+  "id": "E_model_checking1",
+  "legacy_id": "B_walls9",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "B08",
+  "required_capabilities": "Flip Element (×4); Inspect Project (×1)",
+  "instruction": "The project has six exterior walls, all using the same asymmetric wall type, whose render and insulation layers must face outdoors; some walls are currently reversed. Find the flipped walls and turn them around, keeping all wall positions unchanged and leaving the correctly oriented walls untouched.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [],
+    "no_extra_composites": true,
+    "preserve": [
+      "walls"
+    ],
+    "wall_tolerance_mm": 100,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "walls": [
+      {
+        "existing": true,
+        "beg": [
+          -432,
+          -217
+        ],
+        "end": [
+          -432,
+          8983
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "faces": "outward",
+        "label": "west exterior"
+      },
+      {
+        "existing": true,
+        "beg": [
+          -218,
+          9198
+        ],
+        "end": [
+          8382,
+          9198
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "faces": "outward",
+        "label": "north exterior"
+      },
+      {
+        "existing": true,
+        "beg": [
+          8596,
+          8983
+        ],
+        "end": [
+          8596,
+          4283
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "faces": "outward",
+        "label": "step vertical"
+      },
+      {
+        "existing": true,
+        "beg": [
+          8382,
+          4498
+        ],
+        "end": [
+          15582,
+          4498
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "faces": "outward",
+        "label": "step horizontal"
+      },
+      {
+        "existing": true,
+        "beg": [
+          15796,
+          4283
+        ],
+        "end": [
+          15796,
+          -217
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "faces": "outward",
+        "label": "east exterior"
+      },
+      {
+        "existing": true,
+        "beg": [
+          15582,
+          -432
+        ],
+        "end": [
+          -218,
+          -432
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "faces": "outward",
+        "label": "south exterior"
+      }
+    ],
+    "no_extra_walls": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/E_model_checking1/env"
+      }
+    ]
+  }
+}

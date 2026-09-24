@@ -1,0 +1,34 @@
+{
+  "id": "E_model_checking8",
+  "legacy_id": "G_model_check4",
+  "category": "Model Checking",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "H04",
+  "required_capabilities": "Move Element (×8); Inspect Project (×1)",
+  "instruction": "All walls in the layout are supposed to be horizontal or vertical. Straighten every skewed wall so all walls run exactly horizontal or vertical.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls_axis_aligned": true,
+    "exact_counts": {
+      "walls": 11,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/E_model_checking8/env"
+      }
+    ]
+  }
+}

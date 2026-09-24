@@ -1,0 +1,1429 @@
+{
+ "source": "https://help.graphisoft.com/AC/29/INT/_AC29_Help",
+ "note": "URL manifest of the curated Archicad 29 Help subset (titles + links only; the help content itself is fetched by fetch_archicad_help.py, never versioned).",
+ "sections": [
+  "Elements (walls/slabs/doors/windows/stairs/zones)",
+  "Interaction (selection / editing / pet palette / marquee / tracker)",
+  "Attributes (composites / building materials)",
+  "Tool Settings dialogs",
+  "Views (stories / levels / navigation)"
+ ],
+ "pages": [
+  {
+   "slug": "025-001",
+   "title": "Attributes",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-1.htm"
+  },
+  {
+   "slug": "025-012",
+   "title": "Edit Line Type (Dashed)",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-12.htm"
+  },
+  {
+   "slug": "025-013",
+   "title": "Edit Line Type (Symbol)",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-13.htm"
+  },
+  {
+   "slug": "025-014",
+   "title": "Fills",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-14.htm"
+  },
+  {
+   "slug": "025-015",
+   "title": "Fill Categories",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-15.htm"
+  },
+  {
+   "slug": "025-016",
+   "title": "Edit Vector Fill",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-16.htm"
+  },
+  {
+   "slug": "025-017",
+   "title": "Create/Edit Solid Fill",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-17.htm"
+  },
+  {
+   "slug": "025-018",
+   "title": "Create/Edit Symbol Fill",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-18.htm"
+  },
+  {
+   "slug": "025-019",
+   "title": "Create Image Fill",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-19.htm"
+  },
+  {
+   "slug": "025-020",
+   "title": "Fill Display Mode: True Fill Appearance vs. Bitmap",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-20.htm"
+  },
+  {
+   "slug": "025-021",
+   "title": "Building Materials",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-21.htm"
+  },
+  {
+   "slug": "025-022",
+   "title": "Edit and manage Building Materials",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-22.htm"
+  },
+  {
+   "slug": "025-023",
+   "title": "Intersection Priority (Building Material)",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-23.htm"
+  },
+  {
+   "slug": "025-024",
+   "title": "Building Material Classification and Properties",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-24.htm"
+  },
+  {
+   "slug": "025-026",
+   "title": "Composite Structures",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-26.htm"
+  },
+  {
+   "slug": "025-028",
+   "title": "Edit and manage composites",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-28.htm"
+  },
+  {
+   "slug": "025-032",
+   "title": "Edit and manage Pen Sets",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-32.htm"
+  },
+  {
+   "slug": "025-035",
+   "title": "Edit and manage surfaces",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-35.htm"
+  },
+  {
+   "slug": "025-037",
+   "title": "Surface Cover Fill (Basic Engine)",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-37.htm"
+  },
+  {
+   "slug": "025-044",
+   "title": "Load Cinema 4D material",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-44.htm"
+  },
+  {
+   "slug": "025-047",
+   "title": "Align 3D Texture",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-47.htm"
+  },
+  {
+   "slug": "025-048",
+   "title": "Default Texture Alignments/Reset Texture",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-48.htm"
+  },
+  {
+   "slug": "025-054",
+   "title": "Edit Complex Profile",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-54.htm"
+  },
+  {
+   "slug": "025-060",
+   "title": "Capture Selected Element as Custom Profile",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-60.htm"
+  },
+  {
+   "slug": "025-062",
+   "title": "Profile Origin in Profile Editor Window",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-62.htm"
+  },
+  {
+   "slug": "025-063",
+   "title": "Stretch Modifiers",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-63.htm"
+  },
+  {
+   "slug": "025-064",
+   "title": "Offset Modifiers",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-64.htm"
+  },
+  {
+   "slug": "025-065",
+   "title": "Create New Offset Modifier - Example",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-65.htm"
+  },
+  {
+   "slug": "025-066",
+   "title": "Edit Offset Modifier",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-66.htm"
+  },
+  {
+   "slug": "025-067",
+   "title": "Offset Modifiers: Tips and Tricks",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-67.htm"
+  },
+  {
+   "slug": "025-068",
+   "title": "Using the attribute dialogs",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-68.htm"
+  },
+  {
+   "slug": "025-069",
+   "title": "Attributes palette",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-69.htm"
+  },
+  {
+   "slug": "025-070",
+   "title": "Search and sort attributes (Attributes palette)",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-70.htm"
+  },
+  {
+   "slug": "025-071",
+   "title": "Manage attributes and folders (Attributes palette)",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-71.htm"
+  },
+  {
+   "slug": "025-072",
+   "title": "Edit attribute settings (Attributes palette)",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-72.htm"
+  },
+  {
+   "slug": "025-073",
+   "title": "Import attributes",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-73.htm"
+  },
+  {
+   "slug": "025-074",
+   "title": "Export attributes",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-74.htm"
+  },
+  {
+   "slug": "025-075",
+   "title": "Purge attributes",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-75.htm"
+  },
+  {
+   "slug": "025-076",
+   "title": "Delete attributes",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-76.htm"
+  },
+  {
+   "slug": "025-077",
+   "title": "Missing attributes",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-77.htm"
+  },
+  {
+   "slug": "025-078",
+   "title": "Find and Select elements with missing attributes",
+   "section": "Attributes (composites / building materials)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/025_Attributes/025_Attributes-78.htm"
+  },
+  {
+   "slug": "030-010",
+   "title": "Fit in Window",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-10.htm"
+  },
+  {
+   "slug": "030-013",
+   "title": "Navigation in the 3D Window",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-13.htm"
+  },
+  {
+   "slug": "030-020",
+   "title": "Elevation Values in the Tracker",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-20.htm"
+  },
+  {
+   "slug": "030-021",
+   "title": "Selection",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-21.htm"
+  },
+  {
+   "slug": "030-022",
+   "title": "Selecting Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-22.htm"
+  },
+  {
+   "slug": "030-023",
+   "title": "Special Selection Commands",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-23.htm"
+  },
+  {
+   "slug": "030-024",
+   "title": "Deselect Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-24.htm"
+  },
+  {
+   "slug": "030-025",
+   "title": "Selection Highlights",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-25.htm"
+  },
+  {
+   "slug": "030-026",
+   "title": "Draw Selection Area",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-26.htm"
+  },
+  {
+   "slug": "030-027",
+   "title": "Selection Dots",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-27.htm"
+  },
+  {
+   "slug": "030-028",
+   "title": "Find and Select Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-28.htm"
+  },
+  {
+   "slug": "030-031",
+   "title": "Edit Selection Set",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-31.htm"
+  },
+  {
+   "slug": "030-032",
+   "title": "Store Selection Sets in Selections Palette",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-32.htm"
+  },
+  {
+   "slug": "030-033",
+   "title": "Marquee Area",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-33.htm"
+  },
+  {
+   "slug": "030-034",
+   "title": "Marquee Area Definition",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-34.htm"
+  },
+  {
+   "slug": "030-036",
+   "title": "Copy/Paste Marquee Area from Project Window",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-36.htm"
+  },
+  {
+   "slug": "030-037",
+   "title": "Other Editing Operations within the Marquee",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-37.htm"
+  },
+  {
+   "slug": "030-038",
+   "title": "On-Screen Input Aids",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-38.htm"
+  },
+  {
+   "slug": "030-040",
+   "title": "Tracker",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-40.htm"
+  },
+  {
+   "slug": "030-044",
+   "title": "Set up Snap Grid",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-44.htm"
+  },
+  {
+   "slug": "030-045",
+   "title": "Snap to Grid",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-45.htm"
+  },
+  {
+   "slug": "030-046",
+   "title": "Snap Guides",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-46.htm"
+  },
+  {
+   "slug": "030-047",
+   "title": "Guide Lines",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-47.htm"
+  },
+  {
+   "slug": "030-048",
+   "title": "Snap Points",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-48.htm"
+  },
+  {
+   "slug": "030-049",
+   "title": "Snap Point Constraint",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-49.htm"
+  },
+  {
+   "slug": "030-050",
+   "title": "Editing Plane in 3D Window",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-50.htm"
+  },
+  {
+   "slug": "030-051",
+   "title": "Editing Plane Display",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-51.htm"
+  },
+  {
+   "slug": "030-052",
+   "title": "Reposition Editing Plane",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-52.htm"
+  },
+  {
+   "slug": "030-053",
+   "title": "Magic Wand",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-53.htm"
+  },
+  {
+   "slug": "030-054",
+   "title": "Magic Wand Settings",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-54.htm"
+  },
+  {
+   "slug": "030-057",
+   "title": "Coordinate Constraints",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-57.htm"
+  },
+  {
+   "slug": "030-061",
+   "title": "Offset and Multiple Offset Constraints (Relative Construction Methods)",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-61.htm"
+  },
+  {
+   "slug": "030-062",
+   "title": "Aligning Elements to a Surface in 3D",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-62.htm"
+  },
+  {
+   "slug": "030-063",
+   "title": "Snapping to Existing Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-63.htm"
+  },
+  {
+   "slug": "030-064",
+   "title": "Cursor Snap Range",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-64.htm"
+  },
+  {
+   "slug": "030-065",
+   "title": "Distance Guides",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-65.htm"
+  },
+  {
+   "slug": "030-066",
+   "title": "Editing Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-66.htm"
+  },
+  {
+   "slug": "030-067",
+   "title": "Basic Editing Operations",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-67.htm"
+  },
+  {
+   "slug": "030-069",
+   "title": "Move Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-69.htm"
+  },
+  {
+   "slug": "030-071",
+   "title": "Dragging Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-71.htm"
+  },
+  {
+   "slug": "030-073",
+   "title": "Mirroring Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-73.htm"
+  },
+  {
+   "slug": "030-075",
+   "title": "Offset All Edges",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-75.htm"
+  },
+  {
+   "slug": "030-077",
+   "title": "Align Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-77.htm"
+  },
+  {
+   "slug": "030-081",
+   "title": "Reshaping Polygons and Chained Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-81.htm"
+  },
+  {
+   "slug": "030-082",
+   "title": "Stretching with the Marquee Tool",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-82.htm"
+  },
+  {
+   "slug": "030-083",
+   "title": "Stretch Height",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-83.htm"
+  },
+  {
+   "slug": "030-084",
+   "title": "Resize (Enlarge or Reduce) Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-84.htm"
+  },
+  {
+   "slug": "030-085",
+   "title": "Splitting Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-85.htm"
+  },
+  {
+   "slug": "030-086",
+   "title": "Adjusting Elements",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-86.htm"
+  },
+  {
+   "slug": "030-087",
+   "title": "Adjust Elements to Slabs",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-87.htm"
+  },
+  {
+   "slug": "030-088",
+   "title": "Create a Fillet or Chamfer",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-88.htm"
+  },
+  {
+   "slug": "030-089",
+   "title": "Trim Elements Using Scissors",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-89.htm"
+  },
+  {
+   "slug": "030-090",
+   "title": "Adding Element Nodes",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-90.htm"
+  },
+  {
+   "slug": "030-091",
+   "title": "Move Nodes",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-91.htm"
+  },
+  {
+   "slug": "030-095",
+   "title": "Drag, Rotate, Mirror Element Copies",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-95.htm"
+  },
+  {
+   "slug": "030-097",
+   "title": "Drag &amp; Drop",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-97.htm"
+  },
+  {
+   "slug": "030-103",
+   "title": "Virtual Trace: Using References to Edit and Compare Model Views and Drawings",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-103.htm"
+  },
+  {
+   "slug": "030-108",
+   "title": "Move/Rotate/Reset Reference",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-108.htm"
+  },
+  {
+   "slug": "030-109",
+   "title": "Switch Reference with Active: Access Elements within the Reference for Editing or Copying",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-109.htm"
+  },
+  {
+   "slug": "030-113",
+   "title": "Consolidate Lines and Fills in Drawing Windows",
+   "section": "Interaction (selection / editing / pet palette / marquee / tracker)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/030_Interaction/030_Interaction-113.htm"
+  },
+  {
+   "slug": "040-004",
+   "title": "Home Story",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-4.htm"
+  },
+  {
+   "slug": "040-005",
+   "title": "Define Toplink for construction elements and zones",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-5.htm"
+  },
+  {
+   "slug": "040-006",
+   "title": "Walls",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-6.htm"
+  },
+  {
+   "slug": "040-007",
+   "title": "Wall Reference Line",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-7.htm"
+  },
+  {
+   "slug": "040-008",
+   "title": "Create a Straight Wall",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-8.htm"
+  },
+  {
+   "slug": "040-009",
+   "title": "Create a Curved Wall",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-9.htm"
+  },
+  {
+   "slug": "040-010",
+   "title": "Create a Chain of Walls",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-10.htm"
+  },
+  {
+   "slug": "040-011",
+   "title": "Create a Rectangle of Walls",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-11.htm"
+  },
+  {
+   "slug": "040-012",
+   "title": "Create a Trapezoid Wall",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-12.htm"
+  },
+  {
+   "slug": "040-013",
+   "title": "Create a Polygon Wall (PolyWall)",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-13.htm"
+  },
+  {
+   "slug": "040-014",
+   "title": "Stretching Walls",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-14.htm"
+  },
+  {
+   "slug": "040-015",
+   "title": "Create a Slanted or Double-Slanted Wall",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-15.htm"
+  },
+  {
+   "slug": "040-016",
+   "title": "Modify Slanted Wall",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-16.htm"
+  },
+  {
+   "slug": "040-017",
+   "title": "Create a Log Wall",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-17.htm"
+  },
+  {
+   "slug": "040-018",
+   "title": "Walls and Other Elements",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-18.htm"
+  },
+  {
+   "slug": "040-019",
+   "title": "Modify Wall Reference Line",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-19.htm"
+  },
+  {
+   "slug": "040-020",
+   "title": "Invert Wall Direction",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-20.htm"
+  },
+  {
+   "slug": "040-027",
+   "title": "Rotate Join Angle",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-27.htm"
+  },
+  {
+   "slug": "040-078",
+   "title": "Edit Eaves or Gable Overhang",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-78.htm"
+  },
+  {
+   "slug": "040-091",
+   "title": "Define Trimming Bodies",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-91.htm"
+  },
+  {
+   "slug": "040-092",
+   "title": "Trim Multiple Selected Elements: Automatic Trim",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-92.htm"
+  },
+  {
+   "slug": "040-093",
+   "title": "Automatic Trim: Example 1",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-93.htm"
+  },
+  {
+   "slug": "040-094",
+   "title": "Automatic Trim: Example 2",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-94.htm"
+  },
+  {
+   "slug": "040-096",
+   "title": "Merge Trimming Elements",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-96.htm"
+  },
+  {
+   "slug": "040-125",
+   "title": "Slabs",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-125.htm"
+  },
+  {
+   "slug": "040-126",
+   "title": "Slab Reference Plane",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-126.htm"
+  },
+  {
+   "slug": "040-127",
+   "title": "Creating Slabs",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-127.htm"
+  },
+  {
+   "slug": "040-128",
+   "title": "Placing Holes in Slabs",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-128.htm"
+  },
+  {
+   "slug": "040-129",
+   "title": "Set Custom Slab Edge Angle and Edge Surface",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-129.htm"
+  },
+  {
+   "slug": "040-136",
+   "title": "Zones",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-136.htm"
+  },
+  {
+   "slug": "040-137",
+   "title": "Creating Zones",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-137.htm"
+  },
+  {
+   "slug": "040-138",
+   "title": "Edit Zone Polygon",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-138.htm"
+  },
+  {
+   "slug": "040-139",
+   "title": "Zone Categories",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-139.htm"
+  },
+  {
+   "slug": "040-140",
+   "title": "Display of Zones in Floor Plan",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-140.htm"
+  },
+  {
+   "slug": "040-141",
+   "title": "Display of Zones in Section",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-141.htm"
+  },
+  {
+   "slug": "040-142",
+   "title": "Zone Stamps",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-142.htm"
+  },
+  {
+   "slug": "040-143",
+   "title": "3D Display of Zone Spaces",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-143.htm"
+  },
+  {
+   "slug": "040-144",
+   "title": "Crop Zone to Another Element",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-144.htm"
+  },
+  {
+   "slug": "040-145",
+   "title": "Calculating Zone Area and Zone Volume",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-145.htm"
+  },
+  {
+   "slug": "040-146",
+   "title": "Relation to Zones",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-146.htm"
+  },
+  {
+   "slug": "040-147",
+   "title": "Updating Zones",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-147.htm"
+  },
+  {
+   "slug": "040-170",
+   "title": "Edit Grid and Grid Lines in Edit Mode",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-170.htm"
+  },
+  {
+   "slug": "040-177",
+   "title": "Stairs",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-177.htm"
+  },
+  {
+   "slug": "040-178",
+   "title": "About the Stair Tool",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-178.htm"
+  },
+  {
+   "slug": "040-179",
+   "title": "Stair Input",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-179.htm"
+  },
+  {
+   "slug": "040-180",
+   "title": "Graphical Editing of Stair Scheme",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-180.htm"
+  },
+  {
+   "slug": "040-181",
+   "title": "Stair Turning Type",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-181.htm"
+  },
+  {
+   "slug": "040-183",
+   "title": "Stair Segment Type",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-183.htm"
+  },
+  {
+   "slug": "040-184",
+   "title": "Stair Tool Edit Mode",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-184.htm"
+  },
+  {
+   "slug": "040-186",
+   "title": "Stair Settings (Main Element Settings)",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-186.htm"
+  },
+  {
+   "slug": "040-187",
+   "title": "Stair Settings: Geometry and Positioning",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-187.htm"
+  },
+  {
+   "slug": "040-188",
+   "title": "Stair Settings: Rules and Standards",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-188.htm"
+  },
+  {
+   "slug": "040-189",
+   "title": "Toplinked Stairs and Changed Story Height",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-189.htm"
+  },
+  {
+   "slug": "040-197",
+   "title": "Split Stair Structure",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-197.htm"
+  },
+  {
+   "slug": "040-199",
+   "title": "Stair Endings and Connections",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-199.htm"
+  },
+  {
+   "slug": "040-200",
+   "title": "Model View Options for Stairs",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-200.htm"
+  },
+  {
+   "slug": "040-202",
+   "title": "Floor Plan/Reflected Ceiling Plan Display (Stair Settings)",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-202.htm"
+  },
+  {
+   "slug": "040-203",
+   "title": "Edit Stair Symbol Components Graphically",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-203.htm"
+  },
+  {
+   "slug": "040-258",
+   "title": "Openings",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-258.htm"
+  },
+  {
+   "slug": "040-259",
+   "title": "Create Opening",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-259.htm"
+  },
+  {
+   "slug": "040-260",
+   "title": "Opening Display on Floor Plan",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-260.htm"
+  },
+  {
+   "slug": "040-261",
+   "title": "Opening Display in 3D",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-261.htm"
+  },
+  {
+   "slug": "040-262",
+   "title": "Use Limited Opening to Create Niche or Recess",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-262.htm"
+  },
+  {
+   "slug": "040-263",
+   "title": "On-Screen View Options for Openings",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-263.htm"
+  },
+  {
+   "slug": "040-264",
+   "title": "Edit Opening",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-264.htm"
+  },
+  {
+   "slug": "040-265",
+   "title": "Manage Opening Connections",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-265.htm"
+  },
+  {
+   "slug": "040-268",
+   "title": "Create Openings from Selection",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-268.htm"
+  },
+  {
+   "slug": "040-285",
+   "title": "Stretching Objects",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-285.htm"
+  },
+  {
+   "slug": "040-287",
+   "title": "Graphical Editing Using Editable Hotspots",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-287.htm"
+  },
+  {
+   "slug": "040-294",
+   "title": "Save Rectangular Doors and Windows from 3D Model Elements",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-294.htm"
+  },
+  {
+   "slug": "040-295",
+   "title": "Save Custom-Shape Doors or Windows",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-295.htm"
+  },
+  {
+   "slug": "040-298",
+   "title": "Example: Create Custom Door Leaf",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-298.htm"
+  },
+  {
+   "slug": "040-300",
+   "title": "Editing Custom Library Parts and Components",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-300.htm"
+  },
+  {
+   "slug": "040-301",
+   "title": "Open and Edit Library Part",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-301.htm"
+  },
+  {
+   "slug": "040-305",
+   "title": "Doors/Windows",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-305.htm"
+  },
+  {
+   "slug": "040-306",
+   "title": "Placing Doors or Windows",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-306.htm"
+  },
+  {
+   "slug": "040-307",
+   "title": "Previews in Door/Window Settings",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-307.htm"
+  },
+  {
+   "slug": "040-308",
+   "title": "Floor Plan Display of Doors/Windows",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-308.htm"
+  },
+  {
+   "slug": "040-309",
+   "title": "Setting the Window/Door Plane in Slanted or Complex Walls",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-309.htm"
+  },
+  {
+   "slug": "040-313",
+   "title": "Creating an Empty Opening",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-313.htm"
+  },
+  {
+   "slug": "040-314",
+   "title": "Moving Wall Openings",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-314.htm"
+  },
+  {
+   "slug": "040-315",
+   "title": "Doors/Windows in Curved Wall",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-315.htm"
+  },
+  {
+   "slug": "040-320",
+   "title": "Wall Ends",
+   "section": "Elements (walls/slabs/doors/windows/stairs/zones)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/040_ElementsVB/040_ElementsVB-320.htm"
+  },
+  {
+   "slug": "050-003",
+   "title": "Floor Plan Window",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-3.htm"
+  },
+  {
+   "slug": "050-004",
+   "title": "Stories",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-4.htm"
+  },
+  {
+   "slug": "050-005",
+   "title": "About Stories",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-5.htm"
+  },
+  {
+   "slug": "050-006",
+   "title": "Navigate Among Stories",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-6.htm"
+  },
+  {
+   "slug": "050-007",
+   "title": "Defining Story Display in 3D",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-7.htm"
+  },
+  {
+   "slug": "050-008",
+   "title": "Defining Story Display in Section/Elevation/IE",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-8.htm"
+  },
+  {
+   "slug": "050-009",
+   "title": "Create or Delete or Rename Stories",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-9.htm"
+  },
+  {
+   "slug": "050-010",
+   "title": "Story Level Lines",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-10.htm"
+  },
+  {
+   "slug": "050-013",
+   "title": "Show On Stories",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-13.htm"
+  },
+  {
+   "slug": "050-017",
+   "title": "3D Window",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-17.htm"
+  },
+  {
+   "slug": "050-018",
+   "title": "Show Selection/Marquee in 3D",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-18.htm"
+  },
+  {
+   "slug": "050-025",
+   "title": "Create a 3D Cutaway in the 3D Window",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-25.htm"
+  },
+  {
+   "slug": "050-026",
+   "title": "Edit Cutaway",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-26.htm"
+  },
+  {
+   "slug": "050-027",
+   "title": "3D Cutaway Attributes",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-27.htm"
+  },
+  {
+   "slug": "050-030",
+   "title": "3D Window Size",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-30.htm"
+  },
+  {
+   "slug": "050-039",
+   "title": "Editing Section/Elevation/IE Lines on Floor Plan",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-39.htm"
+  },
+  {
+   "slug": "050-046",
+   "title": "Elevations",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-46.htm"
+  },
+  {
+   "slug": "050-047",
+   "title": "Interior Elevations (IE)",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-47.htm"
+  },
+  {
+   "slug": "050-048",
+   "title": "About Interior Elevations",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-48.htm"
+  },
+  {
+   "slug": "050-049",
+   "title": "Create Interior Elevation Group",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-49.htm"
+  },
+  {
+   "slug": "050-050",
+   "title": "Create Single Interior Elevation Viewpoint",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-50.htm"
+  },
+  {
+   "slug": "050-051",
+   "title": "Interior Elevation Horizontal Range",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-51.htm"
+  },
+  {
+   "slug": "050-052",
+   "title": "Interior Elevation Vertical Range",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-52.htm"
+  },
+  {
+   "slug": "050-053",
+   "title": "Display and Edit Interior Elevation Marker Lines and Marker Range",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-53.htm"
+  },
+  {
+   "slug": "050-054",
+   "title": "Interior Elevation IDs and Names",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-54.htm"
+  },
+  {
+   "slug": "050-055",
+   "title": "Delete/Restore IE Viewpoint",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-55.htm"
+  },
+  {
+   "slug": "050-056",
+   "title": "Display of Elements in Interior Elevation",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-56.htm"
+  },
+  {
+   "slug": "050-067",
+   "title": "Display of Detail/Worksheet Boundary",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-67.htm"
+  },
+  {
+   "slug": "050-068",
+   "title": "Update Detail/Worksheet Marker Boundary",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-68.htm"
+  },
+  {
+   "slug": "050-069",
+   "title": "Updating the Detail Window",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-69.htm"
+  },
+  {
+   "slug": "050-074",
+   "title": "Contents of the Worksheet Window",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-74.htm"
+  },
+  {
+   "slug": "050-075",
+   "title": "Editing in the Worksheet Window",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-75.htm"
+  },
+  {
+   "slug": "050-095",
+   "title": "Applying Partial Structure Settings to Model Windows",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-95.htm"
+  },
+  {
+   "slug": "050-100",
+   "title": "Partial Structure Display Settings in Windows Based on a Source Marker",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-100.htm"
+  },
+  {
+   "slug": "050-111",
+   "title": "Openings By Renovation Status: Override Examples",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-111.htm"
+  },
+  {
+   "slug": "050-114",
+   "title": "Adding Insulation to Walls: Renovation Workflow",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-114.htm"
+  },
+  {
+   "slug": "050-115",
+   "title": "Adding New Door Panel to Existing Door Frame: Renovation Workflow",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-115.htm"
+  },
+  {
+   "slug": "050-116",
+   "title": "Zone Stamps for Renovated Rooms: Renovation Workflow",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-116.htm"
+  },
+  {
+   "slug": "050-117",
+   "title": "Listing Material Quantities for Renovation Projects",
+   "section": "Views (stories / levels / navigation)",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/050_ViewsVB/050_ViewsVB-117.htm"
+  },
+  {
+   "slug": "150-003",
+   "title": "Wall Tool Settings",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-3.htm"
+  },
+  {
+   "slug": "150-006",
+   "title": "Slab Tool Settings",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-6.htm"
+  },
+  {
+   "slug": "150-008",
+   "title": "Zone Tool Settings",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-8.htm"
+  },
+  {
+   "slug": "150-016",
+   "title": "Door/Window Tool Settings",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-16.htm"
+  },
+  {
+   "slug": "150-017",
+   "title": "Door/Window Preview and Positioning Panel",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-17.htm"
+  },
+  {
+   "slug": "150-018",
+   "title": "Where to Set Door/Window Parameters",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-18.htm"
+  },
+  {
+   "slug": "150-019",
+   "title": "Floor Plan Display of Door/Window: Symbolic vs. Projected",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-19.htm"
+  },
+  {
+   "slug": "150-020",
+   "title": "Other Panels in Door/Window Settings",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-20.htm"
+  },
+  {
+   "slug": "150-031",
+   "title": "Fill Tool Settings",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-31.htm"
+  },
+  {
+   "slug": "150-033",
+   "title": "Section and Elevation Settings",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-33.htm"
+  },
+  {
+   "slug": "150-034",
+   "title": "Interior Elevation (IE) Tool Settings",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-34.htm"
+  },
+  {
+   "slug": "150-038",
+   "title": "Wall End Tool Settings",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-38.htm"
+  },
+  {
+   "slug": "150-040",
+   "title": "Hotspot Tool Settings",
+   "section": "Tool Settings dialogs",
+   "url": "https://help.graphisoft.com/AC/29/INT/_AC29_Help/150_UserInterfaceToolSettings/150_UserInterfaceToolSettings-40.htm"
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "D_model_completion6",
+  "legacy_id": "D_slabs_stairs_rooms5",
+  "category": "Model Completion",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Slab (×1); Create Slab Opening (×1); Create Stair (×1); Inspect Project (×1)",
+  "instruction": "Both floors of the two-storey building, with the same layout, are already created, but no stair and no second-floor slab exist yet. Two steps. (1) Create one straight stair connecting the ground floor to the first floor (full storey rise, 3000 mm), placed entirely inside the region x = 10480..12437, y = 5657..10659, running along the y direction, with valid connections at both storey levels. (2) Create the upper floor's slab using the existing slab composite 'Concrete Floor with 10mm Tile', outline (712, 12551), (12712, 12551), (12712, 2551), (712, 2551) (the exterior-wall footprint), reference plane Core Top positioned at the second storey level — and cut an opening in it where the stair passes through. Do not modify the existing walls.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stairs": [
+      {
+        "floor": 0,
+        "region": [
+          10479.9,
+          5656.5,
+          12437.2,
+          10658.7
+        ],
+        "axis": "y"
+      }
+    ],
+    "slabs": [
+      {
+        "label": "second-floor slab (stair opening)",
+        "floor": 1,
+        "level_mm": 3000,
+        "outline": [
+          [
+            712.2,
+            12550.5
+          ],
+          [
+            12712.2,
+            12550.5
+          ],
+          [
+            12712.2,
+            2550.5
+          ],
+          [
+            712.2,
+            2550.5
+          ],
+          [
+            712.2,
+            12550.5
+          ]
+        ],
+        "composite": "Concrete Floor with 10mm Tile",
+        "reference_plane": "Core Top",
+        "reference_plane_offset_mm": 30,
+        "ignore_holes": true,
+        "clear_of_stair": true
+      }
+    ],
+    "iou_min": 0.99,
+    "tolerance_mm": 0,
+    "exact_counts": {
+      "stairs": 1,
+      "slabs": 2,
+      "walls": 22,
+      "doors": 9,
+      "windows": 10,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/D_model_completion6/env"
+      }
+    ]
+  }
+}

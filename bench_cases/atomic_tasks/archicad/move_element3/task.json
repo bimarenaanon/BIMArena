@@ -1,0 +1,38 @@
+{
+  "id": "move_element3",
+  "legacy_id": "move_door2",
+  "atom": "move_door",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Move Element (×1)",
+  "instruction": "Move the door on the south wall along its wall so that exactly 1200 mm of wall remains between the door opening's east edge and the wall's EAST end, keeping its size and type unchanged. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "near": [
+          9479,
+          0
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "label": "south door, east edge 1200 from the east end"
+      }
+    ],
+    "opening_pos_tolerance_mm": 200,
+    "exact_counts": {
+      "doors": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/move_element3/env"
+      }
+    ]
+  }
+}

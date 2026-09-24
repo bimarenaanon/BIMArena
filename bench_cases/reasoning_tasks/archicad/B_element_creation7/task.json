@@ -1,0 +1,177 @@
+{
+  "id": "B_element_creation7",
+  "legacy_id": "B_walls7",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "B06",
+  "required_capabilities": "Create Wall (×12); Inspect Project (×1)",
+  "instruction": "The room boundaries have already been created in the project. Based on the room boundaries shown in the project, create the exterior and interior walls so that the room layout is properly enclosed and connected. Use only the existing exterior wall composite '100 Block Insulated Cavity' and only the existing interior wall composite 'Brick Double Plastered'. Do not create or modify wall composites; ensure exterior walls form the building envelope — each with its exterior face pointing outward and ALIGNED ON the room boundary shown (do not offset the envelope outward by the wall thickness) — and interior walls centred on their boundary lines, correctly separating the rooms.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          -1337,
+          10979
+        ],
+        "end": [
+          2298,
+          10979
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          2298,
+          10979
+        ],
+        "end": [
+          2298,
+          11606
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          2298,
+          11606
+        ],
+        "end": [
+          5298,
+          11606
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          5298,
+          11606
+        ],
+        "end": [
+          5298,
+          2787
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          5298,
+          2787
+        ],
+        "end": [
+          -1337,
+          2787
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          -1337,
+          2787
+        ],
+        "end": [
+          -1337,
+          10979
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          2298,
+          10979
+        ],
+        "end": [
+          2298,
+          8041
+        ],
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "beg": [
+          2298,
+          8041
+        ],
+        "end": [
+          -1337,
+          8041
+        ],
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "beg": [
+          163,
+          8041
+        ],
+        "end": [
+          163,
+          6387
+        ],
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "beg": [
+          163,
+          6387
+        ],
+        "end": [
+          -1337,
+          6387
+        ],
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "beg": [
+          2998,
+          2787
+        ],
+        "end": [
+          2998,
+          6387
+        ],
+        "composite": "Brick Double Plastered"
+      },
+      {
+        "beg": [
+          2998,
+          6387
+        ],
+        "end": [
+          163,
+          6387
+        ],
+        "composite": "Brick Double Plastered"
+      }
+    ],
+    "no_extra_walls": true,
+    "composites": [],
+    "no_extra_composites": true,
+    "preserve": [
+      "rooms"
+    ],
+    "wall_tolerance_mm": 100,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 4,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation7/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "create_slab_type1",
+  "legacy_id": "create_composite_slab1",
+  "atom": "create_composite_slab",
+  "category": "Config. & Types",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Slab Type (×1)",
+  "instruction": "Author a new slab composite named 'Timber Deck Floor 270' with this build-up from top to bottom: 20 mm timber flooring, 50 mm brick, 200 mm reinforced concrete structural core.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "name_contains": [
+          "timber deck"
+        ],
+        "skins": [
+          {
+            "material_contains": [
+              "timber"
+            ],
+            "thickness_mm": 20
+          },
+          {
+            "material_contains": [
+              "brick"
+            ],
+            "thickness_mm": 50
+          },
+          {
+            "material_contains": [
+              "reinforced concrete"
+            ],
+            "thickness_mm": 200
+          }
+        ],
+        "layers_exact": true
+      }
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_slab_type1/env"
+      }
+    ]
+  }
+}

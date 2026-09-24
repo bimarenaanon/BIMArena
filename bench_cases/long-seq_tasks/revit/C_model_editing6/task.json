@@ -1,0 +1,283 @@
+{
+  "id": "C_model_editing6",
+  "legacy_id": "F_design_change1",
+  "category": "Model Revision",
+  "authoring_tool": "Revit",
+  "v2_template": "G01",
+  "required_capabilities": "Create Wall (×2); Move Element (×1); Move with Constraints (×1); Inspect Project (×1)",
+  "instruction": "The single-storey model is already built. Modify the walls so the FINAL wall layout is exactly the following (walls not listed must not exist; tolerance is tight). All walls are 200 mm 'Generic - 200mm'; draw each wall exactly on the line given:\n- north exterior: (95, 7496) → (15439, 7496)\n- west exterior (extended south): (-5, -1898) → (-5, 7396)\n- south exterior (moved 2000 south): (15439, -1998) → (95, -1998)\n- east exterior (extended south): (15539, 7396) → (15539, -1898)\n- bedroom partition (extended south): (3195, 7396) → (3195, -1898)\n- bathroom south wall: (3195, 4733) → (6795, 4733)\n- bathroom east wall: (6795, 4733) → (6795, 7396)\n- dining/balcony partition (extended south): (13339, 7396) → (13339, -1898)\n- closet west wall (extended south): (5819, -1898) → (5819, 2337)\n- closet north wall: (4919, 2337) → (7819, 2337)\n- closet east wall (extended south): (7819, 2337) → (7819, -1898)\n- dining door stub: (13339, 4733) → (12239, 4733)\n- NEW kitchen/dining partition (vertical): (10139, 7396) → (10139, 4833)\n- NEW kitchen south partition (horizontal): (10139, 4833) → (7819, 4833)\nUpdate ALL related elements: the door hosted on the moved south wall keeps its position along the wall (near x = 3953, now on y = -1998, opening outward toward -y); the floor slab follows the new exterior footprint; the rooms update to the new boundaries (the Dinning Room ends up about 3000 × 2563 mm). Do not add or remove any door or window.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [],
+    "no_extra_composites": true,
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          95,
+          7496
+        ],
+        "end": [
+          15439,
+          7496
+        ],
+        "width_mm": 200,
+        "label": "north exterior (unchanged)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          -5,
+          -1898
+        ],
+        "end": [
+          -5,
+          7396
+        ],
+        "width_mm": 200,
+        "label": "west exterior (extended south)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          15439,
+          -1998
+        ],
+        "end": [
+          95,
+          -1998
+        ],
+        "width_mm": 200,
+        "label": "south exterior (moved 2000 south)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          15539,
+          7396
+        ],
+        "end": [
+          15539,
+          -1898
+        ],
+        "width_mm": 200,
+        "label": "east exterior (extended south)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          3195,
+          7396
+        ],
+        "end": [
+          3195,
+          -1898
+        ],
+        "width_mm": 200,
+        "label": "bedroom partition (extended south)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          3195,
+          4733
+        ],
+        "end": [
+          6795,
+          4733
+        ],
+        "width_mm": 200,
+        "label": "bathroom south wall (unchanged)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          6795,
+          4733
+        ],
+        "end": [
+          6795,
+          7396
+        ],
+        "width_mm": 200,
+        "label": "bathroom east wall (unchanged)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          13339,
+          7396
+        ],
+        "end": [
+          13339,
+          -1898
+        ],
+        "width_mm": 200,
+        "label": "dining/balcony partition (extended south)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          5819,
+          -1898
+        ],
+        "end": [
+          5819,
+          2337
+        ],
+        "width_mm": 200,
+        "label": "closet west wall (extended south)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          4919,
+          2337
+        ],
+        "end": [
+          7819,
+          2337
+        ],
+        "width_mm": 200,
+        "label": "closet north wall (unchanged)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          7819,
+          2337
+        ],
+        "end": [
+          7819,
+          -1898
+        ],
+        "width_mm": 200,
+        "label": "closet east wall (extended south)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          13339,
+          4733
+        ],
+        "end": [
+          12239,
+          4733
+        ],
+        "width_mm": 200,
+        "label": "dining door stub (unchanged)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          10139,
+          7396
+        ],
+        "end": [
+          10139,
+          4833
+        ],
+        "width_mm": 200,
+        "label": "RED: new kitchen/dining partition (vertical)",
+        "composite": "Generic - 200mm"
+      },
+      {
+        "match": "any",
+        "beg": [
+          10139,
+          4833
+        ],
+        "end": [
+          7819,
+          4833
+        ],
+        "width_mm": 200,
+        "label": "RED: new kitchen south partition (horizontal)",
+        "composite": "Generic - 200mm"
+      }
+    ],
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "near": [
+          3953,
+          -1898
+        ],
+        "label": "south-wall door rides 2000 south",
+        "width_mm": 900,
+        "height_mm": 2100,
+        "open_into": [
+          3953,
+          -2898
+        ]
+      }
+    ],
+    "slabs": [
+      {
+        "match": "any",
+        "floor": 0,
+        "outline": "footprint",
+        "level_mm": 0,
+        "label": "slab follows the moved south wall"
+      }
+    ],
+    "rooms": [
+      {
+        "name": "Dinning Room",
+        "existing": true,
+        "dims_mm": [
+          3000,
+          2563
+        ],
+        "label": "dining room bounded by the new red partition"
+      }
+    ],
+    "exact_counts": {
+      "doors": 5,
+      "windows": 4,
+      "rooms": 1,
+      "slabs": 1,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            3953,
+            102
+          ]
+        ]
+      },
+      "windows"
+    ],
+    "wall_tolerance_mm": 10,
+    "opening_pos_tolerance_mm": 10,
+    "tolerance_mm": 0,
+    "room_area_ratio": 0.05,
+    "iou_min": 0.99
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/C_model_editing6/env"
+      }
+    ]
+  }
+}

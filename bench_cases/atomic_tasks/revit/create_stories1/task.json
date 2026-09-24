@@ -1,0 +1,47 @@
+{
+  "id": "create_stories1",
+  "legacy_id": "set_stories1",
+  "atom": "set_stories",
+  "category": "Config. & Types",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Stories (×1)",
+  "instruction": "Redefine the project's level stack so the final model has exactly three levels: 'First Floor' at elevation 0 mm, 'Second Floor' at 3200 mm and 'Third Floor' at 6400 mm. Adjust the existing levels and add the missing one as needed; create no elements.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stories": [
+      {
+        "name": "First Floor",
+        "elevation_mm": 0
+      },
+      {
+        "name": "Second Floor",
+        "elevation_mm": 3200
+      },
+      {
+        "name": "Third Floor",
+        "elevation_mm": 6400
+      }
+    ],
+    "stories_exact": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/create_stories1/env"
+      }
+    ]
+  }
+}

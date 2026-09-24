@@ -1,0 +1,94 @@
+{
+  "id": "A_setup_types2",
+  "legacy_id": "A_setup_types2",
+  "category": "Project Initialization",
+  "authoring_tool": "Revit",
+  "v2_template": "A02",
+  "required_capabilities": "Create Wall Type (×1); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Based on the build-up drawing, create the matching wall type.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ],
+    "source": {
+      "drawing.png": {
+        "document": "Neufert, Architects' Data, 4th edition",
+        "pdf_page": 91,
+        "printed_page": 78,
+        "bbox": [
+          191.28,
+          331.64,
+          300.69,
+          477.53
+        ],
+        "page_size": [
+          595.2,
+          842.16
+        ],
+        "anchor": "Masonry with external cladding"
+      }
+    }
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "layers_exact": false,
+        "skins": [
+          {
+            "material_contains": [
+              "Clad"
+            ],
+            "thickness_mm": {
+              "min": 10,
+              "max": 15
+            }
+          },
+          {
+            "material_contains": [
+              "Insulation"
+            ],
+            "thickness_mm": 120
+          },
+          {
+            "material_contains": [
+              "Insulation"
+            ],
+            "thickness_mm": 120
+          },
+          {
+            "material_contains": [
+              "Brick",
+              "Masonry"
+            ],
+            "thickness_mm": 240
+          },
+          {
+            "material_contains": [
+              "Gypsum",
+              "Render"
+            ],
+            "thickness_mm": 10
+          }
+        ]
+      }
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/A_setup_types2/env"
+      }
+    ]
+  }
+}

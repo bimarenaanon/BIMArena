@@ -1,0 +1,217 @@
+{
+  "id": "B_element_creation6",
+  "legacy_id": "B_walls5",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "v2_template": "B03",
+  "required_capabilities": "Create Wall (×11); Inspect Project (×1)",
+  "instruction": "The project is empty. Create exactly the following twelve walls, all 200 mm wide, using the project's generic 200 mm basic wall type, height 3000 mm (create no types):\n- north exterior: (-8552, 5167) → (1448, 5167)\n- west exterior: (-8552, -3783) → (-8552, 5167)\n- middle horizontal, west of the open passage: (-8552, 767) → (-6273, 767)\n- middle horizontal, east of the open passage: (-5373, 767) → (1448, 767)\n- east exterior, upper band: (1448, 767) → (1448, 5167)\n- kitchen/bedroom partition: (-5002, 767) → (-5002, 5167)\n- bedroom/balcony partition: (-302, 767) → (-302, 5167)\n- south exterior: (-8552, -3783) → (748, -3783)\n- east exterior, lower band: (748, -3783) → (748, 767)\n- entry/living partition: (-5452, -3783) → (-5452, -2183)\n- WC south wall: (-8552, -2083) → (-6602, -2083)\n- WC east wall: (-6602, -2083) → (-6602, 767)\nThe gap between the two 'middle horizontal' walls is an open passage — leave it exactly as specified. Place no doors and no windows anywhere.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          -8552,
+          5167
+        ],
+        "end": [
+          1448,
+          5167
+        ],
+        "width_mm": 200,
+        "label": "north exterior",
+        "composite": [
+          "Generic"
+        ]
+      },
+      {
+        "beg": [
+          -8552,
+          -3783
+        ],
+        "end": [
+          -8552,
+          5167
+        ],
+        "width_mm": 200,
+        "label": "west exterior",
+        "composite": [
+          "Generic"
+        ]
+      },
+      {
+        "beg": [
+          -8552,
+          767
+        ],
+        "end": [
+          -6273,
+          767
+        ],
+        "width_mm": 200,
+        "label": "middle horizontal (west of the open passage)",
+        "composite": [
+          "Generic"
+        ]
+      },
+      {
+        "beg": [
+          -5373,
+          767
+        ],
+        "end": [
+          1448,
+          767
+        ],
+        "width_mm": 200,
+        "label": "middle horizontal (east of the open passage)",
+        "composite": [
+          "Generic"
+        ]
+      },
+      {
+        "beg": [
+          1448,
+          767
+        ],
+        "end": [
+          1448,
+          5167
+        ],
+        "width_mm": 200,
+        "label": "east exterior (upper band)",
+        "composite": [
+          "Generic"
+        ]
+      },
+      {
+        "beg": [
+          -5002,
+          767
+        ],
+        "end": [
+          -5002,
+          5167
+        ],
+        "width_mm": 200,
+        "label": "kitchen/bedroom partition",
+        "composite": [
+          "Generic"
+        ]
+      },
+      {
+        "beg": [
+          -302,
+          767
+        ],
+        "end": [
+          -302,
+          5167
+        ],
+        "width_mm": 200,
+        "label": "bedroom/balcony partition",
+        "composite": [
+          "Generic"
+        ]
+      },
+      {
+        "beg": [
+          -8552,
+          -3783
+        ],
+        "end": [
+          748,
+          -3783
+        ],
+        "width_mm": 200,
+        "label": "south exterior",
+        "composite": [
+          "Generic"
+        ]
+      },
+      {
+        "beg": [
+          748,
+          -3783
+        ],
+        "end": [
+          748,
+          767
+        ],
+        "width_mm": 200,
+        "label": "east exterior (lower band)",
+        "composite": [
+          "Generic"
+        ]
+      },
+      {
+        "beg": [
+          -5452,
+          -3783
+        ],
+        "end": [
+          -5452,
+          -2183
+        ],
+        "width_mm": 200,
+        "label": "entry/living partition",
+        "composite": [
+          "Generic"
+        ]
+      },
+      {
+        "beg": [
+          -8552,
+          -2083
+        ],
+        "end": [
+          -6602,
+          -2083
+        ],
+        "width_mm": 200,
+        "label": "WC south wall",
+        "composite": [
+          "Generic"
+        ]
+      },
+      {
+        "beg": [
+          -6602,
+          -2083
+        ],
+        "end": [
+          -6602,
+          767
+        ],
+        "width_mm": 200,
+        "label": "WC east wall",
+        "composite": [
+          "Generic"
+        ]
+      }
+    ],
+    "no_extra_walls": true,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 300,
+    "wall_height_mm": 3000
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/B_element_creation6/env"
+      }
+    ]
+  }
+}

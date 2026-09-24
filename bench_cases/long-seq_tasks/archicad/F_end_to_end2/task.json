@@ -1,0 +1,510 @@
+{
+  "id": "F_end_to_end2",
+  "legacy_id": "I_long_sequence2",
+  "category": "End-to-End Modeling",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Switch Active Story (×1); Create Wall (×28); Create Slab (×2); Create Slab Opening (×1); Create Door (×8); Create Window (×6); Create Stair (×1); Inspect Project (×1)",
+  "instruction": "Create this two-storey building on both storeys using any suitable existing types. Create the exterior walls as one closed outline: (0,10725) → (7750,10725) → (7750,9075) → (11950,9075) → (11950,2725) → (7625,2725) → (7625,0) → (0,0) → (0,10725). Create these interior walls: (0,4800) → (4125,4800); (0,2775) → (4350,2775); (4125,10725) → (4125,4800); (2300,4800) → (2300,2775); (5225,1700) → (5225,0); (4350,2775) → (5225,1700). Add windows at (2150,10725), (6400,10725), and (10400,9075), and doors at (3275,4800), (2300,3875), (4764,2266), (6525,0), and (8400,9075), each hosted by the corresponding wall. On the first floor, do not place any doors in the exterior walls. Create one slab per storey following the exterior-wall footprint. Finally, create a stair with its mid point starting at (11075,4425) on the ground floor and rising to the first floor, fitting the available space. Build the full layout, including its doors and windows, on EACH of the two storeys (the storey levels/heights may be any suitable values).",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          0,
+          10725
+        ],
+        "end": [
+          7750,
+          10725
+        ],
+        "floor": 0,
+        "label": "exterior segment 1 (floor 0)"
+      },
+      {
+        "beg": [
+          7750,
+          10725
+        ],
+        "end": [
+          7750,
+          9075
+        ],
+        "floor": 0,
+        "label": "exterior segment 2 (floor 0)"
+      },
+      {
+        "beg": [
+          7750,
+          9075
+        ],
+        "end": [
+          11950,
+          9075
+        ],
+        "floor": 0,
+        "label": "exterior segment 3 (floor 0)"
+      },
+      {
+        "beg": [
+          11950,
+          9075
+        ],
+        "end": [
+          11950,
+          2725
+        ],
+        "floor": 0,
+        "label": "exterior segment 4 (floor 0)"
+      },
+      {
+        "beg": [
+          11950,
+          2725
+        ],
+        "end": [
+          7625,
+          2725
+        ],
+        "floor": 0,
+        "label": "exterior segment 5 (floor 0)"
+      },
+      {
+        "beg": [
+          7625,
+          2725
+        ],
+        "end": [
+          7625,
+          0
+        ],
+        "floor": 0,
+        "label": "exterior segment 6 (floor 0)"
+      },
+      {
+        "beg": [
+          7625,
+          0
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "floor": 0,
+        "label": "exterior segment 7 (floor 0)"
+      },
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          0,
+          10725
+        ],
+        "floor": 0,
+        "label": "exterior segment 8 (floor 0)"
+      },
+      {
+        "beg": [
+          0,
+          4800
+        ],
+        "end": [
+          4125,
+          4800
+        ],
+        "floor": 0,
+        "label": "interior 1 (floor 0)"
+      },
+      {
+        "beg": [
+          0,
+          2775
+        ],
+        "end": [
+          4350,
+          2775
+        ],
+        "floor": 0,
+        "label": "interior 2 (floor 0)"
+      },
+      {
+        "beg": [
+          4125,
+          10725
+        ],
+        "end": [
+          4125,
+          4800
+        ],
+        "floor": 0,
+        "label": "interior 3 (floor 0)"
+      },
+      {
+        "beg": [
+          2300,
+          4800
+        ],
+        "end": [
+          2300,
+          2775
+        ],
+        "floor": 0,
+        "label": "interior 4 (floor 0)"
+      },
+      {
+        "beg": [
+          5225,
+          1700
+        ],
+        "end": [
+          5225,
+          0
+        ],
+        "floor": 0,
+        "label": "interior 5 (floor 0)"
+      },
+      {
+        "beg": [
+          4350,
+          2775
+        ],
+        "end": [
+          5225,
+          1700
+        ],
+        "floor": 0,
+        "label": "interior 6 (floor 0)"
+      },
+      {
+        "beg": [
+          0,
+          10725
+        ],
+        "end": [
+          7750,
+          10725
+        ],
+        "floor": 1,
+        "label": "exterior segment 1 (floor 1)"
+      },
+      {
+        "beg": [
+          7750,
+          10725
+        ],
+        "end": [
+          7750,
+          9075
+        ],
+        "floor": 1,
+        "label": "exterior segment 2 (floor 1)"
+      },
+      {
+        "beg": [
+          7750,
+          9075
+        ],
+        "end": [
+          11950,
+          9075
+        ],
+        "floor": 1,
+        "label": "exterior segment 3 (floor 1)"
+      },
+      {
+        "beg": [
+          11950,
+          9075
+        ],
+        "end": [
+          11950,
+          2725
+        ],
+        "floor": 1,
+        "label": "exterior segment 4 (floor 1)"
+      },
+      {
+        "beg": [
+          11950,
+          2725
+        ],
+        "end": [
+          7625,
+          2725
+        ],
+        "floor": 1,
+        "label": "exterior segment 5 (floor 1)"
+      },
+      {
+        "beg": [
+          7625,
+          2725
+        ],
+        "end": [
+          7625,
+          0
+        ],
+        "floor": 1,
+        "label": "exterior segment 6 (floor 1)"
+      },
+      {
+        "beg": [
+          7625,
+          0
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "floor": 1,
+        "label": "exterior segment 7 (floor 1)"
+      },
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          0,
+          10725
+        ],
+        "floor": 1,
+        "label": "exterior segment 8 (floor 1)"
+      },
+      {
+        "beg": [
+          0,
+          4800
+        ],
+        "end": [
+          4125,
+          4800
+        ],
+        "floor": 1,
+        "label": "interior 1 (floor 1)"
+      },
+      {
+        "beg": [
+          0,
+          2775
+        ],
+        "end": [
+          4350,
+          2775
+        ],
+        "floor": 1,
+        "label": "interior 2 (floor 1)"
+      },
+      {
+        "beg": [
+          4125,
+          10725
+        ],
+        "end": [
+          4125,
+          4800
+        ],
+        "floor": 1,
+        "label": "interior 3 (floor 1)"
+      },
+      {
+        "beg": [
+          2300,
+          4800
+        ],
+        "end": [
+          2300,
+          2775
+        ],
+        "floor": 1,
+        "label": "interior 4 (floor 1)"
+      },
+      {
+        "beg": [
+          5225,
+          1700
+        ],
+        "end": [
+          5225,
+          0
+        ],
+        "floor": 1,
+        "label": "interior 5 (floor 1)"
+      },
+      {
+        "beg": [
+          4350,
+          2775
+        ],
+        "end": [
+          5225,
+          1700
+        ],
+        "floor": 1,
+        "label": "interior 6 (floor 1)"
+      }
+    ],
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "center": [
+          3275,
+          4800
+        ],
+        "floor": 0,
+        "label": "door 1 (floor 0)"
+      },
+      {
+        "center": [
+          2300,
+          3875
+        ],
+        "floor": 0,
+        "label": "door 2 (floor 0)"
+      },
+      {
+        "center": [
+          4764,
+          2266
+        ],
+        "floor": 0,
+        "label": "door 3 (floor 0)"
+      },
+      {
+        "center": [
+          6525,
+          0
+        ],
+        "floor": 0,
+        "label": "door 4 (floor 0)"
+      },
+      {
+        "center": [
+          8400,
+          9075
+        ],
+        "floor": 0,
+        "label": "door 5 (floor 0)"
+      },
+      {
+        "center": [
+          3275,
+          4800
+        ],
+        "floor": 1,
+        "label": "door 1 (floor 1)"
+      },
+      {
+        "center": [
+          2300,
+          3875
+        ],
+        "floor": 1,
+        "label": "door 2 (floor 1)"
+      },
+      {
+        "center": [
+          4764,
+          2266
+        ],
+        "floor": 1,
+        "label": "door 3 (floor 1)"
+      }
+    ],
+    "windows": [
+      {
+        "center": [
+          2150,
+          10725
+        ],
+        "floor": 0,
+        "label": "window 1 (floor 0)"
+      },
+      {
+        "center": [
+          6400,
+          10725
+        ],
+        "floor": 0,
+        "label": "window 2 (floor 0)"
+      },
+      {
+        "center": [
+          10400,
+          9075
+        ],
+        "floor": 0,
+        "label": "window 3 (floor 0)"
+      },
+      {
+        "center": [
+          2150,
+          10725
+        ],
+        "floor": 1,
+        "label": "window 1 (floor 1)"
+      },
+      {
+        "center": [
+          6400,
+          10725
+        ],
+        "floor": 1,
+        "label": "window 2 (floor 1)"
+      },
+      {
+        "center": [
+          10400,
+          9075
+        ],
+        "floor": 1,
+        "label": "window 3 (floor 1)"
+      }
+    ],
+    "slabs": [
+      {
+        "floor": 0,
+        "outline": "footprint"
+      },
+      {
+        "floor": 1,
+        "outline": "footprint",
+        "clear_of_stair": true
+      }
+    ],
+    "stairs": [
+      {
+        "floor": 0,
+        "region": [
+          7750,
+          2725,
+          11950,
+          9075
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 8,
+      "windows": 6,
+      "slabs": 2,
+      "stairs": 1,
+      "rooms": 0,
+      "objects": 0
+    },
+    "wall_tolerance_mm": 150,
+    "opening_pos_tolerance_mm": 300,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/F_end_to_end2/env"
+      }
+    ]
+  }
+}

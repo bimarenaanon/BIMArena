@@ -1,0 +1,63 @@
+{
+  "id": "B_element_creation10",
+  "legacy_id": "C_openings3",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "C03",
+  "required_capabilities": "Load Library Element Type (×2); Create Door (×2); Replace Element Type (×1); Inspect Project (×1)",
+  "instruction": "The room is a simple rectangle with four exterior walls already built. Do not modify any walls. Place a Rectangular Door Opening on the top (north) wall, 900 × 2100 mm, with its left edge 3000 mm from the top-left corner, measured along the wall. Place a Double Door with 2 Sidelights on the right (east) wall, 2300 × 2100 mm, opening outward, with its edge closest to the top-right corner 2500 mm from that corner, measured down along the wall. Create no additional doors or openings.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "center": [
+          3402.0,
+          11912.0
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "type": "Rectangular Door Opening",
+        "label": "rectangular door opening on the north wall"
+      },
+      {
+        "center": [
+          14952.0,
+          8262.0
+        ],
+        "width_mm": 2300,
+        "height_mm": 2100,
+        "type": "Double Door with 2 Sidelights",
+        "open_into": [
+          15952.0,
+          8262.0
+        ],
+        "label": "double door with 2 sidelights on the east wall"
+      }
+    ],
+    "exact_counts": {
+      "doors": 2,
+      "windows": 0,
+      "walls": 4,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls"
+    ],
+    "opening_pos_tolerance_mm": 150,
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/B_element_creation10/env"
+      }
+    ]
+  }
+}

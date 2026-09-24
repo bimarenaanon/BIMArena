@@ -1,0 +1,39 @@
+{
+  "id": "create_stair1",
+  "atom": "create_stair",
+  "category": "Creation",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Stair (×1)",
+  "instruction": "Create one straight single-flight stair on the Ground Floor rising 3000 mm (one full storey), with 15 risers and a flight width of 800 mm. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "stairs": [
+      {
+        "floor": 0,
+        "height_mm": 3000,
+        "width_mm": 800,
+        "risers": 15
+      }
+    ],
+    "exact_counts": {
+      "stairs": 1,
+      "walls": 0,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "objects": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/create_stair1/env"
+      }
+    ]
+  }
+}

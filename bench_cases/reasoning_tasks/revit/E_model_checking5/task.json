@@ -1,0 +1,175 @@
+{
+  "id": "E_model_checking5",
+  "legacy_id": "G_model_check1",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "H01",
+  "required_capabilities": "Move Element (×3); Inspect Project (×1)",
+  "instruction": "The Bathroom room and the Bedroom room are not enclosed. Fix the model so both rooms become enclosed.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "doors",
+      "windows",
+      "slabs",
+      "rooms"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "walls": [
+      {
+        "label": "wall 1",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          -2503,
+          7299
+        ],
+        "end": [
+          -2503,
+          99
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 2",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          -2403,
+          -1
+        ],
+        "end": [
+          2797,
+          -1
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 3",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          97,
+          99
+        ],
+        "end": [
+          97,
+          7299
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 4",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          97,
+          2199
+        ],
+        "end": [
+          -2403,
+          2199
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 5",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5197,
+          7399
+        ],
+        "end": [
+          -2403,
+          7399
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 6",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5297,
+          7299
+        ],
+        "end": [
+          5297,
+          4699
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 7",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5197,
+          4599
+        ],
+        "end": [
+          2797,
+          4599
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 8",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          2897,
+          5999
+        ],
+        "end": [
+          2897,
+          99
+        ],
+        "width_mm": 200
+      }
+    ],
+    "no_extra_walls": true,
+    "wall_tolerance_mm": 10,
+    "rooms": [
+      {
+        "name": "Bedroom",
+        "existing": true,
+        "inside": [
+          -1153,
+          4749
+        ],
+        "area_m2": 11.3
+      },
+      {
+        "name": "Bathroom",
+        "existing": true,
+        "inside": [
+          -1153,
+          1149
+        ],
+        "area_m2": 4.4
+      }
+    ],
+    "room_area_ratio": 0.05,
+    "exact_counts": {
+      "doors": 3,
+      "windows": 0,
+      "slabs": 1,
+      "rooms": 2,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/E_model_checking5/env"
+      }
+    ]
+  }
+}

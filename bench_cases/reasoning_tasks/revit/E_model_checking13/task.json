@@ -1,0 +1,139 @@
+{
+  "id": "E_model_checking13",
+  "legacy_id": "H_domain_reasoning5",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "I07",
+  "required_capabilities": "Move with Constraints (×1); Inspect Project (×1)",
+  "instruction": "A student-residence floor plan has already been created in the project. Check whether the students' living areas are reasonable; if not, adjust the interior walls to correct the room areas.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            9903,
+            3806
+          ],
+          [
+            6503,
+            4906
+          ],
+          [
+            9903,
+            4906
+          ],
+          [
+            13303,
+            4906
+          ]
+        ]
+      },
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            5776,
+            3806
+          ],
+          [
+            9176,
+            3806
+          ],
+          [
+            12576,
+            3806
+          ],
+          [
+            15839,
+            3806
+          ]
+        ]
+      },
+      {
+        "bucket": "rooms",
+        "except_near": [
+          [
+            4803,
+            4837
+          ],
+          [
+            8203,
+            4837
+          ],
+          [
+            11603,
+            4837
+          ],
+          [
+            14934,
+            4837
+          ]
+        ]
+      }
+    ],
+    "rooms": [
+      {
+        "label": "Living bay 1",
+        "name": "Living",
+        "existing": true,
+        "inside": [
+          4803,
+          4518
+        ],
+        "min_area_m2": 8
+      },
+      {
+        "label": "Living bay 2",
+        "name": "Living",
+        "existing": true,
+        "inside": [
+          8203,
+          4518
+        ],
+        "min_area_m2": 8
+      },
+      {
+        "label": "Living bay 3",
+        "name": "Living",
+        "existing": true,
+        "inside": [
+          11603,
+          4518
+        ],
+        "min_area_m2": 8
+      },
+      {
+        "label": "Living bay 4",
+        "name": "Living",
+        "existing": true,
+        "inside": [
+          14934,
+          4518
+        ],
+        "min_area_m2": 8
+      }
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "doors": 6,
+      "windows": 0,
+      "rooms": 5,
+      "slabs": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/E_model_checking13/env"
+      }
+    ]
+  }
+}

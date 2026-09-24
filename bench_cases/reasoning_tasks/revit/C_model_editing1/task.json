@@ -1,0 +1,130 @@
+{
+  "id": "C_model_editing1",
+  "legacy_id": "B_walls8",
+  "category": "Model Revision",
+  "authoring_tool": "Revit",
+  "v2_template": "B07",
+  "required_capabilities": "Replace Element Type (×7); Inspect Project (×1); Query Types (×1)",
+  "instruction": "The model's walls all use a basic generic type. Convert every exterior wall to the wall type 'Exterior - Block on Mtl. Stud' and every interior wall to 'Interior - 79mm Partition (1-hr)'. Preserve all wall centreline geometry and do not create new wall types.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "existing": true,
+        "beg": [
+          101,
+          12330
+        ],
+        "end": [
+          10001,
+          12330
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "label": "exterior N"
+      },
+      {
+        "existing": true,
+        "beg": [
+          10231,
+          12100
+        ],
+        "end": [
+          10231,
+          100
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "label": "exterior E"
+      },
+      {
+        "existing": true,
+        "beg": [
+          10001,
+          -130
+        ],
+        "end": [
+          101,
+          -130
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "label": "exterior S"
+      },
+      {
+        "existing": true,
+        "beg": [
+          -129,
+          100
+        ],
+        "end": [
+          -129,
+          12100
+        ],
+        "composite": "Exterior - Block on Mtl. Stud",
+        "label": "exterior W"
+      },
+      {
+        "existing": true,
+        "beg": [
+          4640,
+          12100
+        ],
+        "end": [
+          4640,
+          100
+        ],
+        "composite": "Interior - 79mm Partition (1-hr)",
+        "label": "interior 1 (full-height vertical)"
+      },
+      {
+        "existing": true,
+        "beg": [
+          4601,
+          3840
+        ],
+        "end": [
+          10001,
+          3840
+        ],
+        "composite": "Interior - 79mm Partition (1-hr)",
+        "label": "interior 2 (horizontal)"
+      },
+      {
+        "existing": true,
+        "beg": [
+          7640,
+          12100
+        ],
+        "end": [
+          7640,
+          3800
+        ],
+        "composite": "Interior - 79mm Partition (1-hr)",
+        "label": "interior 3 (upper vertical)"
+      }
+    ],
+    "preserve": [
+      "walls"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 100,
+    "exact_counts": {
+      "walls": 7,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/C_model_editing1/env"
+      }
+    ]
+  }
+}

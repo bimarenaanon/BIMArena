@@ -1,0 +1,275 @@
+{
+  "id": "D_model_completion8",
+  "legacy_id": "I_long_sequence3",
+  "category": "Model Completion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Wall (×5); Create Slab (×1); Create Door (×6); Create Window (×3); Move Element (×1); Inspect Project (×1); Query Types (×1); Query Library (×1)",
+  "instruction": "The apartment is only partly modelled in the project. Complete it as follows, reusing the types already present; do not create or modify any types, and do not change or delete what is already correctly built.\n1. EXTEND the existing partition so it runs (5934, 6150) → (2650, 6150) (type 'Interior - 138mm Partition (1-hr)').\n2. CREATE these missing walls:\n- 'Exterior - Render on Brick on Block': (-3966, 14448) → (5934, 14448); (6148, 14233) → (6148, 11733)\n- 'Interior - 138mm Partition (1-hr)': (2719, 11733) → (2719, -267); (2650, 4149) → (5934, 4149); (2650, 2511) → (5934, 2511)\n3. PLACE these missing doors, all Single-Flush at the family's default size: centred at (2650, 7046) opening toward +x; (2650, 5150) opening toward -x; (4220, 2442) opening toward -y; (2650, 905) opening toward -x; (1724, -267) opening toward -y; (1792, 11733) opening toward +y.\n4. PLACE these missing windows, all Casement at the family's default size: centred at (4220, 11733); (-2451, 14233); (4020, 14233).\n5. CREATE the apartment floor slab, type 'Generic 150mm' at level 0, outline (6149, 14448), (6149, -481), (-1080, -481), (-1080, 7019), (-4180, 7019), (-4180, 14448).",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          5934,
+          6150
+        ],
+        "end": [
+          2650,
+          6150
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "existing partition extended to full drawn length"
+      },
+      {
+        "beg": [
+          -3966,
+          14448
+        ],
+        "end": [
+          5934,
+          14448
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "label": "missing exterior wall"
+      },
+      {
+        "beg": [
+          6148,
+          14233
+        ],
+        "end": [
+          6148,
+          11733
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "label": "missing exterior wall"
+      },
+      {
+        "beg": [
+          2719,
+          11733
+        ],
+        "end": [
+          2719,
+          -267
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "missing interior wall"
+      },
+      {
+        "beg": [
+          2650,
+          4149
+        ],
+        "end": [
+          5934,
+          4149
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "missing interior wall"
+      },
+      {
+        "beg": [
+          2650,
+          2511
+        ],
+        "end": [
+          5934,
+          2511
+        ],
+        "composite": "Interior - 138mm Partition (1-hr)",
+        "label": "missing interior wall"
+      }
+    ],
+    "no_extra_walls": false,
+    "doors": [
+      {
+        "center": [
+          2650,
+          7046
+        ],
+        "type_contains": [
+          "Single-Flush"
+        ],
+        "label": "missing door 1",
+        "open_into": [
+          3650,
+          7046
+        ]
+      },
+      {
+        "center": [
+          2650,
+          5150
+        ],
+        "type_contains": [
+          "Single-Flush"
+        ],
+        "label": "missing door 2",
+        "open_into": [
+          1650,
+          5150
+        ]
+      },
+      {
+        "center": [
+          4220,
+          2442
+        ],
+        "type_contains": [
+          "Single-Flush"
+        ],
+        "label": "missing door 3",
+        "open_into": [
+          4220,
+          1442
+        ]
+      },
+      {
+        "center": [
+          2650,
+          905
+        ],
+        "type_contains": [
+          "Single-Flush"
+        ],
+        "label": "missing door 4",
+        "open_into": [
+          1650,
+          905
+        ]
+      },
+      {
+        "center": [
+          1724,
+          -267
+        ],
+        "type_contains": [
+          "Single-Flush"
+        ],
+        "label": "missing door 5",
+        "open_into": [
+          1724,
+          -1267
+        ]
+      },
+      {
+        "center": [
+          1792,
+          11733
+        ],
+        "type_contains": [
+          "Single-Flush"
+        ],
+        "label": "missing door 6",
+        "open_into": [
+          1792,
+          12733
+        ]
+      }
+    ],
+    "opening_pos_tolerance_mm": 300,
+    "windows": [
+      {
+        "center": [
+          4220,
+          11733
+        ],
+        "type_contains": [
+          "Casement"
+        ],
+        "label": "missing window 1"
+      },
+      {
+        "center": [
+          -2451,
+          14233
+        ],
+        "type_contains": [
+          "Casement"
+        ],
+        "label": "missing window 2"
+      },
+      {
+        "center": [
+          4020,
+          14233
+        ],
+        "type_contains": [
+          "Casement"
+        ],
+        "label": "missing window 3"
+      }
+    ],
+    "slabs": [
+      {
+        "floor": 0,
+        "outline": [
+          [
+            6149,
+            14448
+          ],
+          [
+            6149,
+            -481
+          ],
+          [
+            -1080,
+            -481
+          ],
+          [
+            -1080,
+            7019
+          ],
+          [
+            -4180,
+            7019
+          ],
+          [
+            -4180,
+            14448
+          ]
+        ],
+        "level_mm": 0,
+        "composite": "Generic 150mm",
+        "label": "apartment floor slab"
+      }
+    ],
+    "exact_counts": {
+      "doors": 8,
+      "windows": 5,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "walls",
+        "except_near": [
+          [
+            4884,
+            6219
+          ]
+        ]
+      },
+      "doors",
+      "windows"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 150,
+    "iou_min": 0.98
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/D_model_completion8/env"
+      }
+    ]
+  }
+}

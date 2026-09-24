@@ -1,0 +1,70 @@
+{
+  "id": "A_setup_types3",
+  "legacy_id": "A_setup_types4",
+  "category": "Project Initialization",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "A05",
+  "required_capabilities": "Create Slab Type (×1); Replace Element Type (×1); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "Create a concrete intermediate-floor composite finished with parquet, with three layers, top->bottom: (1) 15 mm timber parquet finish, (2) 60 mm cement screed, (3) a 200 mm reinforced-concrete structural slab (the Core). An intermediate floor slab already exists within the exterior-wall footprint. Change this existing slab to use the newly created composite. Do not modify the slab's boundary, elevation, thickness positioning, or the existing exterior walls.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "skins": [
+          {
+            "material_contains": [
+              "Timber-Floor",
+              "Timber - Floor"
+            ],
+            "thickness_mm": 15
+          },
+          {
+            "material_contains": [
+              "Concrete"
+            ],
+            "thickness_mm": 60
+          },
+          {
+            "material_contains": [
+              "Reinforced Concrete"
+            ],
+            "thickness_mm": 200
+          }
+        ]
+      }
+    ],
+    "slabs": [
+      {
+        "existing": true,
+        "floor": 0,
+        "composite": "$new",
+        "level_mm": 0,
+        "label": "existing slab switched to the new composite"
+      }
+    ],
+    "preserve": [
+      "walls",
+      "slabs"
+    ],
+    "no_extra_composites": true,
+    "exact_counts": {
+      "walls": 4,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/A_setup_types3/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "id": "D_model_completion5",
+  "legacy_id": "C_openings6",
+  "category": "Model Completion",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Create Door (×4); Inspect Project (×1); Query Library (×1)",
+  "instruction": "The walls are already built; do not create, move, or modify any walls. Place exactly four doors:\n1. Single-leaf 900 × 2100 mm centred at (5295, -445), opening toward -y (out of the building), hinge on the jamb near (4845, -445).\n2. Single-leaf 900 × 2100 mm centred at (5954, 4138), opening toward -x (west), hinge on the jamb near (5954, 4588).\n3. Double-leaf 1800 × 2100 mm centred at (3229, 11130), opening toward +x (east).\n4. Double-leaf 1800 × 2100 mm centred at (1929, 11130), opening toward -x (west).\nDo not add extra doors.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "center": [
+          5295,
+          -445
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "open_into": [
+          5295,
+          -1445
+        ],
+        "hinge_near": [
+          4845,
+          -445
+        ],
+        "label": "single door at [5295, -445], opens south, hinge west"
+      },
+      {
+        "center": [
+          5954,
+          4138
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "open_into": [
+          4954,
+          4138
+        ],
+        "hinge_near": [
+          5954,
+          4588
+        ],
+        "label": "single door at [5954, 4138], opens west, hinge north"
+      },
+      {
+        "center": [
+          3229,
+          11130
+        ],
+        "width_mm": 1800,
+        "height_mm": 2100,
+        "type_contains": [
+          "double"
+        ],
+        "open_into": [
+          4229,
+          11130
+        ],
+        "label": "double door at [3229, 11130], opens east"
+      },
+      {
+        "center": [
+          1929,
+          11130
+        ],
+        "width_mm": 1800,
+        "height_mm": 2100,
+        "type_contains": [
+          "double"
+        ],
+        "open_into": [
+          929,
+          11130
+        ],
+        "label": "double door at [1929, 11130], opens west"
+      }
+    ],
+    "opening_pos_tolerance_mm": 100,
+    "exact_counts": {
+      "doors": 4,
+      "walls": 21,
+      "windows": 4,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "windows",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/D_model_completion5/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "create_wall2",
+  "atom": "create_wall",
+  "category": "Creation",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Create Wall (×1)",
+  "instruction": "Create four walls using the existing wall type 'Exterior - Render on Brick on Block', through (0, 0) → (8000, 0) → (8000, 5000) → (0, 5000) → (0, 0), with the rendered exterior face of every wall pointing outward, away from the interior, height 6000 mm. Create no other elements and do not create or modify any wall type.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          8000,
+          0
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "faces": "outward",
+        "height_mm": 6000
+      },
+      {
+        "beg": [
+          8000,
+          0
+        ],
+        "end": [
+          8000,
+          5000
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "faces": "outward",
+        "height_mm": 6000
+      },
+      {
+        "beg": [
+          8000,
+          5000
+        ],
+        "end": [
+          0,
+          5000
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "faces": "outward",
+        "height_mm": 6000
+      },
+      {
+        "beg": [
+          0,
+          5000
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "Exterior - Render on Brick on Block",
+        "faces": "outward",
+        "height_mm": 6000
+      }
+    ],
+    "no_extra_walls": true,
+    "exact_counts": {
+      "walls": 4,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/create_wall2/env"
+      }
+    ]
+  }
+}

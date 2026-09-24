@@ -1,0 +1,293 @@
+{
+  "id": "E_model_checking7",
+  "legacy_id": "G_model_check3",
+  "category": "Model Checking",
+  "authoring_tool": "Revit",
+  "v2_template": "H03",
+  "required_capabilities": "Flip Element (×4); Inspect Project (×1); Check Clash (×1)",
+  "instruction": "Six doors exist; some clash with nearby furniture or each other because they swing the wrong way. Set the swing directions as follows by flipping only the wrong ones (keep every door's position, size, and hinge side):\n- corridor upper door at (3846, 1902): opens toward +y (north)\n- corridor lower door at (3846, 102): opens toward -y (south)\n- desk door at (1061, 1902): opens toward +y (north — the desk is below)\n- sofa door at (103, 4045): opens toward -x (west — the sofa is east)\n- door at (6161, 7402): already opens toward -y — leave it\n- door at (8146, 2602): already opens toward -y — leave it\nAfter the fixes no door may clash with anything. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs",
+      "objects"
+    ],
+    "composites": [],
+    "no_extra_composites": true,
+    "any_of": [
+      {
+        "doors": [
+          {
+            "label": "corridor upper door (north)",
+            "near": [
+              3846,
+              1902
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              3846,
+              2902
+            ]
+          },
+          {
+            "label": "corridor lower door (north)",
+            "near": [
+              3846,
+              102
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              3846,
+              1102
+            ]
+          },
+          {
+            "label": "desk door (must open north, desk below)",
+            "near": [
+              1061,
+              1902
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              1061,
+              2902
+            ]
+          },
+          {
+            "label": "sofa door (must open west, sofa east)",
+            "near": [
+              103,
+              4045
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              -897,
+              4045
+            ]
+          },
+          {
+            "label": "upper-room door (unchanged, south)",
+            "near": [
+              6161,
+              7402
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              6161,
+              6402
+            ]
+          },
+          {
+            "label": "east-room door (unchanged, south)",
+            "near": [
+              8146,
+              2602
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              8146,
+              1602
+            ]
+          }
+        ],
+        "label": "A: both corridor doors open north"
+      },
+      {
+        "doors": [
+          {
+            "label": "corridor upper door (south)",
+            "near": [
+              3846,
+              1902
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              3846,
+              902
+            ]
+          },
+          {
+            "label": "corridor lower door (south)",
+            "near": [
+              3846,
+              102
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              3846,
+              -898
+            ]
+          },
+          {
+            "label": "desk door (must open north, desk below)",
+            "near": [
+              1061,
+              1902
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              1061,
+              2902
+            ]
+          },
+          {
+            "label": "sofa door (must open west, sofa east)",
+            "near": [
+              103,
+              4045
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              -897,
+              4045
+            ]
+          },
+          {
+            "label": "upper-room door (unchanged, south)",
+            "near": [
+              6161,
+              7402
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              6161,
+              6402
+            ]
+          },
+          {
+            "label": "east-room door (unchanged, south)",
+            "near": [
+              8146,
+              2602
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              8146,
+              1602
+            ]
+          }
+        ],
+        "label": "B: both corridor doors open south"
+      },
+      {
+        "doors": [
+          {
+            "label": "corridor upper door (north)",
+            "near": [
+              3846,
+              1902
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              3846,
+              2902
+            ]
+          },
+          {
+            "label": "corridor lower door (south)",
+            "near": [
+              3846,
+              102
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              3846,
+              -898
+            ]
+          },
+          {
+            "label": "desk door (must open north, desk below)",
+            "near": [
+              1061,
+              1902
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              1061,
+              2902
+            ]
+          },
+          {
+            "label": "sofa door (must open west, sofa east)",
+            "near": [
+              103,
+              4045
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              -897,
+              4045
+            ]
+          },
+          {
+            "label": "upper-room door (unchanged, south)",
+            "near": [
+              6161,
+              7402
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              6161,
+              6402
+            ]
+          },
+          {
+            "label": "east-room door (unchanged, south)",
+            "near": [
+              8146,
+              2602
+            ],
+            "width_mm": 915,
+            "height_mm": 2134,
+            "open_into": [
+              8146,
+              1602
+            ]
+          }
+        ],
+        "label": "C: corridor doors open apart (north/south)"
+      }
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "openings_no_clash": true,
+    "exact_counts": {
+      "doors": 6,
+      "walls": 10,
+      "windows": 0,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 2
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/E_model_checking7/env"
+      }
+    ]
+  }
+}

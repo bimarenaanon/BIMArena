@@ -1,0 +1,46 @@
+{
+  "id": "inspect_project1",
+  "legacy_id": "get_selection1",
+  "atom": "get_selection",
+  "category": "Query & Selection",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Inspect Project (×1)",
+  "instruction": "Select all the walls, then read the selection back and REPORT the composite they are built from and their thickness in millimetres. Answer in the form \"<label>: <value>\", one line each, using the labels composite and width.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "doors",
+      "windows"
+    ],
+    "answer_items": [
+      {
+        "label": "composite",
+        "min": 1,
+        "must_match": [
+          [
+            "100 Block Insulated Cavity"
+          ]
+        ]
+      }
+    ],
+    "answer_values": {
+      "width": {
+        "value": 275,
+        "tol": 1,
+        "unit": "mm"
+      }
+    }
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/inspect_project1/env"
+      }
+    ]
+  }
+}

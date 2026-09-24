@@ -1,0 +1,259 @@
+{
+  "id": "B_element_creation21",
+  "legacy_id": "E_cross_view2",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Switch Active Story (×1); Create Wall (×16); Inspect Project (×1)",
+  "instruction": "The project is empty. Create ONLY the exterior walls of a two-storey building; use the wall type 'Generic Wall/Shell' for every wall. Ground-floor outline, one closed loop (mm): (3500, 10200) → (3500, 8300) → (0, 8300) → (0, 800) → (3500, 800) → (3500, 0) → (10700, 0) → (10700, 8300) → (8000, 8300) → (8000, 10200) → back to (3500, 10200). The SECOND floor reuses the same outline minus the northern projection: everything north of y = 8300 is single-storey, so the upper outline closes straight along y = 8300. The outline coordinates are the OUTSIDE face of the walls; orient every wall so its exterior face points outward. Create nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          3500,
+          10200
+        ],
+        "end": [
+          3500,
+          8300
+        ],
+        "floor": 0,
+        "label": "ground-floor segment 1",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          3500,
+          8300
+        ],
+        "end": [
+          0,
+          8300
+        ],
+        "floor": 0,
+        "label": "ground-floor segment 2",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          0,
+          8300
+        ],
+        "end": [
+          0,
+          800
+        ],
+        "floor": 0,
+        "label": "ground-floor segment 3",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          0,
+          800
+        ],
+        "end": [
+          3500,
+          800
+        ],
+        "floor": 0,
+        "label": "ground-floor segment 4",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          3500,
+          800
+        ],
+        "end": [
+          3500,
+          0
+        ],
+        "floor": 0,
+        "label": "ground-floor segment 5",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          3500,
+          0
+        ],
+        "end": [
+          10700,
+          0
+        ],
+        "floor": 0,
+        "label": "ground-floor segment 6",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          10700,
+          0
+        ],
+        "end": [
+          10700,
+          8300
+        ],
+        "floor": 0,
+        "label": "ground-floor segment 7",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          10700,
+          8300
+        ],
+        "end": [
+          8000,
+          8300
+        ],
+        "floor": 0,
+        "label": "ground-floor segment 8",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          8000,
+          8300
+        ],
+        "end": [
+          8000,
+          10200
+        ],
+        "floor": 0,
+        "label": "ground-floor segment 9",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          8000,
+          10200
+        ],
+        "end": [
+          3500,
+          10200
+        ],
+        "floor": 0,
+        "label": "ground-floor segment 10",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          0,
+          8300
+        ],
+        "end": [
+          0,
+          800
+        ],
+        "floor": 1,
+        "label": "second-floor segment 1",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          0,
+          800
+        ],
+        "end": [
+          3500,
+          800
+        ],
+        "floor": 1,
+        "label": "second-floor segment 2",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          3500,
+          800
+        ],
+        "end": [
+          3500,
+          0
+        ],
+        "floor": 1,
+        "label": "second-floor segment 3",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          3500,
+          0
+        ],
+        "end": [
+          10700,
+          0
+        ],
+        "floor": 1,
+        "label": "second-floor segment 4",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          10700,
+          0
+        ],
+        "end": [
+          10700,
+          8300
+        ],
+        "floor": 1,
+        "label": "second-floor segment 5",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          10700,
+          8300
+        ],
+        "end": [
+          0,
+          8300
+        ],
+        "floor": 1,
+        "label": "second-floor segment 6",
+        "composite": "Generic Wall/Shell",
+        "faces": "outward"
+      }
+    ],
+    "no_extra_walls": true,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 100
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation21/env"
+      }
+    ]
+  }
+}

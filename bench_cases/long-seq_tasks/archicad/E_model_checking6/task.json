@@ -1,0 +1,280 @@
+{
+  "id": "E_model_checking6",
+  "legacy_id": "G_model_check2",
+  "category": "Model Checking",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "H02",
+  "required_capabilities": "Create Wall (×1); Create Door (×2); Create Window (×1); Move Element (×1); Delete Element (×1); Inspect Project (×1); Query Library (×2)",
+  "instruction": "The current model deviates from the intended layout. Make the model match EXACTLY the following target, leaving everything that already matches untouched.\nFinal wall layout (walls not listed must not exist; tolerance is tight):\n300 mm walls:\n- (2410.7, 0) → (2410.7, 3800)\n- (2410.7, 3800) → (-589.3, 3800)\n- (-589.3, 3800) → (-589.3, 9800)\n- (-589.3, 9800) → (5910.7, 9800)\n- (5910.7, 9800) → (5910.7, 12800)\n- (12410.7, 12800) → (12410.7, 0)\n- (12710.7, 0) → (2410.7, 0)\n- (5910.7, 12800) → (12410.7, 12800)\n200 mm walls:\n- (5910.7, 3500) → (2410.7, 3500)\n- (2410.7, 3700) → (2410.7, 5700)\n- (-589.3, 5700) → (5910.7, 5700)\n- (5910.7, 10100) → (12410.7, 10100)\n- (5910.7, 3500) → (5910.7, 9900)\nDoors to ADD:\n- 900 × 2100 mm centred at (2411, 4577) on the wall along x = 2411, opening toward +x (east), hinge on the jamb near (2411, 4127).\n- 1200 × 2100 mm centred at (5911, 8100) on the wall along x = 5911, opening toward +x (east), hinge on the jamb near (5911, 8700).\nWindow to ADD: 2100 × 1500 mm, sill height 1000 mm, centred at (2361, 9800).\nDELETE the door near (12411, 5311). Leave all other doors, all windows, and the slab untouched.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "label": "wall 1",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          2410.7,
+          0
+        ],
+        "end": [
+          2410.7,
+          3800
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 2",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          2410.7,
+          3800
+        ],
+        "end": [
+          -589.3,
+          3800
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 3",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          -589.3,
+          3800
+        ],
+        "end": [
+          -589.3,
+          9800
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 4",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          -589.3,
+          9800
+        ],
+        "end": [
+          5910.7,
+          9800
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 5",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5910.7,
+          9800
+        ],
+        "end": [
+          5910.7,
+          12800
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 6",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          12410.7,
+          12800
+        ],
+        "end": [
+          12410.7,
+          0
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 7",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          12710.7,
+          0
+        ],
+        "end": [
+          2410.7,
+          0
+        ],
+        "width_mm": 300
+      },
+      {
+        "label": "wall 8",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5910.7,
+          3500
+        ],
+        "end": [
+          2410.7,
+          3500
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 9",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          2410.7,
+          3700
+        ],
+        "end": [
+          2410.7,
+          5700
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 10",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          -589.3,
+          5700
+        ],
+        "end": [
+          5910.7,
+          5700
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 11",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5910.7,
+          10100
+        ],
+        "end": [
+          12410.7,
+          10100
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 12",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5910.7,
+          3500
+        ],
+        "end": [
+          5910.7,
+          9900
+        ],
+        "width_mm": 200
+      },
+      {
+        "label": "wall 13 (north wall closing the top-right room)",
+        "floor": 0,
+        "match": "any",
+        "beg": [
+          5910.7,
+          12800
+        ],
+        "end": [
+          12410.7,
+          12800
+        ],
+        "width_mm": 300
+      }
+    ],
+    "wall_tolerance_mm": 10,
+    "no_extra_walls": true,
+    "doors": [
+      {
+        "label": "added door on the west interior wall",
+        "center": [
+          2411,
+          4577
+        ],
+        "width_mm": 900,
+        "height_mm": 2100,
+        "open_into": [
+          3411,
+          4577
+        ],
+        "hinge_near": [
+          2411,
+          4127
+        ]
+      },
+      {
+        "label": "added door on the corrected wall",
+        "center": [
+          5911,
+          8100
+        ],
+        "width_mm": 1200,
+        "height_mm": 2100,
+        "open_into": [
+          6911,
+          8100
+        ],
+        "hinge_near": [
+          5911,
+          8700
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "label": "added window",
+        "center": [
+          2361,
+          9800
+        ],
+        "width_mm": 2100,
+        "height_mm": 1500,
+        "sill_mm": 1000
+      }
+    ],
+    "opening_pos_tolerance_mm": 10,
+    "exact_counts": {
+      "doors": 5,
+      "windows": 2,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            12411,
+            5311
+          ]
+        ]
+      },
+      "windows",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/archicad/E_model_checking6/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "flip_element4",
+  "legacy_id": "flip_wall2",
+  "atom": "flip_wall",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Flip Element (×1)",
+  "instruction": "Flip ONLY the south wall so its layer stack faces inward, keeping its endpoints and composite unchanged. Leave every other wall exactly as it is.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          11129,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "inward",
+        "floor": 0
+      },
+      {
+        "match": "any",
+        "beg": [
+          11129,
+          0
+        ],
+        "end": [
+          11129,
+          10205
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward",
+        "floor": 0
+      },
+      {
+        "match": "any",
+        "beg": [
+          11129,
+          10205
+        ],
+        "end": [
+          0,
+          10205
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward",
+        "floor": 0
+      },
+      {
+        "match": "any",
+        "beg": [
+          0,
+          10205
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "faces": "outward",
+        "floor": 0
+      }
+    ],
+    "exact_counts": {
+      "walls": 4
+    }
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/flip_element4/env"
+      }
+    ]
+  }
+}

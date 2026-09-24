@@ -1,0 +1,113 @@
+{
+  "id": "B_element_creation4",
+  "legacy_id": "B_walls3",
+  "category": "Model Authoring",
+  "authoring_tool": "Revit",
+  "v2_template": "B02",
+  "required_capabilities": "Create Wall (×6); Inspect Project (×1)",
+  "instruction": "The exterior walls of the building already exist as a closed loop; do not create, move, or modify them. Based on the provided floor plan, create the six interior partition walls using only the existing interior wall type 'Interior - 135mm Partition (2-hr)' with clean connections to the adjoining walls:\n- IntWall_1: (4225, 6175) → (0, 6175)\n- IntWall_2: (4225, 10700) → (4225, 3075)\n- IntWall_3: (0, 3825) → (4225, 3825)\n- IntWall_4: (2825, 6175) → (2825, 3825)\n- IntWall_5: (9725, 10700) → (9725, 5450)\n- IntWall_6: (4225, 0) → (4225, 1400)\nDo not create any other walls and do not create wall types.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          4225,
+          6175
+        ],
+        "end": [
+          0,
+          6175
+        ],
+        "composite": "Interior - 135mm Partition (2-hr)",
+        "label": "IntWall_1"
+      },
+      {
+        "beg": [
+          4225,
+          10700
+        ],
+        "end": [
+          4225,
+          3075
+        ],
+        "composite": "Interior - 135mm Partition (2-hr)",
+        "label": "IntWall_2"
+      },
+      {
+        "beg": [
+          0,
+          3825
+        ],
+        "end": [
+          4225,
+          3825
+        ],
+        "composite": "Interior - 135mm Partition (2-hr)",
+        "label": "IntWall_3"
+      },
+      {
+        "beg": [
+          2825,
+          6175
+        ],
+        "end": [
+          2825,
+          3825
+        ],
+        "composite": "Interior - 135mm Partition (2-hr)",
+        "label": "IntWall_4"
+      },
+      {
+        "beg": [
+          9725,
+          10700
+        ],
+        "end": [
+          9725,
+          5450
+        ],
+        "composite": "Interior - 135mm Partition (2-hr)",
+        "label": "IntWall_5"
+      },
+      {
+        "beg": [
+          4225,
+          0
+        ],
+        "end": [
+          4225,
+          1400
+        ],
+        "composite": "Interior - 135mm Partition (2-hr)",
+        "label": "IntWall_6"
+      }
+    ],
+    "no_extra_walls": true,
+    "composites": [],
+    "no_extra_composites": true,
+    "preserve": [
+      "walls"
+    ],
+    "wall_tolerance_mm": 100,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/B_element_creation4/env"
+      }
+    ]
+  }
+}

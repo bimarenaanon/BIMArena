@@ -1,0 +1,90 @@
+{
+  "id": "C_model_editing3",
+  "legacy_id": "C_openings4",
+  "category": "Model Revision",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "C04",
+  "required_capabilities": "Replace Element Type (×5); Inspect Project (×1); Query Library (×1)",
+  "instruction": "The floorplan layout and all room labels are already created; every door is single-leaf 900 x 2100 mm. Work out which door is which and modify exactly three: the entrance door (connecting the building to the outside) becomes a Pivot Door, 300 mm wider at the same height; the bathroom door becomes a Sliding Door of unchanged size; the balcony door becomes an Exterior Double Sliding Door, as wide as it is tall at the current height.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "width_mm": 1200,
+        "height_mm": 2100,
+        "type": "Pivot Door",
+        "label": "entrance -> Pivot Door 1200x2100",
+        "near": [
+          7759.0,
+          1478.0
+        ]
+      },
+      {
+        "width_mm": 900,
+        "height_mm": 2100,
+        "type": "Sliding Door",
+        "label": "bathroom -> Sliding Door 900x2100",
+        "near": [
+          9559.0,
+          5142.0
+        ]
+      },
+      {
+        "width_mm": 2100,
+        "height_mm": 2100,
+        "type": "Exterior Double Sliding Door",
+        "label": "balcony -> Exterior Double Sliding Door 2100x2100",
+        "near": [
+          9322.0,
+          12578.0
+        ]
+      }
+    ],
+    "exact_counts": {
+      "doors": 6,
+      "walls": 13,
+      "windows": 4,
+      "slabs": 1,
+      "rooms": 5,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      {
+        "bucket": "doors",
+        "except_near": [
+          [
+            7759,
+            1478
+          ],
+          [
+            9559,
+            5142
+          ],
+          [
+            9322,
+            12578
+          ]
+        ]
+      },
+      "walls",
+      "windows",
+      "rooms",
+      "slabs"
+    ],
+    "opening_pos_tolerance_mm": 50,
+    "composites": [],
+    "no_extra_composites": true,
+    "size_tolerance_mm": 0
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/C_model_editing3/env"
+      }
+    ]
+  }
+}

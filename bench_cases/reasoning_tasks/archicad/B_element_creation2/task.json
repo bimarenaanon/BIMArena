@@ -1,0 +1,114 @@
+{
+  "id": "B_element_creation2",
+  "legacy_id": "B_walls1",
+  "category": "Model Authoring",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "B01",
+  "required_capabilities": "Create Wall (×6); Inspect Project (×1)",
+  "instruction": "The building's footprint is the union of two rectangular volumes: the WEST wing spans 5800 mm in x and 10700 mm in y, with its south-west corner at (0, 0); the EAST wing spans 5350 mm in x and 5250 mm in y, attached to the east side of the west wing and flush with its north edge. All wing dimensions and the (0, 0) corner are measured on the OUTSIDE face of the walls. Derive the outline of the combined footprint and create its perimeter as exterior walls, one continuous closed loop, using only the existing exterior wall composite '100 Block Insulated Cavity' with every wall's exterior face pointing outward; do not create or modify a composite. Wall ONLY the perimeter of the union. All corners must close cleanly with no duplicate segments. Create no other walls.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          5800,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "label": "exterior segment 1",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          5800,
+          0
+        ],
+        "end": [
+          5800,
+          5450
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "label": "exterior segment 2",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          5800,
+          5450
+        ],
+        "end": [
+          11150,
+          5450
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "label": "exterior segment 3",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          11150,
+          5450
+        ],
+        "end": [
+          11150,
+          10700
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "label": "exterior segment 4",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          11150,
+          10700
+        ],
+        "end": [
+          0,
+          10700
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "label": "exterior segment 5",
+        "faces": "outward"
+      },
+      {
+        "beg": [
+          0,
+          10700
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity",
+        "label": "exterior segment 6",
+        "faces": "outward"
+      }
+    ],
+    "no_extra_walls": true,
+    "composites": [],
+    "no_extra_composites": true,
+    "wall_tolerance_mm": 100,
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    }
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/B_element_creation2/env"
+      }
+    ]
+  }
+}

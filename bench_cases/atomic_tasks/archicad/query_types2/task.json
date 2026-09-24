@@ -1,0 +1,49 @@
+{
+  "id": "query_types2",
+  "legacy_id": "list_composites2",
+  "atom": "list_composites",
+  "category": "Query & Selection",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Query Types (×1)",
+  "instruction": "Look up the composite structures available in this project and REPORT the names of two SLAB composites. Answer in the form \"<label>: <value>\", one line each, using the label floor.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    },
+    "answer_items": [
+      {
+        "label": "floor",
+        "min": 2,
+        "contains": [
+          "Concrete Floor Insulated with Parquet",
+          "Concrete Floor Insulated with 10mm Tile",
+          "Concrete Floor with 10mm Tile",
+          "Concrete Floor with Parquet",
+          "Flat Roof",
+          "Generic Wall/Shell",
+          "Generic Slab/Roof",
+          "Generic Roof/Shell"
+        ],
+        "exact": true
+      }
+    ]
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/query_types2/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "id": "A_setup_types5",
+  "legacy_id": "A_setup_types6",
+  "category": "Project Initialization",
+  "authoring_tool": "Revit",
+  "v2_template": "A07",
+  "required_capabilities": "Create Wall Type (×2); Create Slab Type (×1); Replace Element Type (×9); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "The project contains exterior walls, interior walls, and one slab, all using generic types. Create three new types: (1) an exterior wall type with four layers, exterior to interior: 150 mm concrete, 150 mm insulation, 150 mm concrete, 10 mm gypsum plaster (total 460 mm); (2) an interior wall type with three layers: 15 mm gypsum plaster, a 175 mm brick masonry core, 15 mm gypsum plaster (total 205 mm); (3) a floor type with three layers, top to bottom: 10 mm ceramic tile, 65 mm cement screed, a 200 mm concrete structural slab (total 275 mm). Then switch the exterior walls to the new exterior wall type with the finish side facing outward, the interior walls to the new interior wall type, and the slab to the new floor type. Do not change any wall or slab geometry and create no other types.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "label": "exterior wall type (concrete sandwich 460)",
+        "total_thickness_mm": 460,
+        "layers_exact": true,
+        "skins": [
+          {
+            "material_contains": [
+              "Concrete"
+            ],
+            "thickness_mm": 150
+          },
+          {
+            "material_contains": [
+              "Insulation"
+            ],
+            "thickness_mm": 150
+          },
+          {
+            "material_contains": [
+              "Concrete"
+            ],
+            "thickness_mm": 150
+          },
+          {
+            "material_contains": [
+              "Gypsum",
+              "Render"
+            ],
+            "thickness_mm": 10
+          }
+        ]
+      },
+      {
+        "label": "interior wall type (brick 205)",
+        "total_thickness_mm": 205,
+        "layers_exact": true,
+        "skins": [
+          {
+            "material_contains": [
+              "Gypsum",
+              "Render"
+            ],
+            "thickness_mm": 15
+          },
+          {
+            "material_contains": [
+              "Brick",
+              "Masonry"
+            ],
+            "thickness_mm": 175
+          },
+          {
+            "material_contains": [
+              "Gypsum",
+              "Render"
+            ],
+            "thickness_mm": 15
+          }
+        ]
+      },
+      {
+        "label": "floor type (tile ground slab 275)",
+        "total_thickness_mm": 275,
+        "layers_exact": true,
+        "skins": [
+          {
+            "material_contains": [
+              "Ceramic Tile"
+            ],
+            "thickness_mm": 10
+          },
+          {
+            "material_contains": [
+              "Cement Screed"
+            ],
+            "thickness_mm": 65
+          },
+          {
+            "material_contains": [
+              "Concrete"
+            ],
+            "thickness_mm": 200
+          }
+        ]
+      }
+    ],
+    "no_extra_composites": true,
+    "preserve": [
+      "walls"
+    ],
+    "slabs": [
+      {
+        "existing": true,
+        "floor": 0,
+        "composite": "$new:2",
+        "label": "existing slab switched to the new floor type"
+      }
+    ],
+    "exact_counts": {
+      "walls": 8,
+      "doors": 0,
+      "windows": 0,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "walls": [
+      {
+        "existing": true,
+        "beg": [
+          102,
+          11898
+        ],
+        "end": [
+          11702,
+          11898
+        ],
+        "composite": "$new:0",
+        "label": "existing exterior wall switched to the new exterior type",
+        "faces": "outward"
+      },
+      {
+        "existing": true,
+        "beg": [
+          11802,
+          11798
+        ],
+        "end": [
+          11802,
+          98
+        ],
+        "composite": "$new:0",
+        "label": "existing exterior wall switched to the new exterior type",
+        "faces": "outward"
+      },
+      {
+        "existing": true,
+        "beg": [
+          11702,
+          -2
+        ],
+        "end": [
+          102,
+          -2
+        ],
+        "composite": "$new:0",
+        "label": "existing exterior wall switched to the new exterior type",
+        "faces": "outward"
+      },
+      {
+        "existing": true,
+        "beg": [
+          2,
+          98
+        ],
+        "end": [
+          2,
+          11798
+        ],
+        "composite": "$new:0",
+        "label": "existing exterior wall switched to the new exterior type",
+        "faces": "outward"
+      },
+      {
+        "existing": true,
+        "beg": [
+          6502,
+          11798
+        ],
+        "end": [
+          6502,
+          6698
+        ],
+        "composite": "$new:1",
+        "label": "existing interior wall switched to the new interior type"
+      },
+      {
+        "existing": true,
+        "beg": [
+          6502,
+          6698
+        ],
+        "end": [
+          102,
+          6698
+        ],
+        "composite": "$new:1",
+        "label": "existing interior wall switched to the new interior type"
+      },
+      {
+        "existing": true,
+        "beg": [
+          7802,
+          98
+        ],
+        "end": [
+          7802,
+          4098
+        ],
+        "composite": "$new:1",
+        "label": "existing interior wall switched to the new interior type"
+      },
+      {
+        "existing": true,
+        "beg": [
+          7802,
+          4098
+        ],
+        "end": [
+          11702,
+          4098
+        ],
+        "composite": "$new:1",
+        "label": "existing interior wall switched to the new interior type"
+      }
+    ]
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/long-seq_tasks/revit/A_setup_types5/env"
+      }
+    ]
+  }
+}

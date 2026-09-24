@@ -1,0 +1,109 @@
+{
+  "id": "D_model_completion5",
+  "legacy_id": "C_openings6",
+  "category": "Model Completion",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Load Library Element Type (×2); Create Door (×4); Inspect Project (×1); Query Library (×1)",
+  "instruction": "The walls in the floorplan are already built. Add all doors shown, without creating, moving, or modifying any walls. Use single-leaf 915 mm wide doors where the plan shows a single door and double-leaf 1700 mm wide doors where it shows a double door. Judge each door's host wall and approximate position from the drawing; exact positions are not required. Match the swing arc shown, including the hinge side and whether the door opens into or out of the room. Do not add extra doors.",
+  "input": {
+    "drawing": [
+      "drawing.png"
+    ]
+  },
+  "expected_result": {
+    "doors": [
+      {
+        "center": [
+          -4633,
+          11747
+        ],
+        "width_mm": 1700,
+        "type_contains": [
+          "Double"
+        ],
+        "label": "double door (west)",
+        "open_into": [
+          -5633,
+          11747
+        ]
+      },
+      {
+        "center": [
+          -3483,
+          11747
+        ],
+        "width_mm": 1700,
+        "type_contains": [
+          "Double"
+        ],
+        "label": "double door (east)",
+        "open_into": [
+          -2483,
+          11747
+        ]
+      },
+      {
+        "center": [
+          -1133,
+          -103
+        ],
+        "width_mm": 915,
+        "type_contains": [
+          "Single-Flush"
+        ],
+        "label": "single door (south)",
+        "open_into": [
+          -1133,
+          -1103
+        ],
+        "hinge_near": [
+          -676,
+          -103
+        ]
+      },
+      {
+        "center": [
+          117,
+          5487
+        ],
+        "width_mm": 915,
+        "type_contains": [
+          "Single-Flush"
+        ],
+        "label": "single door (middle)",
+        "open_into": [
+          -883,
+          5487
+        ],
+        "hinge_near": [
+          117,
+          5030
+        ]
+      }
+    ],
+    "opening_pos_tolerance_mm": 100,
+    "exact_counts": {
+      "doors": 4,
+      "walls": 20,
+      "windows": 0,
+      "slabs": 1,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "preserve": [
+      "walls",
+      "slabs"
+    ],
+    "composites": [],
+    "no_extra_composites": true
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/revit/D_model_completion5/env"
+      }
+    ]
+  }
+}

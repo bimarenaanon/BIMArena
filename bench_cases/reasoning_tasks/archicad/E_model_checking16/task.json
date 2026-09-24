@@ -1,0 +1,164 @@
+{
+  "id": "E_model_checking16",
+  "legacy_id": "H_domain_reasoning8",
+  "category": "Model Checking",
+  "authoring_tool": "ArchiCAD",
+  "v2_template": "I10",
+  "required_capabilities": "Create Wall Type (×1); Replace Element Type (×6); Inspect Project (×1); Query Materials (×1)",
+  "instruction": "All exterior walls currently use the uninsulated composite 'Existing External Wall 225'. Its skins, from exterior to interior, are: 10 mm 'Plaster - Lime Sand', 200 mm 'Reinforced Concrete - Structural', and 15 mm 'Plaster - Gypsum'. Upgrade the building envelope to achieve U <= 0.20 W/(m2*K) by adding a layer of 'Insulation - Mineral Soft' between the reinforced-concrete core and the external render. Use the following thermal data: 'Insulation - Mineral Soft' lambda = 0.035 W/(m*K), 'Plaster - Lime Sand' lambda = 1.00 W/(m*K), 'Reinforced Concrete - Structural' lambda = 2.30 W/(m*K), and 'Plaster - Gypsum' lambda = 0.51 W/(m*K). Use Rsi = 0.13 m2*K/W and Rse = 0.04 m2*K/W. Insulation boards are available only in 10 mm increments from 100 mm to 200 mm. Calculate the required insulation thickness and select the thinnest available board that satisfies the target U-value. Create a new composite named 'External Wall EW-U020' with the correct skin order and assign it to all exterior walls. Set 'Reinforced Concrete - Structural' as the structural core. Do not modify any internal partitions, wall geometry, wall reference lines, openings, heights, or constraints.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "composites": [
+      {
+        "label": "External Wall EW-U020",
+        "name_contains": [
+          "EW-U020"
+        ],
+        "total_thickness_mm": 395,
+        "layers_exact": true,
+        "skins": [
+          {
+            "material_contains": [
+              "Plaster - Lime Sand"
+            ],
+            "thickness_mm": 10
+          },
+          {
+            "material_contains": [
+              "Insulation - Mineral Soft"
+            ],
+            "thickness_mm": 170
+          },
+          {
+            "material_contains": [
+              "Reinforced Concrete - Structural"
+            ],
+            "thickness_mm": 200
+          },
+          {
+            "material_contains": [
+              "Plaster - Gypsum"
+            ],
+            "thickness_mm": 15
+          }
+        ]
+      }
+    ],
+    "no_extra_composites": true,
+    "preserve": [
+      "walls"
+    ],
+    "walls": [
+      {
+        "label": "exterior wall SW - 001",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          0,
+          0
+        ],
+        "end": [
+          0,
+          8742
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      },
+      {
+        "label": "exterior wall SW - 002",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          0,
+          8742
+        ],
+        "end": [
+          6872,
+          8742
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      },
+      {
+        "label": "exterior wall SW - 003",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          6872,
+          8742
+        ],
+        "end": [
+          6872,
+          5338
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      },
+      {
+        "label": "exterior wall SW - 004",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          6872,
+          5338
+        ],
+        "end": [
+          9006,
+          5338
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      },
+      {
+        "label": "exterior wall SW - 005",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          9006,
+          5338
+        ],
+        "end": [
+          9006,
+          0
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      },
+      {
+        "label": "exterior wall SW - 006",
+        "existing": true,
+        "floor": 0,
+        "beg": [
+          9006,
+          0
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "$new:0",
+        "faces": "outward"
+      }
+    ],
+    "exact_counts": {
+      "walls": 6,
+      "doors": 0,
+      "windows": 0,
+      "rooms": 0,
+      "slabs": 0,
+      "stairs": 0,
+      "objects": 0
+    },
+    "wall_tolerance_mm": 150
+  },
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/reasoning_tasks/archicad/E_model_checking16/env"
+      }
+    ]
+  }
+}

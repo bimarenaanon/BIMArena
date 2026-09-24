@@ -1,0 +1,50 @@
+{
+  "id": "query_types1",
+  "legacy_id": "list_composites1",
+  "atom": "list_composites",
+  "category": "Query & Selection",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Query Types (×1)",
+  "instruction": "Look up the composite structures available in this project and REPORT the names of two EXTERIOR wall composites. Answer in the form \"<label>: <value>\", one line each, using the label exterior wall.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "exact_counts": {
+      "doors": 0,
+      "windows": 0,
+      "slabs": 0,
+      "rooms": 0,
+      "stairs": 0,
+      "objects": 0,
+      "walls": 0
+    },
+    "answer_items": [
+      {
+        "label": "exterior wall",
+        "min": 2,
+        "contains": [
+          "100 Block Insulated Cavity",
+          "100 Block Insulated Cavity Plastered",
+          "140 Block Insulated Cavity",
+          "140 Block Insulated Cavity Plastered",
+          "215 Block Insulated Cavity",
+          "215 Block Insulated Cavity Plastered",
+          "Double 50 Block Cavity",
+          "Basement Wall",
+          "Generic Wall/Shell"
+        ],
+        "exact": true
+      }
+    ]
+  },
+  "env_template": "empty",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/query_types1/env"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "inspect_project4",
+  "legacy_id": "observation1",
+  "atom": "observation",
+  "category": "Query & Selection",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Inspect Project (×1)",
+  "instruction": "Read the live model state and REPORT in your final answer how many storeys the project has and how many walls, doors and windows the model contains. Give your answer as ONE LINE PER ITEM, in the form \"<label>: <value>\", nothing else on the line, using exactly the labels storeys, walls, doors, windows. Change nothing.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "doors",
+      "windows"
+    ],
+    "answer_values": {
+      "storeys": 3,
+      "walls": 4,
+      "doors": 3,
+      "windows": 3
+    }
+  },
+  "env_template": "rich",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/inspect_project4/env"
+      }
+    ]
+  }
+}

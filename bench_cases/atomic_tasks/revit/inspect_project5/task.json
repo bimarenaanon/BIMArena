@@ -1,0 +1,50 @@
+{
+  "id": "inspect_project5",
+  "legacy_id": "select_elements1",
+  "atom": "select_elements",
+  "category": "Query & Selection",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Inspect Project (×1)",
+  "instruction": "Set the on-screen selection to the interior partition wall and leave it selected — nothing else selected. Then REPORT that wall's total thickness in millimetres and the NAME of its wall type. Answer in the form \"<label>: <value>\", one line each, using the labels width and type.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs",
+      "rooms"
+    ],
+    "exact_counts": {
+      "walls": 6
+    },
+    "answer_values": {
+      "width": {
+        "value": 124,
+        "tol": 1
+      }
+    },
+    "answer_items": [
+      {
+        "label": "type",
+        "min": 1,
+        "must_match": [
+          [
+            "blockwork"
+          ]
+        ]
+      }
+    ]
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/inspect_project5/env"
+      }
+    ]
+  }
+}

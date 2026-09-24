@@ -1,0 +1,45 @@
+{
+  "id": "inspect_project6",
+  "legacy_id": "select_elements2",
+  "atom": "select_elements",
+  "category": "Query & Selection",
+  "authoring_tool": "Revit",
+  "required_capabilities": "Inspect Project (×1)",
+  "instruction": "Set the on-screen selection to the floor and leave it selected. Then REPORT the floor's type name in the form \"<label>: <value>\", using the label type.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "preserve": [
+      "walls",
+      "doors",
+      "windows",
+      "slabs",
+      "rooms"
+    ],
+    "exact_counts": {
+      "walls": 6,
+      "slabs": 1,
+      "rooms": 1
+    },
+    "answer_items": [
+      {
+        "label": "type",
+        "min": 1,
+        "contains": [
+          "Insitu Concrete 225mm"
+        ],
+        "exact": true
+      }
+    ]
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/revit/inspect_project6/env"
+      }
+    ]
+  }
+}

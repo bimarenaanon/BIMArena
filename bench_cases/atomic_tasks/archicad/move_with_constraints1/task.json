@@ -1,0 +1,132 @@
+{
+  "id": "move_with_constraints1",
+  "legacy_id": "move_with_constrain1",
+  "atom": "move_with_constrain",
+  "category": "Editing",
+  "authoring_tool": "ArchiCAD",
+  "required_capabilities": "Move with Constraints (×1)",
+  "instruction": "Move the north exterior wall 500 mm in +y, keeping every element joined to it stretched with it. Change nothing else.",
+  "input": {
+    "drawing": "text-only"
+  },
+  "expected_result": {
+    "walls": [
+      {
+        "match": "any",
+        "beg": [
+          0,
+          10705
+        ],
+        "end": [
+          11129,
+          10705
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "match": "any",
+        "beg": [
+          11129,
+          0
+        ],
+        "end": [
+          11129,
+          10705
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "match": "any",
+        "beg": [
+          0,
+          10705
+        ],
+        "end": [
+          0,
+          0
+        ],
+        "composite": "100 Block Insulated Cavity"
+      },
+      {
+        "match": "any",
+        "beg": [
+          5784,
+          0
+        ],
+        "end": [
+          5784,
+          10705
+        ],
+        "width_mm": 100
+      }
+    ],
+    "windows": [
+      {
+        "near": [
+          4000,
+          10705
+        ],
+        "width_mm": 1200,
+        "height_mm": 1200,
+        "sill_mm": 900
+      }
+    ],
+    "slabs": [
+      {
+        "match": "any",
+        "floor": "active",
+        "level_mm": 0,
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            11129,
+            0
+          ],
+          [
+            11129,
+            10705
+          ],
+          [
+            0,
+            10705
+          ]
+        ],
+        "composite": "Concrete Floor with 10mm Tile"
+      }
+    ],
+    "iou_min": 0.98,
+    "rooms": [
+      {
+        "existing": true,
+        "name_contains": [
+          "office"
+        ],
+        "inside": [
+          8344,
+          10200
+        ],
+        "area_m2": 51.0,
+        "area_ratio": 0.02
+      }
+    ],
+    "exact_counts": {
+      "walls": 5,
+      "windows": 1,
+      "slabs": 1,
+      "rooms": 1,
+      "doors": 1
+    }
+  },
+  "env_template": "base",
+  "env": {
+    "files": [
+      {
+        "filename": "",
+        "filepath": "./bench_cases/atomic_tasks/archicad/move_with_constraints1/env"
+      }
+    ]
+  }
+}
